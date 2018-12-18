@@ -1,0 +1,6 @@
+.project
+.ftpconfig
+bower_components
+node_modules
+*-dev.*
+examples/dev
