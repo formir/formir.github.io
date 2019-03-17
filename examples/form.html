@@ -22,34 +22,34 @@
     	<fieldset><div class="legend">Form with grid</div>
     		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
   	    		<div class="cell m-cell-16"><select><option>1 23</option></select></div>
   	    	</div>
   	    </form>
     	</fieldset>
 
-      <fieldset><div class="legend">Form with grid- small size on each input</div>
-    		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
+      <fieldset><div class="legend">Form with grid- large size on each input</div>
+    		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0 size-l">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text" class="input-l"/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text" class="input-l"/></div>
             <div class="cell m-cell-16"><a class="button button-l">test</a></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text" class="input-l"/></div>
   	    		<div class="cell m-cell-16 select-arrow"><select class="input-l"><option>1 23</option></select><span></span></div>
   	    	</div>
@@ -59,16 +59,16 @@
       <fieldset><div class="legend">Form with grid - small size wrapper</div>
     		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0 size-s">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
             <div class="cell m-cell-16"><a class="button">test</a></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label></div>
   	    		<div class="cell m-cell-16"><input type="text"/></div>
   	    		<div class="cell m-cell-16"><select><option>1 23</option></select></div>
   	    	</div>
@@ -82,19 +82,19 @@
     	<fieldset><div class="legend">Form with grid and label</div>
     		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label><input type="text"/></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label><input type="text"/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label><input type="text"/></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label><input type="text"/></div>
   	    	</div>
   	    	<div class="row">
   	    		<div class="cell m-cell-16">
-  	    			<label>Label for input:</label>
+  	    			<label class="label">Label for input:</label>
   	    			<div class="control icon-home left-icon" data-addon="USD"><input type="text"/></div>
   	    			<div class="hint text-right"> help</div>
       			</div>
   	    		<div class="cell select-arrow m-cell-16">
-  	    			<label></label>
+  	    			<label class="label"></label>
               <div class="control">
                 <select><option>1 23</option></select>
     	    			<span></span>
@@ -103,7 +103,7 @@
   	    	</div>
   	    	<div class="row">
   	    		<div class="cell">
-  	    			<label>Styled select</label>
+  	    			<label class="label">Styled select</label>
   	    			<span class="select" tabindex="1">
   				      <div class="select-content">
   				        <input id="b0" type="radio" name="c">
@@ -158,10 +158,10 @@
       <fieldset><div class="legend">Form with validation</div>
     		<form class="grid grid-form validate gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label><input type="text" required/></div>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label><input type="text" required/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16"><label>Label for input:</label>
+  	    		<div class="cell m-cell-16"><label class="label">Label for input:</label>
               <div class="control has-tooltip">
                 <input type="text" required/>
                 <div class="tooltip">this field is required</div>
@@ -170,12 +170,12 @@
   	    	</div>
   	    	<div class="row">
   	    		<div class="cell m-cell-16">
-  	    			<label>Label for input - only number:</label>
+  	    			<label class="label">Label for input - only number:</label>
   	    			<div class="control"><input type="number"/><span></span></div>
   	    			<div class="hint text-right"> help</div>
       			</div>
   	    		<div class="cell select-arrow m-cell-16">
-              <label></label>
+              <label class="label"></label>
               <div class="control">
                 <select required><option>1 23</option></select>
     	    			<span></span>
@@ -194,14 +194,14 @@
       <fieldset><div class="legend">Form with status</div>
     		<form class="grid grid-form gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
   	    	<div class="row">
-  	    		<div class="cell m-cell-16 has-error"><label>Label for input:</label><input type="text" required/></div>
+  	    		<div class="cell m-cell-16 has-error"><label class="label">Label for input:</label><input type="text" required/></div>
   	    	</div>
   	    	<div class="row">
-  	    		<div class="cell m-cell-16 has-info"><label>Label for input:</label><input type="text"/></div>
+  	    		<div class="cell m-cell-16 has-info"><label class="label">Label for input:</label><input type="text"/></div>
   	    	</div>
           <div class="row">
   	    		<div class="cell m-cell-16 has-warning">
-  	    			<label>Label for input:</label>
+  	    			<label class="label">Label for input:</label>
   	    			<div class="control has-tooltip">
                 <input type="text" required/><span></span>
                 <div class="tooltip">warning message</div>
@@ -209,7 +209,7 @@
   	    			<div class="hint text-right"> help</div>
       			</div>
   	    		<div class="cell select-arrow m-cell-16  has-error">
-              <label></label>
+              <label class="label"></label>
               <div class="control">
                 <select required><option>1 23</option></select>
     	    			<span></span>
@@ -223,7 +223,7 @@
       <fieldset><div class="legend">Checkboxes</div>
     		<form class="grid grid-form validate gutter-1 space-3 offset-right-5 offset-left-2 t-offset-left-0 t-offset-right-0">
   	    	<div class="row">
-  	    		<div class="cell-4"><label>Pick one or two</label></div>
+  	    		<div class="cell-4"><label class="label">Pick one or two</label></div>
             <div class="cell-12">
               <label class="checkbox">
                 <input type="checkbox"/>

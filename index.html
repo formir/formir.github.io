@@ -36,9 +36,9 @@
               </ul>
             </li>
             <li class="item"><a class="anchor" href="docs.html">Documentations</a></li>
-            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir/archive/v0.1.10.zip">Download</a></li>
+            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir" tagret="_blank">Download</a></li>
             <li class="item">
-              <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Donate - Buy a Caffee', '#934780', 'A77436HN');kofiwidget2.draw();</script>
+              <a class="anchor button inverse transparent" href="https://patronite.pl/formir" tagret="_blank">Support on Patronite</a>
             </li>
           </ul>
         </nav>
@@ -50,12 +50,12 @@
           <div class="margin-top-2 has-tooltip">
             <a class="logo"><img src="node_modules/formir/img/logo/formir-150.png"/><span>formir</span></a>
             <div class="tooltip center opacity-7">
-              <h5><i>v0.1.10</i></h5>
+              <a href="https://www.npmjs.com/package/formir" rel="nofollow"  tagret="_blank"><img src="https://camo.githubusercontent.com/4242607f6a201b4ae8685bd85b570610194a7303/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f666f726d69722e737667" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/formir.svg" style="max-width:100%;"></a>
             </div>
           </div>
            <div class="margin-top-4">
              <div class="tooltip bottom-center horizostal-center">
-               <h3>I'm first pure, complete and modular<br/> CSS & HTML Framework for RWD developing.</h3>
+               <h3>First pure CSS & HTML5 Framework<br/> for Responsive web design developing.<br/> Written in <a href="http://lesscss.org/">{less}</a>.</h3>
              </div>
            </div>
         </div>
@@ -63,17 +63,30 @@
     </section>
     <section class="section full-height primary center-vertically">
       <div class="content-holder width-6 text-center">
-        <h2>Our idea is:</h2>
+        <h2>Why formir</h2>
         <ul class="text-left width-3 max-width-100 horizostal-center margin-top-5">
-          <li>to minimize JS code in application - so we don't have any</li>
+          <li>idea is to: minimize Java Script code in application,</li>
           <li>no more !important - we give you free hand with style,</li>
           <li>use less style as possible,</li>
           <li>give you able to set every class your own name,</li>
           <li>propose you to use structure of files gained of our experience,</li>
           <li>do it all with the help of modules and mixins.</li>
         </ul>
-        <a class="logo logo-m margin-top-5 has-tooltip"><img src="node_modules/formir/img/logo/formir-150.png"/><span class="tooltip bottom-center">Well, hello there, developer - this is formir</span></a>
+        <a class="logo logo-m margin-top-5 has-tooltip"><img src="node_modules/formir/img/logo/formir-150.png"/><span class="tooltip bottom-center">Hello there, this is formir</span></a>
     	</div>
+    </section>
+    <section class="section primary-dark">
+      <div class="content-holder width-6 text-center padding-horizontal-4">
+        <h2>Installation</h2>
+        <code>npm install formir</code>
+        <p>Include <code>formir.less</code> file to your application stylesheets.</p>
+        <a class="button transparent button-color-2 inverse" href="docs.html">Read more installation guide</a>
+        <h2>Get formir</h2>
+        <p>
+          <a href="https://www.npmjs.com/package/formir" tagret="_blank"><img src="https://camo.githubusercontent.com/4242607f6a201b4ae8685bd85b570610194a7303/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f666f726d69722e737667" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/formir.svg" style="max-width:100%;"></a>
+          <a href="https://github.com/konrad-k/formir"  tagret="_blank"><i style="font-size: 2rem; color: #fff;" class="icon-github-circled"></i></a>
+        </p>
+      </div>
     </section>
     <section class="section full-height center-vertically">
       <div class="content-holder width-6 text-center">
@@ -93,25 +106,25 @@
           </div>
           <h4 class="padding-top-3">You can easily change the number of columns or space between rows & columns,<br/> use row wrapper or not - no matter - always will work great!</h4>
           <p>So feel free and <label>change your gutter <input id="input-gutter" style="width: 50px;" min="0" max="4" value="1" type="number" onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('gutter-' + $(this).val()).addClass('space-' + $('#input-space').val())"/></label><label> or space <input id="input-space" style="width: 50px;" min="0" max="4" value="1" class="width-1" type="number"  onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('space-' + $(this).val()).addClass('gutter-' + $('#input-gutter').val())"/></label></p>
-          <p class="padding-top-1"><small>And one more thing: number of steps and width of each are customizable.</small></p>
+          <div class="tooltip opacity-7  bottom-center horizostal-center">And one more thing: number of columns and steps are customizable.</small></div>
         </div>
     	</div>
     </section>
-    <section class="section alternative full-height center-vertically">
+    <section class="section primary full-height center-vertically">
       <div class="content-holder width-6">
           <h2 class="text-center"><i class="icon-check"></i> Forms & select-box</h2>
           <div class="center-vertically horizontally">
             <div class="width-3">
               <form class="grid grid-form gutter-1 space-3">
         	    	<div class="row">
-        	    		<div class="cell m-cell-16"><label>Label for input:</label><input type="text" required/></div>
+        	    		<div class="cell m-cell-16"><label class="label">Label for input:</label><input type="text" required/></div>
         	    	</div>
         	    	<div class="row">
-        	    		<div class="cell m-cell-16 has-info"><label>Label for input:</label><input type="text"/></div>
+        	    		<div class="cell m-cell-16 has-info"><label class="label">Label for input:</label><input type="text"/></div>
         	    	</div>
                 <div class="row">
         	    		<div class="cell m-cell-16 has-warning">
-        	    			<label>Label for input:</label>
+        	    			<label class="label">Label for input:</label>
         	    			<div class="control has-tooltip">
                       <input type="text" required/><span></span>
                       <div class="tooltip">warning message</div>
@@ -119,7 +132,7 @@
         	    			<div class="hint text-right"> help</div>
             			</div>
         	    		<div class="cell select-arrow m-cell-16  has-error">
-                    <label></label>
+                    <label class="label"></label>
                     <div class="control">
                       <select required><option>1 23</option></select>
           	    			<span></span>
@@ -133,56 +146,68 @@
           <h3 class="text-center padding-top-2">Look at select-box with pure CSS:</h3>
           <div class="text-center">
             <h4>Simple hover select with icons:</h4>
-            <span class="select input-l display-inline-block hoverable min-width-1">
-              <div class="select-content">
-                <input id="a0" name="select-box" type="radio">
-                <label for="a0"><i class="icon-home"></i>Option 0</label>
-                <input id="a1" name="select-box" type="radio">
-                <label for="a1">Option 1</label>
-                <input id="a2" name="select-box" type="radio">
-                <label for="a2">Option 2</label>
-                <input id="a3" name="select-box" type="radio">
-                <label for="a3">Option 3</label>
-                <input id="a4" name="select-box" type="radio">
-                <label for="a4">Option 4</label>
-                <input id="a5" name="select-box" type="radio">
-                <label for="a5">Option 5</label>
-                <input id="a6"  name="select-box" type="radio">
-                <label for="a6">Option 6</label>
-                <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
+            <form class="grid grid-form offset-6 offset-right-6 m-offset-0 m-offset-right-0">
+              <div class="row">
+                <div class="cell">
+                  <span class="select input-l hoverable min-width-1">
+                      <div class="select-content">
+                        <input id="a0" name="select-box" type="radio">
+                        <label for="a0"><i class="icon-home"></i>Option 0</label>
+                        <input id="a1" name="select-box" type="radio">
+                        <label for="a1">Option 1</label>
+                        <input id="a2" name="select-box" type="radio">
+                        <label for="a2">Option 2</label>
+                        <input id="a3" name="select-box" type="radio">
+                        <label for="a3">Option 3</label>
+                        <input id="a4" name="select-box" type="radio">
+                        <label for="a4">Option 4</label>
+                        <input id="a5" name="select-box" type="radio">
+                        <label for="a5">Option 5</label>
+                        <input id="a6"  name="select-box" type="radio">
+                        <label for="a6">Option 6</label>
+                        <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
+                      </div>
+                    </span>
+                </div>
               </div>
-            </span>
+            </form>
           </div>
           <div class="text-center padding-bottom-3">
             <h4>and even multi-select:</h4>
-            <span class="select  display-inline-block width-3">
-              <input type="checkbox"/>
-              <div class="select-content">
-                <input id="c0" type="checkbox">
-                <label for="c0"><i class="icon-home"></i>Option 0</label>
-                <input id="c1" type="checkbox">
-                <label for="c1">Option 1</label>
-                <input id="c2" type="checkbox">
-                <label for="c2">Option 2</label>
-                <input id="c3" type="checkbox">
-                <label for="c3">Option 3</label>
-                <input id="c4" type="checkbox">
-                <label for="c4">Option 4</label>
-                <input id="c5" type="checkbox">
-                <label for="c5">Option 5</label>
-                <input id="c6" type="checkbox">
-                <label for="c6">Option 6</label>
-                <input id="c7" type="checkbox">
-                <label for="c7">Option 7</label>
-                <input id="c8" type="checkbox">
-                <label for="c8">Option 8</label>
-                <input id="c9" type="checkbox">
-                <label for="c9">Option 9</label>
-                <input id="c10" type="checkbox">
-                <label for="c10">Option 10</label>
-                <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
+            <form class="grid grid-form offset-3 offset-right-3 m-offset-0 m-offset-right-0">
+              <div class="row">
+                <div class="cell">
+                  <span class="select input-l">
+                    <input type="checkbox"/>
+                    <div class="select-content">
+                      <input id="c0" type="checkbox">
+                      <label for="c0"><i class="icon-home"></i>Option 0</label>
+                      <input id="c1" type="checkbox">
+                      <label for="c1">Option 1</label>
+                      <input id="c2" type="checkbox">
+                      <label for="c2">Option 2</label>
+                      <input id="c3" type="checkbox">
+                      <label for="c3">Option 3</label>
+                      <input id="c4" type="checkbox">
+                      <label for="c4">Option 4</label>
+                      <input id="c5" type="checkbox">
+                      <label for="c5">Option 5</label>
+                      <input id="c6" type="checkbox">
+                      <label for="c6">Option 6</label>
+                      <input id="c7" type="checkbox">
+                      <label for="c7">Option 7</label>
+                      <input id="c8" type="checkbox">
+                      <label for="c8">Option 8</label>
+                      <input id="c9" type="checkbox">
+                      <label for="c9">Option 9</label>
+                      <input id="c10" type="checkbox">
+                      <label for="c10">Option 10</label>
+                      <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
+                    </div>
+                  </span>
+                </div>
               </div>
-            </span>
+            </form>
           </div>
     	</div>
     </section>
@@ -199,8 +224,10 @@
       <div class="content-holder">
         <div class="grid">
           <div class="cell-auto m-cell-16">
-            <p class="margin-horizontal-3">v0.1.10 - &copy 2018 Foreground - <a class="link" href="mailto:office@foreground.pl">Konrad Kubrak</a>
-              <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Please Support', '#934780', 'A77436HN');kofiwidget2.draw();</script>
+            <p class="margin-horizontal-3">v0.1.11 - &copy 2018 Foreground - <a class="link" href="mailto:office@foreground.pl">Konrad Kubrak</a>
+            </p>
+            <p>
+              <a class="button" href="https://patronite.pl/formir">Support on Patronite</a>
             </p>
 
             <p>Free & Open Source (MIT)</p>
@@ -208,7 +235,7 @@
               <a class="github-button" href="https://github.com/konrad-k/formir/fork" data-size="large" aria-label="Fork konrad-k/formir on GitHub">Fork</a>
               <a class="github-button" href="https://github.com/konrad-k/formir" data-size="large" aria-label="Star konrad-k/formir on GitHub">Star</a>
               <a class="github-button" href="https://github.com/konrad-k/formir/issues" data-size="large" aria-label="Issue konrad-k/formir on GitHub">Issue</a>
-              <a class="github-button" href="https://github.com/konrad-k/formir/archive/v0.1.10.zip" data-size="large" aria-label="Download konrad-k/formir on GitHub">Download</a>
+              <a class="github-button" href="https://github.com/konrad-k/formir/archive/v0.1.11.zip" data-size="large" aria-label="Download konrad-k/formir on GitHub">Download</a>
             </p>
           </div>
           <div class="cell-fill m-cell-16 items-end vertical-items-end">
