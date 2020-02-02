@@ -1,379 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-    Remove content if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>index</title>
-    <meta name="description" content="" />
-    <meta name="author" content="Konrad" />
-
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/application.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </head>
-
-  <body>
-    <div class="content-holder">
-        <h1>Accordion</h1>
-      <div class="accordion animated">
-        <input type="checkbox" name="accordion" id="accordion-1"/>
-        <label for="accordion-1">Accordion 1</label>
-        <div class="content">
-          <p>we will show content</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-        </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <div class="accordion hoverable">
-        <label for="accordion-3">Accordion 2</label>
-        <div class="content">
-          <p>we will show content</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-        </div>
-      </div>
-      <div class="accordion hoverable animated">
-        <label for="accordion-3">Accordion 3</label>
-        <div class="content">
-          <p>we will show content</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-        </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <div class="accordion focusable animated">
-        <a class="label" href="javascript: void(0);">Accordion 4</a>
-        <div class="content">
-          <p>we will show content</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-          <p>we will show content 1</p>
-        </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <div class="accordion label-hide">
-        <input type="radio" name="accordion-5" id="accordion-5-1"/>
-        <label for="accordion-5-1">Accordion 5.1 - label will hide</label>
-        <div class="content">we will show content 1</div>
-      </div>
-      <div class="accordion label-hide">
-        <input type="radio" name="accordion-5" id="accordion-5-2"/>
-        <label for="accordion-5-2">Accordion 5.2 - label will hide</label>
-        <div class="content">we will show content 2</div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      Accordion in grid (secound click will collapse):
-      <div class="grid column accordions" style="">
-        <input type="radio" class="accordion-collapsible" name="accordion-grid"/>
-        <div class="accordion focusable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-1-1"/>
-          <label for="accordion-1-1" >Accordion 6 <span class="arrow"></span></label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion focusable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-1-2"/>
-          <label for="accordion-1-2" >Accordion 7 <span class="arrow"></span></label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion animated focusable cell">
-          <input type="radio" name="accordion-grid" id="accordion-1-3"/>
-          <label for="accordion-1-3" >Accordion 1 <span class="arrow"></span></label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion animated focusable cell">
-          <input type="radio" name="accordion-grid" id="accordion-1-4"/>
-          <label for="accordion-1-4">Accordion 1 <span class="arrow"></span></label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      Accordion in grid:
-      <div class="grid nowrap justify-around" style="height: 300px;">
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-1"/>
-          <label for="accordion-2-1" >A 1</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-2"/>
-          <label for="accordion-2-2">A 2</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-3"/>
-          <label for="accordion-2-3">A 3</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-4"/>
-          <label for="accordion-2-4" >A 4</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-5"/>
-          <label for="accordion-2-5" >A 5</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-6"/>
-          <label for="accordion-2-6" >A 6</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-7"/>
-          <label for="accordion-2-7" >A 7</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
-        <div class="accordion horizontal label-hide hoverable animated cell">
-          <input type="radio" name="accordion-grid" id="accordion-2-8"/>
-          <label for="accordion-2-8" >A 8</label>
-          <div class="content">
-            <p>we will show content</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-            <p>we will show content 1</p>
-          </div>
-        </div>
+<div class="content-holder">
+  <h1>Accordions</h1>
+  <div class="section section-content with-table overflow-hidden">
+    <table class="table text-left borders-horizontal hoverable-tr">
+      <thead>
+        <tr>
+          <th>Class method</th>
+          <th>on what</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><code>accordion</code></td>
+            <td>item in accordions; <code>accordion</code> could live alone</td>
+            <td></td>
+          </tr>
+        <tr>
+          <td><code>accordions</code></td>
+          <td>list in accordion</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code>arrow</code></td>
+          <td>in <code>label</code> of <code>accordion</code></td>
+          <td>display arrow in header</td>
+        </tr>
+        <tr>
+          <td><code>animated</code></td>
+          <td>on <code>accordion</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code>hoverable</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will keep open accordion when hover</td>
+        </tr>
+        <tr>
+          <td><code>focusable</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will keep open accordion when focused</td>
+        </tr>
+        <tr>
+          <td><code>label-hide</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will hide header when accordion is open</td>
+        </tr>
+        <tr>
+          <td><code>grid columns</code></td>
+          <td>on <code>accordions</code></td>
+          <td>display accordion as grid</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h2>Cases of use</h2>
+  <h3 id="animated">animated <a class="anhor link small" href="/docs/accordion#animated">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="animated" id="animated-1" checked="true"/>
+    <input type="radio" name="animated" id="animated-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="animated-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="animated-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
       </div>
     </div>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-104149097-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-  </body>
-</html>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/accordion/animated.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/accordion/animated.html">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="hoverable">hoverable <a class="anhor link small" href="/docs/accordion#hoverable">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="hoverable" id="hoverable-1" checked="true"/>
+    <input type="radio" name="hoverable" id="hoverable-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="hoverable-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="hoverable-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/accordion/hoverable.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/accordion/hoverable.html">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="focusable-animated">focusable animated <a class="anhor link small" href="/docs/accordion#focusable-animated">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="focusable-animated" id="focusable-animated-1" checked="true"/>
+    <input type="radio" name="focusable-animated" id="focusable-animated-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="focusable-animated-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="focusable-animated-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/accordion/focusable-animated.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/accordion/focusable-animated.html">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="label-hide">label hide <a class="anhor link small" href="/docs/accordion#label-hide">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="label-hide" id="label-hide-1" checked="true"/>
+    <input type="radio" name="label-hide" id="label-hide-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="label-hide-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="label-hide-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/accordion/label-hide.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/accordion/label-hide.html">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="grid-column">grid column <a class="anhor link small" href="/docs/accordion#grid-column">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="grid-column" id="grid-column-1" checked="true"/>
+    <input type="radio" name="grid-column" id="grid-column-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="grid-column-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="grid-column-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/accordion/grid-column.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/accordion/grid-column.html">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/accordion#setup">#</a></h2>
+  <h3 id="classes">classes <a class="anhor link small" href="/docs/accordion#classes">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less" encode="true" include-html="../examples/accordion/classes.html">
+    </code>
+  </pre>
+  <h3 id="variables">variables <a class="anhor link small" href="/docs/accordion#variables">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less" encode="true" include-html="../examples/accordion/variables.html">
+    </code>
+  </pre>
+</div>

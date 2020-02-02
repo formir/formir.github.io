@@ -1,105 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-    Remove this if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>index</title>
-    <meta name="description" content="" />
-    <meta name="author" content="Konrad" />
-
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/application.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </head>
-
-  <body>
-    <div class="content-holder">
-      <h1>Tabs</h1>
-      <div class="tabs">
-        <input type="radio" name="tab" id="tab-1" checked="true"/>
-        <input type="radio" name="tab" id="tab-2"/>
-        <input type="radio" name="tab" id="tab-3"/>
-        <input type="radio" name="tab" id="tab-4"/>
-        <input type="radio" name="tab" id="tab-5"/>
-        <div class="tab-navs">
-          <div class="tab-labels">
-            <label for="tab-1" onClick="window.location.href='#'+this.attributes.for.value">Tab 1</label>
-            <label for="tab-2" onClick="window.location.href='#'+this.attributes.for.value">Tab 2</label>
-            <label for="tab-3" onClick="window.location.href='#'+this.attributes.for.value">Tab 3</label>
-            <label for="tab-4" onClick="window.location.href='#'+this.attributes.for.value">Tab 4</label>
-            <label for="tab-5" onClick="window.location.href='#'+this.attributes.for.value">Tab 5</label>
-          </div>
-        </div>
-        <div class="tab-pages">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-        </div>
-      </div>
-
-      <div class="tabs">
-        <input type="radio" name="tab-2" id="tab-2-1" checked="true"/>
-        <input type="radio" name="tab-2" id="tab-2-2"/>
-        <input type="radio" name="tab-2" id="tab-2-3"/>
-        <input type="radio" name="tab-2" id="tab-2-4"/>
-        <input type="radio" name="tab-2" id="tab-2-5"/>
-        <div class="tab-navs table">
-          <div class="tab-labels">
-            <label for="tab-2-1" onClick="window.location.href='#'+this.attributes.for.value">Tab 1</label>
-            <label for="tab-2-2" onClick="window.location.href='#'+this.attributes.for.value">Tab 2</label>
-            <label for="tab-2-3" onClick="window.location.href='#'+this.attributes.for.value">Tab 3</label>
-            <label for="tab-2-4" onClick="window.location.href='#'+this.attributes.for.value">Tab 4</label>
-            <label for="tab-2-5" onClick="window.location.href='#'+this.attributes.for.value">Tab 5</label>
-          </div>
-        </div>
-        <div class="tab-pages">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-        </div>
-      </div>
-
-      <div class="tabs">
-        <input type="radio" name="tab-3" id="tab-3-1" checked="true"/>
-        <input type="radio" name="tab-3" id="tab-3-2"/>
-        <input type="radio" name="tab-3" id="tab-3-3"/>
-        <input type="radio" name="tab-3" id="tab-3-4"/>
-        <input type="radio" name="tab-3" id="tab-3-5"/>
-        <div class="tab-navs flex">
-          <div class="tab-labels">
-            <label for="tab-3-1" onClick="window.location.href='#'+this.attributes.for.value">Tab 1</label>
-            <label for="tab-3-2" onClick="window.location.href='#'+this.attributes.for.value">Tab 2</label>
-            <label for="tab-3-3" onClick="window.location.href='#'+this.attributes.for.value">Tab 3</label>
-            <label for="tab-3-4" onClick="window.location.href='#'+this.attributes.for.value">Tab 4</label>
-            <label for="tab-3-5" onClick="window.location.href='#'+this.attributes.for.value">Tab 5</label>
-          </div>
-        </div>
-        <div class="tab-pages">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-        </div>
+<div class="content-holder">
+  <h1>Tabs</h1>
+  <div class="tabs">
+    <input type="radio" name="tab" id="tab-1" checked="true"/>
+    <input type="radio" name="tab" id="tab-2"/>
+    <input type="radio" name="tab" id="tab-3"/>
+    <input type="radio" name="tab" id="tab-4"/>
+    <input type="radio" name="tab" id="tab-5"/>
+    <div class="tab-navs">
+      <div class="tab-labels menu horizontal">
+        <label class="item" for="tab-1" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
+        <label class="item" for="tab-2" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
+        <label class="item" for="tab-3" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
+        <label class="item" for="tab-4" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
+        <label class="item" for="tab-5" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
       </div>
     </div>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <div class="tab-pages">
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quia temporibus officiis minima accusamus id culpa perspiciatis saepe aliquid quae, ducimus illum alias repudiandae, eveniet obcaecati omnis quidem enim soluta.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt enim ut! Reiciendis repellat, ipsam corporis non similique consequatur minima! Nostrum sint quas vero molestiae sapiente numquam ipsam accusamus? Laudantium?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio voluptas ipsa molestias, error praesentium atque facilis expedita dignissimos obcaecati similique ex quo id minus itaque in ut, a magni quam.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugiat reiciendis vero dolores at quo qui, nesciunt autem dolorum cum alias similique quidem placeat et est illum. Enim, totam autem!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id alias, rerum harum pariatur labore nulla incidunt laborum? Sed iure ratione quis veniam natus alias. Suscipit similique adipisci alias inventore est.
+      </div>
+    </div>
+  </div>
 
-  ga('create', 'UA-104149097-1', 'auto');
-  ga('send', 'pageview');
+  <div class="tabs">
+    <input type="radio" name="tab-2" id="tab-2-1" checked="true"/>
+    <input type="radio" name="tab-2" id="tab-2-2"/>
+    <input type="radio" name="tab-2" id="tab-2-3"/>
+    <input type="radio" name="tab-2" id="tab-2-4"/>
+    <input type="radio" name="tab-2" id="tab-2-5"/>
+    <div class="tab-navs">
+      <div class="tab-labels menu horizontal auto-width">
+        <label for="tab-2-1" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
+        <label for="tab-2-2" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
+        <label for="tab-2-3" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
+        <label for="tab-2-4" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
+        <label for="tab-2-5" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
+      </div>
+    </div>
+    <div class="tab-pages">
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam unde, ducimus repellat inventore nisi veritatis non praesentium recusandae iste error, consectetur doloremque nesciunt quibusdam magnam vitae! Nostrum voluptate nobis reprehenderit?
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione quasi est iste saepe. Nisi quaerat exercitationem mollitia, ratione voluptatibus, quia et iste temporibus reiciendis quae, eius nam consequuntur quod.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium natus tenetur suscipit ipsa. Et cumque quam iste minus aliquid dolores. Iure voluptates praesentium magnam excepturi nesciunt nostrum error, aliquam in?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum ullam mollitia! Illo placeat consequuntur unde beatae magni perferendis omnis facere excepturi rem odit exercitationem, nesciunt numquam perspiciatis repellendus optio!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt sed perferendis. Quae molestias, dicta illo nostrum sit rerum, repudiandae vitae quis animi odio iste quasi voluptatibus? Laboriosam, nulla dolor?
+      </div>
+    </div>
+  </div>
 
-</script>
-  </body>
-</html>
+  <div class="tabs grid">
+    <input type="radio" name="tab-3" id="tab-3-1" checked="true"/>
+    <input type="radio" name="tab-3" id="tab-3-2"/>
+    <input type="radio" name="tab-3" id="tab-3-3"/>
+    <input type="radio" name="tab-3" id="tab-3-4"/>
+    <input type="radio" name="tab-3" id="tab-3-5"/>
+    <div class="tab-navs cell-4">
+      <div class="tab-labels menu">
+        <label for="tab-3-1" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
+        <label for="tab-3-2" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
+        <label for="tab-3-3" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
+        <label for="tab-3-4" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
+        <label for="tab-3-5" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
+      </div>
+    </div>
+    <div class="tab-pages cell-10">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim labore iste sint, culpa eius nisi corporis sit, iure est, atque omnis. Quidem similique officia veritatis delectus, atque rerum reiciendis quia?
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequuntur? Odio eos nulla nemo nobis alias sed, corrupti iure. Corrupti quaerat itaque rerum. Explicabo porro cupiditate magni, quas eaque soluta.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nam accusantium vero expedita ipsam placeat, exercitationem voluptatem nisi cupiditate sapiente, esse aut? Numquam aspernatur officiis debitis corporis harum recusandae illo?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem sapiente rem ea, voluptatem placeat ut inventore tempora officiis vel sit distinctio id odit consequatur iusto natus laboriosam neque dolor dolores!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellat rerum odio neque iusto velit debitis officiis commodi, quibusdam ipsam, optio culpa? Fuga, facilis similique expedita illo aperiam voluptatem optio.
+      </div>
+    </div>
+  </div>
+</div>

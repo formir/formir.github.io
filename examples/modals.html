@@ -1,179 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<div class="content-holder">
+  <h1>Modals</h1>
+  <div class="section section-content with-padding">
+    <p>To toggle modals use <code>label for=""</code> tag that points assign <code>input type="radio"</code> above modal tag.</p>
+    <p>For closing modal you need once more <code>input</code> tag that will tell when modal is close, use the same name for all input elements in the same group of modals. This solution gives you the opportunity to switch between modals in one group, the same as work gropus of radio inputs with the same name.</p>
+  </div>
+  
+  <h3 id="normal">normal <a class="anhor link small" href="/docs/modals#normal">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="normal" id="normal-1" checked="true"/>
+		<input type="radio" name="normal" id="normal-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="normal-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="normal-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/modals/normal.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/modals/normal.html">
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
 
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-    Remove this if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <h3 id="transparent">transparent <a class="anhor link small" href="/docs/modals#transparent">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="transparent" id="transparent-1" checked="true"/>
+		<input type="radio" name="transparent" id="transparent-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="transparent-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="transparent-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/modals/transparent.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/modals/transparent.html">
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
 
-    <title>index</title>
-    <meta name="description" content="" />
-    <meta name="author" content="Konrad" />
+  <h3 id="group">group <a class="anhor link small" href="/docs/modals#group">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="group" id="group-1" checked="true"/>
+		<input type="radio" name="group" id="group-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="group-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="group-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/modals/group.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/modals/group.html">
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/application.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </head>
-
-  <body>
-    <input type="radio" name="modal" id="modal-close" class="modal-close" value="off" autocomplete="off" checked="true"/>
-    <input type="radio" name="modal-2" id="modal-close-2" class="modal-close" value="off" autocomplete="off"  checked="true"/> <!-- User the same name attribute to prevent open many modals from group name -->
-
-    <div class="body">
-      <div class="content-holder">
-        <h1>Modals</h1>
-        <label class="button" for="modal">Normal modal</label>
-        <label class="button" for="modal-2">Transparent modal</label>
-        <p>
-          <label class="button button-info" for="modal-2-1">Modal 2-1</label>
-        </p>
-        <p>
-          <label class="button button-primary has-tooltip" for="modal-3" data-tooltip="For input checkbox modal">Modal 3</label>
-        </p>
-        <input type="radio" name="modal" id="modal" class="modal-open" value="on" autocomplete="off"/>
-        <div class="modal centered animated">
-          <div class="modal-wrapper">
-            <div class="modal-window window">
-              <div class="window-header">
-                Modal header
-                <label class="modal-close" for="modal-close"><i class="icon-cancel"></i></label>
-              </div>
-              <div class="window-content">
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              </div>
-              <div
-              <div class="window-footer"></div>
-            </div>
-          </div>
-          <label class="modal-backdrop" for="modal-close"></label>
-        </div>
-
-        <input type="radio" name="modal-2" id="modal-2" class="modal-open" value="on" autocomplete="off"/> <!-- User the same name attribute to prevent open many modals from group name -->
-        <div class="modal">
-          <div class="modal-wrapper">
-            <div class="modal-window">
-              <div class="modal-header">
-                Modal header 2
-                <label class="modal-close" for="modal-close-2"><i class="icon-cancel"></i></label>
-              </div>
-              <div class="modal-content">
-                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-              </div>
-              <div class="modal-footer">
-              </div>
-            </div>
-          </div>
-          <label class="modal-backdrop" for="modal-close-2"></label>
-        </div>
-
-        <input type="radio" name="modal-2" id="modal-2-1" class="modal-open" value="on" autocomplete="off"/>
-        <div class="modal centered animated">
-          <div class="modal-wrapper">
-            <div class="modal-window">
-              <div class="modal-header">
-                Modal one
-                <label class="modal-close" for="modal-close-2"><i class="icon-cancel"></i></label>
-              </div>
-              <div class="modal-content">
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<label class="button button-success" for="modal-2-2"> Open modal 2-2</label>
-              </div>
-            </div>
-          </div>
-          <label class="modal-backdrop" for="modal-close-2"></label>
-        </div>
-
-        <input type="radio" name="modal-2" id="modal-2-2" class="modal-open" value="on" autocomplete="off"/>
-        <div class="modal centered animated">
-          <div class="modal-wrapper">
-            <div class="modal-window">
-              <div class="modal-header">
-                Modal two
-                <label class="modal-close" for="modal-close-2"><i class="icon-cancel"></i></label>
-              </div>
-              <div class="modal-content">
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<label class="button button-danger" for="modal-close-2">Close</label>
-              </div>
-            </div>
-          </div>
-          <label class="modal-backdrop" for="modal-close-2"></label>
-        </div>
-
-
-        <input type="checkbox" name="modal-3" id="modal-3" class="modal-open" value="on" autocomplete="off"/>
-        <div class="modal centered animated">
-          <div class="modal-wrapper">
-            <div class="modal-window">
-              <div class="modal-header">
-                Modal three
-                <label class="modal-close" for="modal-3"><i class="icon-cancel"></i></label>
-              </div>
-              <div class="modal-content">
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<p>aaaaa</p>
-              	<label class="button button-danger" for="modal-3">Close</label>
-              </div>
-            </div>
-          </div>
-          <label class="modal-backdrop" for="modal-3"></label>
-        </div>
-      </div>
-    </div>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-104149097-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-  </body>
-</html>
+  <h3 id="on_checkbox">on checkbox input <a class="anhor link small" href="/docs/modals#on_checkbox">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="on_checkbox" id="on_checkbox-1" checked="true"/>
+		<input type="radio" name="on_checkbox" id="on_checkbox-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-on_checkbox">
+				<label class="button button-s" for="on_checkbox-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="on_checkbox-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/modals/on_checkbox.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/modals/on_checkbox.html">
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/modals#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="/docs/modals#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/modals/classes.html">
+			</code>
+		</pre>
+	</div>
+	<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="/docs/modals#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/modals/variables.html">
+			</code>
+		</pre>
+	</div>
+</div>

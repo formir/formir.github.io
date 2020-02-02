@@ -1,0 +1,218 @@
+@button-border-style: solid;
+@button-text-align: center;
+@button-cursor: pointer;
+
+@button-lighten: 0%;
+@button-lighten-2: -7%;
+
+@button-hover-lighten: 10%;
+@button-hover-lighten-2: 20%;
+
+@button-focus-lighten: 8%;
+@button-focus-lighten-2: 18%;
+
+@button-active-lighten: 8%;
+@button-active-lighten-2: 18%;
+
+@button-default-text: @color-white-contrast;
+@button-default-background: @color-white;
+
+@button-default-font-size: 1rem;
+@button-default-line-height: 1.35rem;
+@button-default-padding-horizontal: 0.7rem;
+@button-default-padding-vertical: 0.35rem;
+@button-default-border-radius: 3px;
+@button-default-border: 1px solid currentColor;
+@button-default-outline: none;
+@button-default-shadow: none;
+
+// Use variables name as: button-<size-name>-... on @sizes array
+@button-xs-font-size: @button-default-font-size * @size-xs;
+@button-xs-line-height: @button-default-line-height * @size-xs;
+@button-xs-padding: @button-default-padding-vertical * @size-xs @button-default-padding-horizontal * @size-xs;
+@button-xs-border-radius: @button-default-border-radius - 1px;
+@button-xs-border-width: none;
+@button-xs-outline-width: none;
+@button-xs-shadow: none;
+
+@button-s-font-size: @button-default-font-size * @size-s;
+@button-s-line-height: @button-default-line-height * @size-s;
+@button-s-padding: @button-default-padding-vertical * @size-s @button-default-padding-horizontal * @size-s;
+@button-s-border-radius: @button-default-border-radius - 1px;
+@button-s-border-width: none;
+@button-s-outline-width: none;
+@button-s-shadow: none;
+
+@button-m-font-size: @button-default-font-size * @size-m;
+@button-m-line-height: @button-default-line-height * @size-m;
+@button-m-padding: @button-default-padding-vertical * @size-m @button-default-padding-horizontal * @size-m;
+@button-m-border-radius: @button-default-border-radius + 2px;
+@button-m-border-width: none;
+@button-m-outline-width: none;
+@button-m-shadow: none;
+
+@button-l-font-size: @button-default-font-size * @size-l;
+@button-l-line-height: @button-default-line-height * @size-l;
+@button-l-padding: @button-default-padding-vertical* @size-l @button-default-padding-horizontal * @size-l;
+@button-l-border-radius: @button-default-border-radius + 1px;
+@button-l-border-width: none;
+@button-l-outline-width: none;
+@button-l-shadow: none;
+
+@button-xl-font-size: @button-default-font-size * @size-xl;
+@button-xl-line-height: @button-default-line-height * @size-xl;
+@button-xl-padding: @button-default-padding-vertical * @size-xl @button-default-padding-horizontal * @size-xl;
+@button-xl-border-radius: @button-default-border-radius + 2px;
+@button-xl-border-width: none;
+@button-xl-outline-width: none;
+@button-xl-shadow: none;
+
+@button-xxl-font-size: @button-default-font-size * @size-xxl;
+@button-xxl-line-height: @button-default-line-height * @size-xxl;
+@button-xxl-padding: @button-default-padding-vertical * @size-xxl @button-default-padding-horizontal * @size-xxl;
+@button-xxl-border-radius: @button-default-border-radius + 3px;
+@button-xxl-border-width: none;
+@button-xxl-outline-width: none;
+@button-xxl-shadow: none;
+
+@button-hover-border: @button-default-border;
+@button-hover-outline: @button-default-outline;
+@button-hover-shadow: @button-default-shadow;
+
+@button-active-border: @button-default-border;
+@button-active-outline: @button-default-outline;
+@button-active-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1) inset;
+
+@button-focus-border: @button-default-border;
+@button-focus-outline: @button-default-outline;
+@button-focus-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+
+@button-inverse-border: @button-default-border;
+@button-inverse-outline: @button-default-outline;
+@button-inverse-shadow: @button-default-shadow;
+
+@button-inverse-hover-border: @button-inverse-border;
+@button-inverse-hover-outline: @button-inverse-outline;
+@button-inverse-hover-shadow: @button-inverse-shadow;
+
+@button-inverse-active-border: @button-inverse-border;
+@button-inverse-active-outline: @button-inverse-outline;
+@button-inverse-active-shadow: @button-active-shadow;
+
+@button-inverse-focus-border: @button-inverse-border;
+@button-inverse-focus-outline: @button-inverse-outline;
+@button-inverse-focus-shadow: @button-inverse-shadow;
+
+// Buttons colors
+// Use variables name as: button-color-<color-name>... or button-color-...-<color-name>.. on @colors array
+@button-color-body: lighten(@color-body, @button-lighten);
+@button-color-primary: lighten(@color-primary, @button-lighten);
+@button-color-alternative: lighten(@color-alternative, @button-lighten);
+@button-color-link: lighten(@color-link, @button-lighten);
+@button-color-mute: lighten(@color-mute, @button-lighten);
+@button-color-cancel: lighten(@color-cancel, @button-lighten);
+@button-color-success: lighten(@color-success, @button-lighten);
+@button-color-info: lighten(@color-info, @button-lighten);
+@button-color-warning: lighten(@color-warning, @button-lighten);
+@button-color-danger: lighten(@color-danger, @button-lighten);
+@button-color-color-1: lighten(@color-color-1, @button-lighten);
+@button-color-color-2: lighten(@color-color-2, @button-lighten);
+@button-color-color-3: lighten(@color-color-3, @button-lighten);
+
+@button-color-2-body: lighten(@color-body, @button-lighten-2);
+@button-color-2-primary: lighten(@color-primary, @button-lighten-2);
+@button-color-2-alternative: lighten(@color-alternative, @button-lighten-2);
+@button-color-2-link: lighten(@color-link, @button-lighten-2);
+@button-color-2-mute: lighten(@color-mute, @button-lighten-2);
+@button-color-2-cancel: lighten(@color-cancel, @button-lighten-2);
+@button-color-2-success: lighten(@color-success, @button-lighten-2);
+@button-color-2-info: lighten(@color-info, @button-lighten-2);
+@button-color-2-warning: lighten(@color-warning, @button-lighten-2);
+@button-color-2-danger: lighten(@color-danger, @button-lighten-2);
+@button-color-2-color-1: lighten(@color-color-1, @button-lighten-2);
+@button-color-2-color-2: lighten(@color-color-2, @button-lighten-2);
+@button-color-2-color-3: lighten(@color-color-3, @button-lighten-2);
+
+@button-color-hover-body: lighten(@button-color-body, @button-hover-lighten);
+@button-color-hover-primary: lighten(@button-color-primary, @button-hover-lighten);
+@button-color-hover-alternative: lighten(@button-color-alternative, @button-hover-lighten);
+@button-color-hover-link: lighten(@button-color-link, @button-hover-lighten);
+@button-color-hover-mute: lighten(@button-color-mute, @button-hover-lighten);
+@button-color-hover-cancel: lighten(@button-color-cancel, @button-hover-lighten);
+@button-color-hover-success: lighten(@button-color-success, @button-hover-lighten);
+@button-color-hover-info: lighten(@button-color-info, @button-hover-lighten);
+@button-color-hover-warning: lighten(@button-color-warning, @button-hover-lighten);
+@button-color-hover-danger: lighten(@button-color-danger, @button-hover-lighten);
+@button-color-hover-color-1: lighten(@button-color-color-1, @button-hover-lighten);
+@button-color-hover-color-2: lighten(@button-color-color-2, @button-hover-lighten);
+@button-color-hover-color-3: lighten(@button-color-color-3, @button-hover-lighten);
+
+@button-color-2-hover-body: lighten(@button-color-body, @button-hover-lighten-2);
+@button-color-2-hover-primary: lighten(@button-color-primary, @button-hover-lighten-2);
+@button-color-2-hover-alternative: lighten(@button-color-alternative, @button-hover-lighten-2);
+@button-color-2-hover-link: lighten(@button-color-link, @button-hover-lighten-2);
+@button-color-2-hover-mute: lighten(@button-color-mute, @button-hover-lighten-2);
+@button-color-2-hover-cancel: lighten(@button-color-cancel, @button-hover-lighten-2);
+@button-color-2-hover-success: lighten(@button-color-success, @button-hover-lighten-2);
+@button-color-2-hover-info: lighten(@button-color-info, @button-hover-lighten-2);
+@button-color-2-hover-warning: lighten(@button-color-warning, @button-hover-lighten-2);
+@button-color-2-hover-danger: lighten(@button-color-danger, @button-hover-lighten-2);
+@button-color-2-hover-color-1: lighten(@button-color-color-1, @button-hover-lighten-2);
+@button-color-2-hover-color-2: lighten(@button-color-2-color-2, @button-hover-lighten-2);
+@button-color-2-hover-color-3: lighten(@button-color-color-3, @button-hover-lighten-2);
+
+@button-color-focus-body: lighten(@button-color-body, @button-focus-lighten);
+@button-color-focus-primary: lighten(@button-color-primary, @button-focus-lighten);
+@button-color-focus-alternative: lighten(@button-color-alternative, @button-focus-lighten);
+@button-color-focus-link: lighten(@button-color-link, @button-focus-lighten);
+@button-color-focus-mute: lighten(@button-color-mute, @button-focus-lighten);
+@button-color-focus-cancel: lighten(@button-color-cancel, @button-focus-lighten);
+@button-color-focus-success: lighten(@button-color-success, @button-focus-lighten);
+@button-color-focus-info: lighten(@button-color-info, @button-focus-lighten);
+@button-color-focus-warning: lighten(@button-color-warning, @button-focus-lighten);
+@button-color-focus-danger: lighten(@button-color-danger, @button-focus-lighten);
+@button-color-focus-color-1: lighten(@button-color-color-1, @button-focus-lighten);
+@button-color-focus-color-2: lighten(@button-color-color-2, @button-focus-lighten);
+@button-color-focus-color-3: lighten(@button-color-color-3, @button-focus-lighten);
+
+@button-color-2-focus-body: lighten(@button-color-body, @button-focus-lighten-2);
+@button-color-2-focus-primary: lighten(@button-color-primary, @button-focus-lighten-2);
+@button-color-2-focus-alternative: lighten(@button-color-alternative, @button-focus-lighten-2);
+@button-color-2-focus-link: lighten(@button-color-link, @button-focus-lighten-2);
+@button-color-2-focus-mute: lighten(@button-color-mute, @button-focus-lighten-2);
+@button-color-2-focus-cancel: lighten(@button-color-cancel, @button-focus-lighten-2);
+@button-color-2-focus-success: lighten(@button-color-success, @button-focus-lighten-2);
+@button-color-2-focus-info: lighten(@button-color-info, @button-focus-lighten-2);
+@button-color-2-focus-warning: lighten(@button-color-warning, @button-focus-lighten-2);
+@button-color-2-focus-danger: lighten(@button-color-danger, @button-focus-lighten-2);
+@button-color-2-focus-color-1: lighten(@button-color-color-1, @button-focus-lighten-2);
+@button-color-2-focus-color-2: lighten(@button-color-color-2, @button-focus-lighten-2);
+@button-color-2-focus-color-3: lighten(@button-color-color-3, @button-focus-lighten-2);
+
+@button-color-active-body: lighten(@button-color-body, @button-active-lighten);
+@button-color-active-primary: lighten(@button-color-primary, @button-active-lighten);
+@button-color-active-alternative: lighten(@button-color-alternative, @button-active-lighten);
+@button-color-active-link: lighten(@button-color-link, @button-active-lighten);
+@button-color-active-mute: lighten(@button-color-mute, @button-active-lighten);
+@button-color-active-cancel: lighten(@button-color-cancel, @button-active-lighten);
+@button-color-active-success: lighten(@button-color-success, @button-active-lighten);
+@button-color-active-info: lighten(@button-color-info, @button-active-lighten);
+@button-color-active-warning: lighten(@button-color-warning, @button-active-lighten);
+@button-color-active-danger: lighten(@button-color-danger, @button-active-lighten);
+@button-color-active-color-1: lighten(@button-color-color-1, @button-active-lighten);
+@button-color-active-color-2: lighten(@button-color-color-2, @button-active-lighten);
+@button-color-active-color-3: lighten(@button-color-color-3, @button-active-lighten);
+
+@button-color-2-active-body: lighten(@button-color-body, @button-active-lighten-2);
+@button-color-2-active-primary: lighten(@button-color-primary, @button-active-lighten-2);
+@button-color-2-active-alternative: lighten(@button-color-alternative, @button-active-lighten-2);
+@button-color-2-active-link: lighten(@button-color-link, @button-active-lighten-2);
+@button-color-2-active-mute: lighten(@button-color-mute, @button-active-lighten-2);
+@button-color-2-active-cancel: lighten(@button-color-cancel, @button-active-lighten-2);
+@button-color-2-active-success: lighten(@button-color-success, @button-active-lighten-2);
+@button-color-2-active-info: lighten(@button-color-info, @button-active-lighten-2);
+@button-color-2-active-warning: lighten(@button-color-warning, @button-active-lighten-2);
+@button-color-2-active-danger: lighten(@button-color-danger, @button-active-lighten-2);
+@button-color-2-active-color-1: lighten(@button-color-color-1, @button-active-lighten-2);
+@button-color-2-active-color-2: lighten(@button-color-color-2, @button-active-lighten-2);
+@button-color-2-active-color-3: lighten(@button-color-color-3, @button-active-lighten-2);

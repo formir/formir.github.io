@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Formir - open source, pure css / HTML Framework</title>
+    <meta name="description" content="Formir is pure, complete and modular CSS & HTML Framework for RWD developing." />
+    <meta name="author" content="Konrad Kubrak" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="theme-color" content="#281E2B">
+    <meta name="msapplication-navbutton-color" content="#281E2B">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#281E2B">
+    <link rel="stylesheet" type="text/css" href="../examples/css/application.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="../js/include.js"></script>
+  </head>
+  <body class="background-alternative">
+    <input type="checkbox" id="aside-left" name="aside" class="side-collapse"/>
+    <aside tabindex="-1" class="side left overflow">
+      <label for="aside-left" class="side-close"><i class="icon-cancel collapsed-hide"></i><i class="icon-menu expanded-hide"></i></label>
+      <ul class="menu" active="accordion" include-html="../docs/_menu.html"></ul>
+    </aside>
+    <label for="aside-left" class="side-backdrop"></label>
+    <label for="aside-left" class="side-open expanded-hide background-white text-primary"><i class="icon-menu"></i></label>
+    <header class="header fixed body-content" include-html="../docs/_header.html"></header>
+    <div id="body" class="body-content" include-html="../examples/accordion.html"></div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104149097-1', 'auto');
+      ga('send', 'pageview');
+      includeHTML();
+    </script>
+  </body>
+</html>

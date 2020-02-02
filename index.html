@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Formir - Pure CSS/HTML Framework</title>
+    <title>Formir - open source, pure css / HTML Framework</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Formir is pure, complete and modular CSS & HTML Framework for RWD developing." />
     <meta name="author" content="Konrad Kubrak" />
@@ -25,7 +25,6 @@
             <i class="icon-cancel toggle-show"></i>
           </label>
           <ul class="items menu-mobile mobile-toggle-show">
-            <!-- <a href="#">Getting started</a> -->
             <li class="item has-popup">
               <input type="checkbox"/>
               <a class="anchor">Paid Extentions</a>
@@ -35,16 +34,18 @@
                 </li>
               </ul>
             </li>
-            <li class="item"><a class="anchor" href="docs.html">Documentations</a></li>
-            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir" tagret="_blank">Download</a></li>
+            <li class="item active"><a class="anchor" href="docs/index.html">Documentations</a></li>
+            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir" target="_blank"><i class="icon-github-circled"></i></a></li>
+            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir/archive/master.zip" target="_blank">Download</a></li>
+            <li class="item"><a class="anchor" href="https://github.com/konrad-k/formir/issues/new" target="_blank">Report issue</a></li>
             <li class="item">
-              <a class="anchor button inverse transparent" href="https://patronite.pl/formir" tagret="_blank">Support on Patronite</a>
+              <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support author</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <section class="section welcome full-height primary-dark center-vertically">
+    <section class="welcome full-height primary-dark center-vertically">
       <div class="content-holder text-center width-6">
         <div class="image center padding-horizontal-3">
           <div class="margin-top-2 has-tooltip">
@@ -55,32 +56,32 @@
           </div>
            <div class="margin-top-4">
              <div class="tooltip bottom-center horizostal-center">
-               <h3>First pure CSS & HTML5 Framework<br/> for Responsive web design developing.<br/> Written in <a href="http://lesscss.org/">{less}</a>.</h3>
+               <h3>Pure CSS & HTML5 Framework<br/> <small>for</small> <br/> responsive web design developing</h3>
              </div>
            </div>
         </div>
     	</div>
     </section>
-    <section class="section full-height primary center-vertically">
-      <div class="content-holder width-6 text-center">
+    <section class="full-height primary center-vertically">
+      <div class="content-holder width-8 text-center">
         <h2>Why formir</h2>
-        <ul class="text-left width-3 max-width-100 horizostal-center margin-top-5">
-          <li>idea is to: minimize Java Script code in application,</li>
-          <li>no more !important - we give you free hand with style,</li>
-          <li>use less style as possible,</li>
-          <li>give you able to set every class your own name,</li>
-          <li>propose you to use structure of files gained of our experience,</li>
-          <li>do it all with the help of modules and mixins.</li>
+        <ul class="items-center width-8 max-width-100 margin-top-5 items">
+          <li class="item button button-l">minimize Java Script code in application,</li>
+          <li class="item button button-l">no more !important - we give you free hand with style,</li>
+          <li class="item button button-l">use less style and html as possible,</li>
+          <li class="item button button-l">give you able to set every class your own name,</li>
+          <li class="item button button-l">propose you to use structure of files gained of our experience,</li>
+          <li class="item button button-l">do it all with the help of modules and mixins.</li>
         </ul>
         <a class="logo logo-m margin-top-5 has-tooltip"><img src="node_modules/formir/img/logo/formir-150.png"/><span class="tooltip bottom-center">Hello there, this is formir</span></a>
     	</div>
     </section>
-    <section class="section primary-dark">
+    <section class="primary-dark">
       <div class="content-holder width-6 text-center padding-horizontal-4">
         <h2>Installation</h2>
         <code>npm install formir</code>
         <p>Include <code>formir.less</code> file to your application stylesheets.</p>
-        <a class="button transparent button-color-2 inverse" href="docs.html">Read more installation guide</a>
+        <a class="button transparent button-color-2 inverse" href="docs/index.html">Read more installation guide</a>
         <h2>Get formir</h2>
         <p>
           <a href="https://www.npmjs.com/package/formir" tagret="_blank"><img src="https://camo.githubusercontent.com/4242607f6a201b4ae8685bd85b570610194a7303/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f666f726d69722e737667" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/formir.svg" style="max-width:100%;"></a>
@@ -88,10 +89,10 @@
         </p>
       </div>
     </section>
-    <section class="section full-height center-vertically">
+    <section class="full-height center-vertically">
       <div class="content-holder width-6 text-center">
         <div class="grids">
-          <h2 id="grid-system"><i class="icon-th"></i> Grid system</h2>
+          <h2 id="grid-system margin-bottom-5"><i class="icon-th"></i> Grid system</h2>
           <div class="grid gutter-1 space-1" id="grid-1" data-class="grid">
             <div class="cell-1 mp-cell-16 t-cell-2 m-cell-8">&nbsp;</div>
             <div class="cell-15 mp-cell-16 t-cell-4 m-cell-8">&nbsp;</div>
@@ -110,9 +111,9 @@
         </div>
     	</div>
     </section>
-    <section class="section primary full-height center-vertically">
+    <section class="primary full-height center-vertically">
       <div class="content-holder width-6">
-          <h2 class="text-center"><i class="icon-check"></i> Forms & select-box</h2>
+          <h2 class="text-center margin-bottom-5"><i class="icon-check"></i> Forms & select-box</h2>
           <div class="center-vertically horizontally">
             <div class="width-3">
               <form class="grid grid-form gutter-1 space-3">
@@ -216,7 +217,10 @@
         <h2>It's just a drop in the sea..</h2>
         <h4>Check out our other components and helper, like: modals, tooltip, buttons etc.</h4>
         <p>
-          <a class="button button-l button-primary" href="docs.html">Examples of use</a>
+          <a class="button button-l button-primary" href="docs/index.html">Examples of use</a>
+        </p>
+        <p class="margin-top-5">
+          <a class="button button-alternative" target="_blank" href="https://github.com/konrad-k/formir">Like formir? give us a star on github!</a>
         </p>
       </div>
     </section>
@@ -224,19 +228,14 @@
       <div class="content-holder">
         <div class="grid">
           <div class="cell-auto m-cell-16">
-            <p class="margin-horizontal-3">v0.1.11 - &copy 2018 Foreground - <a class="link" href="mailto:office@foreground.pl">Konrad Kubrak</a>
-            </p>
-            <p>
-              <a class="button" href="https://patronite.pl/formir">Support on Patronite</a>
-            </p>
-
-            <p>Free & Open Source (MIT)</p>
-            <p class="items">
+            <p class="margin-horizontal-3">
+              <a class="button button-color-2 inverse transparent" style="vertical-align: top;" href="https://paypal.me/formir">Support author</a>
               <a class="github-button" href="https://github.com/konrad-k/formir/fork" data-size="large" aria-label="Fork konrad-k/formir on GitHub">Fork</a>
               <a class="github-button" href="https://github.com/konrad-k/formir" data-size="large" aria-label="Star konrad-k/formir on GitHub">Star</a>
               <a class="github-button" href="https://github.com/konrad-k/formir/issues" data-size="large" aria-label="Issue konrad-k/formir on GitHub">Issue</a>
-              <a class="github-button" href="https://github.com/konrad-k/formir/archive/v0.1.11.zip" data-size="large" aria-label="Download konrad-k/formir on GitHub">Download</a>
+              <a class="github-button" href="https://github.com/konrad-k/formir/archive/v0.2.0.zip" data-size="large" aria-label="Download konrad-k/formir on GitHub">Download</a>
             </p>
+            <p>Free & Open Source (MIT) &nbsp;&nbsp; - &nbsp;&nbsp; v0.2.0 &nbsp;&nbsp; - &nbsp;&nbsp; &copy 2020 Konrad Kubrak &nbsp;&nbsp; - &nbsp;&nbsp; <a class="link" href="mailto:support@formir.io">support@formir.io</a></p>
           </div>
           <div class="cell-fill m-cell-16 items-end vertical-items-end">
             <a href="https://www.browserstack.com" target="_blank" class="has-tooltip no-wrap background-color-2 padding-1 text-primary margin-bottom-2" style="border-radius: 10px;">
