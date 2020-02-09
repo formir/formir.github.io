@@ -1,20 +1,42 @@
 <div class="content-holder">
-	<h1>Charts</h1>
-  <div style="background: #fff;">
-    <div class="chart value ring">
-      <div></div>
-    </div>
+  <h1>Charts</h1>
+  <h2>Case of use</h2>
+  <h3 id="base">pie chart <a class="anhor link small" href="/docs/chart#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/chart/base.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/chart/base.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
-  <div  style="background: #fff;">
-    <input type="number" class="chart-control" autocomplete="off" onChange="this.setAttribute('value', this.value)">
-    <div class="chart value ring">
-      <div></div>
-    </div>
-  </div>
-  <div  style="background: #fff;">
-    <input class="chart-control" type="range" autocomplete="off" min="0" max="100" step="1" onChange="this.setAttribute('value', this.value)" />
-    <div class="chart value ring value-colored">
-      <div></div>
-    </div>
-  </div>
+
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/chart#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="/docs/chart#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/chart/classes.html">
+			</code>
+		</pre>
+	</div>
+	<h3 id="core">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="/docs/chart#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/chart/variables.html">
+			</code>
+		</pre>
+	</div>
 </div>
