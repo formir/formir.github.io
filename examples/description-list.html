@@ -1,21 +1,48 @@
 <div class="content-holder">
-	<h1>Description list</h1>
-  <dl class="horizontally tp-under-collapse title-colon">
-    <dt>Title 1</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 2</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 3</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 4</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 5</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 6</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 7</dt>
-    <dd>Description lorem ipsum</dd>
-    <dt>Title 8</dt>
-    <dd>Description lorem ipsum</dd>
-  </dl>
+  <h1>Description list</h1>
+  <h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="/docs/description-list#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/description-list/base.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/description-list/base.html">
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/description-list#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="/docs/description-list#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/description-list/classes.html">
+			</code>
+		</pre>
+  </div>
+  <h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="/docs/description-list#core">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/description-list/core.html">
+			</code>
+		</pre>
+	</div>
+	<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="/docs/description-list#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/description-list/variables.html">
+			</code>
+		</pre>
+	</div>
 </div>

@@ -1,113 +1,129 @@
-<style>
-  .has-tooltip {
-    border-bottom: 1px dotted;
-  }
-</style>
 <div class="content-holder">
-    <h1>Tooltip</h1>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip" data-tooltip="Lorem ipsum dolor sit amet">top-left</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip center" data-tooltip="Lorem ipsum dolor sit amet">top-center</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span class="has-tooltip right" data-tooltip="Lorem ipsum dolor sit amet">top-right</span>.
-  </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip bottom" data-tooltip="Lorem ipsum dolor sit amet">bottom-left</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip bottom-center" data-tooltip="Lorem ipsum dolor sit amet">bottom-center</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span class="has-tooltip bottom-right" data-tooltip="Lorem ipsum dolor sit amet">bottom-right</span>.
-  </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip right-middle" data-tooltip="Lorem ipsum dolor sit amet">right-middle</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip left-middle" data-tooltip="Lorem ipsum dolor sit amet">left-middle</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip bottom-right" data-tooltip="Lorem ipsum dolor sit amet">bottom-right</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip center" data-tooltip="Lorem ipsum dolor sit amet">top-center</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip right-top" data-tooltip="Lorem ipsum dolor sit amet">right-top</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip right-bottom" data-tooltip="Lorem ipsum dolor sit amet">right-bottom</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur <span tabindex="-1" class="has-tooltip left-top" data-tooltip="Lorem ipsum dolor sit amet">left-top</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="has-tooltip left-bottom" data-tooltip="Lorem ipsum dolor sit amet">left-bottom</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <h1>Tooltip</h1>
+  <h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="/docs/tooltip#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/tooltip/base.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/tooltip/base.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
 
-  <hr/>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-tooltip">
-      top left
-      <span class="tooltip left hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur</span>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-tooltip" tabindex="-1" >
-      top center
-      <span class="tooltip center">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-tooltip" tabindex="-1" >
-      top right
-      <span class="tooltip right hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
+  <h3 id="position">position, focusable <a class="anhor link small" href="/docs/tooltip#position">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="position" id="position-1" checked="true"/>
+		<input type="radio" name="position" id="position-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div include-html="../examples/tooltip/position.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/tooltip/position.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-tooltip">
-      bottom left
-      <span class="tooltip bottom hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur</span>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-tooltip" tabindex="-1" >
-      bottom center
-      <span class="tooltip bottom-center">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-tooltip" tabindex="-1" >
-      bottom right
-      <span class="tooltip bottom-right hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
+
+  <h3 id="inside">inside html, focusable <a class="anhor link small" href="/docs/tooltip#inside">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="inside" id="inside-1" checked="true"/>
+		<input type="radio" name="inside" id="inside-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="inside-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="inside-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div include-html="../examples/tooltip/inside.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/tooltip/inside.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-tooltip">
-      left middle
-      <span class="tooltip left-middle">Lorem ipsum <b>dolor sit </b>amet, consectetur</span>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-tooltip" tabindex="-1" >
-      rigth middle
-      <span class="tooltip right-middle hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-tooltip" tabindex="-1" >
-      top right
-      <span class="tooltip right">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
+
+  <h3 id="inside-position">inside html, focusable <a class="anhor link small" href="/docs/tooltip#inside-position">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="inside-position" id="inside-position-1" checked="true"/>
+		<input type="radio" name="inside-position" id="inside-position-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="inside-position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="inside-position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div include-html="../examples/tooltip/inside-position.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/tooltip/inside-position.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-tooltip">
-      right top
-      <span class="tooltip right-top">Lorem ipsum <b>dolor sit </b>amet, consectetur</span>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-tooltip" tabindex="-1" >
-      right bottom
-      <span class="tooltip right-bottom hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-tooltip" tabindex="-1" >
-      right top
-      <span class="tooltip right-top hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
+
+  <h3 id="hoverable">inside html, hoverable <a class="anhor link small" href="/docs/tooltip#hoverable">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="hoverable" id="hoverable-1" checked="true"/>
+		<input type="radio" name="hoverable" id="hoverable-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="hoverable-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="hoverable-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div include-html="../examples/tooltip/hoverable.html">
+			</div>
+			<div>
+				<pre>
+					<code class="html" encode="true" include-html="../examples/tooltip/hoverable.html">
+					</code>
+				</pre>
+			</div>
+		</div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-tooltip">
-      left top
-      <span class="tooltip left-top hoverable">Lorem ipsum <b>dolor sit </b>amet, consectetur</span>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-tooltip" tabindex="-1" >
-      left bottom
-      <span class="tooltip left-bottom hoverable">Lorem ipsum <b>dolor sit </b><br/>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-tooltip" tabindex="-1" >
-      left middle
-      <span class="tooltip left-middle">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></span>
-    </span>
-  </div>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/tooltip#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="/docs/tooltip#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/tooltip/classes.html">
+			</code>
+		</pre>
+	</div>
+	<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="/docs/tooltip#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less" encode="true" include-html="../examples/tooltip/variables.html">
+			</code>
+		</pre>
+	</div>
 </div>

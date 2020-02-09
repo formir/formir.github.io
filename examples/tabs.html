@@ -1,104 +1,174 @@
 <div class="content-holder">
   <h1>Tabs</h1>
-  <div class="tabs">
-    <input type="radio" name="tab" id="tab-1" checked="true"/>
-    <input type="radio" name="tab" id="tab-2"/>
-    <input type="radio" name="tab" id="tab-3"/>
-    <input type="radio" name="tab" id="tab-4"/>
-    <input type="radio" name="tab" id="tab-5"/>
-    <div class="tab-navs">
-      <div class="tab-labels menu horizontal">
-        <label class="item" for="tab-1" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
-        <label class="item" for="tab-2" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
-        <label class="item" for="tab-3" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
-        <label class="item" for="tab-4" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
-        <label class="item" for="tab-5" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
+  <div class="section section-content with-padding">
+    <p>Tabs and navigation is control by <code>input</code> tag, id of seach input should be unique.</p>
+    <p>navigation label should be set te same <code>for</code> as <code>id</code> of his <code>input</code> in the same order.</p>
+    <p>You could use any tag to list your pages to display, but do not change display priperty of this elements.</p>
+    <p>Before you start, maximum number of supported tab set on core setup file, (default set to 10)</p>
+    <p>You can combine any other components with tabs, buttons, section, menu, grid etc.</p>
+  </div>
+  <h2>Case of use</h2>
+  <h3 id="horizontal">horizontal - nowrap navs with menu component <a class="anhor link small" href="/docs/tabs#horizontal">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="horizontal" id="horizontal-1" checked="true"/>
+    <input type="radio" name="horizontal" id="horizontal-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="horizontal-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="horizontal-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
       </div>
     </div>
-    <div class="tab-pages">
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quia temporibus officiis minima accusamus id culpa perspiciatis saepe aliquid quae, ducimus illum alias repudiandae, eveniet obcaecati omnis quidem enim soluta.
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/tabs/horizontal.html">
       </div>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt enim ut! Reiciendis repellat, ipsam corporis non similique consequatur minima! Nostrum sint quas vero molestiae sapiente numquam ipsam accusamus? Laudantium?
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio voluptas ipsa molestias, error praesentium atque facilis expedita dignissimos obcaecati similique ex quo id minus itaque in ut, a magni quam.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugiat reiciendis vero dolores at quo qui, nesciunt autem dolorum cum alias similique quidem placeat et est illum. Enim, totam autem!
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id alias, rerum harum pariatur labore nulla incidunt laborum? Sed iure ratione quis veniam natus alias. Suscipit similique adipisci alias inventore est.
+        <pre>
+          <code class="html" encode="true" include-html="../examples/tabs/horizontal.html">
+          </code>
+        </pre>
       </div>
     </div>
   </div>
 
-  <div class="tabs">
-    <input type="radio" name="tab-2" id="tab-2-1" checked="true"/>
-    <input type="radio" name="tab-2" id="tab-2-2"/>
-    <input type="radio" name="tab-2" id="tab-2-3"/>
-    <input type="radio" name="tab-2" id="tab-2-4"/>
-    <input type="radio" name="tab-2" id="tab-2-5"/>
-    <div class="tab-navs">
-      <div class="tab-labels menu horizontal auto-width">
-        <label for="tab-2-1" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
-        <label for="tab-2-2" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
-        <label for="tab-2-3" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
-        <label for="tab-2-4" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
-        <label for="tab-2-5" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
+  <h3 id="horizontal-auto">horizontal - wrap nav, auto with with menu component <a class="anhor link small" href="/docs/tabs#horizontal-auto">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="horizontal-auto" id="horizontal-auto-1" checked="true"/>
+    <input type="radio" name="horizontal-auto" id="horizontal-auto-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="horizontal-auto-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="horizontal-auto-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
       </div>
     </div>
-    <div class="tab-pages">
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam unde, ducimus repellat inventore nisi veritatis non praesentium recusandae iste error, consectetur doloremque nesciunt quibusdam magnam vitae! Nostrum voluptate nobis reprehenderit?
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/tabs/horizontal-auto.html">
       </div>
       <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione quasi est iste saepe. Nisi quaerat exercitationem mollitia, ratione voluptatibus, quia et iste temporibus reiciendis quae, eius nam consequuntur quod.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium natus tenetur suscipit ipsa. Et cumque quam iste minus aliquid dolores. Iure voluptates praesentium magnam excepturi nesciunt nostrum error, aliquam in?
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum ullam mollitia! Illo placeat consequuntur unde beatae magni perferendis omnis facere excepturi rem odit exercitationem, nesciunt numquam perspiciatis repellendus optio!
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt sed perferendis. Quae molestias, dicta illo nostrum sit rerum, repudiandae vitae quis animi odio iste quasi voluptatibus? Laboriosam, nulla dolor?
+        <pre>
+          <code class="html" encode="true" include-html="../examples/tabs/horizontal-auto.html">
+          </code>
+        </pre>
       </div>
     </div>
   </div>
 
-  <div class="tabs grid">
-    <input type="radio" name="tab-3" id="tab-3-1" checked="true"/>
-    <input type="radio" name="tab-3" id="tab-3-2"/>
-    <input type="radio" name="tab-3" id="tab-3-3"/>
-    <input type="radio" name="tab-3" id="tab-3-4"/>
-    <input type="radio" name="tab-3" id="tab-3-5"/>
-    <div class="tab-navs cell-4">
-      <div class="tab-labels menu">
-        <label for="tab-3-1" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 1</span></label>
-        <label for="tab-3-2" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 2</span></label>
-        <label for="tab-3-3" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 3</span></label>
-        <label for="tab-3-4" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 4</span></label>
-        <label for="tab-3-5" class="item" onClick="window.location.href='#'+this.attributes.for.value"><span class="anchor">Tab 5</span></label>
+  <h3 id="vertical">vertical with menu and grid component<a class="anhor link small" href="/docs/tabs#vertical">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="vertical" id="vertical-1" checked="true"/>
+    <input type="radio" name="vertical" id="vertical-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="vertical-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="vertical-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
       </div>
     </div>
-    <div class="tab-pages cell-10">
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim labore iste sint, culpa eius nisi corporis sit, iure est, atque omnis. Quidem similique officia veritatis delectus, atque rerum reiciendis quia?
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/tabs/vertical.html">
       </div>
       <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequuntur? Odio eos nulla nemo nobis alias sed, corrupti iure. Corrupti quaerat itaque rerum. Explicabo porro cupiditate magni, quas eaque soluta.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nam accusantium vero expedita ipsam placeat, exercitationem voluptatem nisi cupiditate sapiente, esse aut? Numquam aspernatur officiis debitis corporis harum recusandae illo?
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem sapiente rem ea, voluptatem placeat ut inventore tempora officiis vel sit distinctio id odit consequatur iusto natus laboriosam neque dolor dolores!
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellat rerum odio neque iusto velit debitis officiis commodi, quibusdam ipsam, optio culpa? Fuga, facilis similique expedita illo aperiam voluptatem optio.
+        <pre>
+          <code class="html" encode="true" include-html="../examples/tabs/vertical.html">
+          </code>
+        </pre>
       </div>
     </div>
+  </div>
+
+  <h3 id="section">with section component<a class="anhor link small" href="/docs/tabs#section">#</a></h3>
+  <div class="tabs section">
+    <input type="radio" name="section" id="section-1" checked="true"/>
+    <input type="radio" name="section" id="section-2"/>
+    <input type="radio" name="section" id="section-3"/>
+    <div class="section-header tab-navs with-tabs">
+      <div class="tab-labels menu text-center horizontal">
+        <label class="item" for="section-1" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Code</span>
+        </label>
+        <label class="item" for="section-2" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Tab 2</span>
+        </label>
+        <label class="item" for="section-3" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Tab label 3</span>
+        </label>
+      </div>
+    </div>
+    <div class="tab-pages with-padding section-content with-border">
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/tabs/section.html">
+          </code>
+        </pre>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ea nostrum! Ipsum, itaque voluptatibus officia nihil amet similique tenetur doloremque ad sed unde pariatur neque maxime ullam vitae vero? Et.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum perferendis autem esse reprehenderit eligendi necessitatibus sunt accusamus dolores, repellat id, fuga neque quas, corporis dolorem consequuntur! Exercitationem, aliquam perspiciatis.
+      </div>
+    </div>
+  </div>
+
+  <h3 id="section-auto">with section component - auto-width<a class="anhor link small" href="/docs/tabs#section-auto">#</a></h3>
+  <div class="tabs section">
+    <input type="radio" name="section-auto" id="section-auto-1" checked="true"/>
+    <input type="radio" name="section-auto" id="section-auto-2"/>
+    <input type="radio" name="section-auto" id="section-auto-3"/>
+    <div class="section-header tab-navs with-tabs">
+      <div class="tab-labels menu auto-width horizontal">
+        <label class="item" for="section-auto-1" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Code</span>
+        </label>
+        <label class="item" for="section-auto-2" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Tab 2</span>
+        </label>
+        <label class="item" for="section-auto-3" onClick="window.location.href='#'+this.attributes.for.value">
+          <span class="anchor">Tab label 3</span>
+        </label>
+      </div>
+    </div>
+    <div class="tab-pages with-padding section-content with-border">
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/tabs/section-auto.html">
+          </code>
+        </pre>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ea nostrum! Ipsum, itaque voluptatibus officia nihil amet similique tenetur doloremque ad sed unde pariatur neque maxime ullam vitae vero? Et.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum perferendis autem esse reprehenderit eligendi necessitatibus sunt accusamus dolores, repellat id, fuga neque quas, corporis dolorem consequuntur! Exercitationem, aliquam perspiciatis.
+      </div>
+    </div>
+  </div>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="/docs/tabs#setup">#</a></h2>
+  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="/docs/tabs#classes">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/tabs/classes.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="/docs/tabs#core">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/tabs/core.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="/docs/tabs#core">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/tabs/variables.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">mixins  <small>less/formir/setup/mixins.less</small> <a class="anhor link small" href="/docs/tabs#core">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/tabs/mixins.html">
+      </code>
+    </pre>
   </div>
 </div>
