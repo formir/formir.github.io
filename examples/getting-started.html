@@ -30,6 +30,41 @@
     <p>Mixins are store in direction - <code>less/core/mixins/</code> there is a lot of prefix function.</p>
     <p>In core there is a logic of css, we dont't remomment to change this files, use variables or templates file mixins (each components template has own class mixin to do the job) - but feel free if such a need arises. Remember to copy all files that will be changes from node_modules and change the include direction.</p>
   </article>
+  <h2 id="import">One file to import all components<small>less/formir.less</small>  <a class="anhor link small" href="#import">#</a></h2>
+  <h3 id="import-setup">import setup <a class="anhor link small" href="#import-setup">#</a></h3>
+  <div class="section section-content with-padding">
+    <p>In this section we import all setup files, classes, core and variables for core part of framework and your themes.</p>
+    <pre>
+      <code class="less" encode="true" include-html="../examples/getting-started/import-setup.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="import-core">import core <a class="anhor link small" href="#import-setup">#</a></h3>
+  <div class="section section-content with-padding">
+    <p>In this section we import all components of framework that have core style with logic. If you want you can comment/remove each component that you will not used.</p>
+    <pre>
+      <code class="less" encode="true" include-html="../examples/getting-started/import-core.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="import-themes">import themes <a class="anhor link small" href="#import-themes">#</a></h3>
+  <div class="section section-content with-padding">
+    <p>In section you can import your own changes in style using mixins or other selectors that are part of this files. Try to use the same name of path.</p>
+    <pre>
+      <code class="less" encode="true" include-html="../examples/getting-started/import-themes.html">
+      </code>
+    </pre>
+  </div>
+  <div class="section section-content with-padding background-primary">
+    <p>Remember, you can copy each file from <code>node_modules</code> direction to your own files scope in project. Copy <code>/less/formir.less</code> and other files that you need to change in your project and change path form node_modules to your root path</p>
+  </div>
+  <h3 id="import-themes">example of formir.less file <a class="anhor link small" href="#import-themes">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/getting-started/example.html">
+      </code>
+    </pre>
+  </div>
 
   <h2 id="setup">Setup your first variables <a class="anhor link small" href="#setup">#</a></h2>
 	<h3 id="core">core <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
