@@ -11,6 +11,7 @@
     <meta name="msapplication-navbutton-color" content="#281E2B">
     <meta name="apple-mobile-web-app-status-bar-style" content="#281E2B">
     <link rel="stylesheet" type="text/css" href="examples/css/application.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/examples/css/formir-room-black.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
@@ -107,7 +108,7 @@
           </div>
           <h4 class="padding-top-3">You can easily change the number of columns or space between rows & columns,<br/> use row wrapper or not - no matter - always will work great!</h4>
           <p>So feel free and <label>change your gutter <input id="input-gutter" style="width: 50px;" min="0" max="4" value="1" type="number" onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('gutter-' + $(this).val()).addClass('space-' + $('#input-space').val())"/></label><label> or space <input id="input-space" style="width: 50px;" min="0" max="4" value="1" class="width-1" type="number"  onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('space-' + $(this).val()).addClass('gutter-' + $('#input-gutter').val())"/></label></p>
-          <div class="tooltip opacity-7  bottom-center horizostal-center">And one more thing: number of columns and steps are customizable.</small></div>
+          <div class="tooltip opacity-7  bottom-center horizostal-center show">And one more thing: number of columns and steps are customizable.</small></div>
         </div>
     	</div>
     </section>
@@ -225,6 +226,109 @@
         </p>
       </div>
     </section>
+    <section class="text-center overflow-hidden padding-top-3 padding-bottom-2 primary-dark">
+      <div>
+        <h3>That still not all for pure CSS and formir ...</h3>
+        <h2>look at The room - formir extention</h2>
+        <div class="room">
+          <input class="room-zoom" id="room-zoom-1" type="checkbox" name="zoom-1"/>
+          <div class="room-body">
+            <input id="room-sample-1-1" type="radio" name="animate-1" checked="checked"/>
+            <input id="room-sample-1-2" type="radio" name="animate-1"/>
+            <input id="room-sample-1-3" type="radio" name="animate-1"/>
+            <input id="room-sample-1-4" type="radio" name="animate-1"/>
+            <input id="room-sample-1-5" type="radio" name="animate-1"/>
+            <input id="room-sample-1-6" type="radio" name="animate-1"/>
+            <input id="room-sample-1-7" type="radio" name="animate-1"/>
+            <input id="room-sample-1-8" type="radio" name="animate-1"/>
+            <div class="room-arena">
+              <div class="walls">
+                <div class="wall">
+                  <div class="item">
+                    <p><a class="button-primary button button-xxl inverse transparent" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934" target="_blank">Buy this extention</a></p>
+                    <p class="h1 item-desc">
+                      This carousel works on pure CSS,
+                    </p>
+                    <p>click "next" - arrow button</p>
+                  </div>
+                  <div class="item">
+                    <a class="item-image">
+                      <img src="plugins/examples/img/room/JPEG/4.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="wall">
+                  <div class="item">
+                    <p><a class="button-alternative button button-xxl inverse transparent" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934" target="_blank">Buy this extention</a></p>
+                    <p class="h1 item-desc">
+                      only with html, becouse
+                    </p>
+                    <p>..keep clicking..</p>
+                  </div>
+                  <div class="item">
+                    <a class="item-image">
+                      <img src="plugins/examples/img/room/JPEG/6.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="wall">
+                  <div class="item">
+                    <p><a class="button-success button button-xxl inverse transparent" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934" target="_blank">Buy this extention</a></p>
+                    <p class="h1 item-desc">
+                      all formir extentions and components
+                    </p>
+                    <p>you can even move closer to wall.. click "move closer"</p>
+                  </div>
+                  <div class="item">
+                    <a class="item-image">
+                      <img src="plugins/examples/img/room/JPEG/7.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="wall">
+                  <div class="item">
+                    <p><a class="button-info button button-xxl inverse transparent" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934" target="_blank">Buy this extention</a></p>
+                    <p class="h1 item-desc">
+                      no need JS to work at all.
+                    </p>
+                  </div>
+                  <div class="item">
+                    <a class="item-image">
+                      <img src="plugins/examples/img/room/JPEG/8.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="ceil"></div>
+                <div class="floor"></div>
+              </div>
+            </div>
+            <div class="navigations">
+              <label for="room-sample-1-1">1</label>
+              <label for="room-sample-1-2">2</label>
+              <label for="room-sample-1-3">3</label>
+              <label for="room-sample-1-4">4</label>
+              <label for="room-sample-1-5">5</label>
+              <label for="room-sample-1-6">6</label>
+              <label for="room-sample-1-7">7</label>
+              <label for="room-sample-1-8">8</label>
+            </div>
+            <div class="paginations">
+              <label for="room-sample-1-1">1</label>
+              <label for="room-sample-1-2">2</label>
+              <label for="room-sample-1-3">3</label>
+              <label for="room-sample-1-4">4</label>
+              <label for="room-sample-1-5">5</label>
+              <label for="room-sample-1-6">6</label>
+              <label for="room-sample-1-7">7</label>
+              <label for="room-sample-1-8">8</label>
+            </div>
+            <label class="zoom" for="room-zoom-1">come over</label>
+            <label for="room-zoom-1" class="exit">exit</label>
+          </div>
+        </div>
+      </div>
+      <h4>and comming more... </h4>
+    </section>
     <section class="welcome padding-top-1 padding-bottom-1">
       <div class="content-holder">
         <div class="grid">
@@ -250,7 +354,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </footern>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
