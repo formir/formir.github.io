@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"  style="overflow-x: hidden; height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Formir - open source, pure css / HTML Framework - Plugins</title>
+    <meta name="description" content="Formir - Pure CSS/HTML Framework" />
+    <meta name="author" content="Konrad Kubrak" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../examples/css/application.min.css" />
+    <link rel="stylesheet" type="text/css" href="examples/css/formir-room.min.css" />
+    <link rel="stylesheet" type="text/css" href="examples/css/formir-room-black.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+    </script>
+  </head>
+
+  <body class="tabs">
+    <input type="radio" name="tab" id="tab-welcome" checked="true"/>
+    <header class="header fixed tab-navs">
+      <div class="header-content">
+        <span>
+          <a class="logo logo-s display-inline"><img src="http://formir.io/node_modules/formir/img/logo/formir-64.png"/><span>plugins <small class="mobile-hide"> by formir</small></span></a>
+        </span>
+        <nav>
+          <input id="nav-mobile" type="checkbox" class="mobile-toggle"/>
+          <label for="nav-mobile" class="mobile-toggle-label">
+            <span class="toggle-hide">&#9776;</span>
+            <span class="toggle-show">&times;</span>
+          </label>
+          <ul class="items menu-mobile mobile-toggle-show">
+            <li class="item">
+                <li class="item active"><a class="anchor" href="/plugins">Plugins</a></li>
+            </li>
+            <li class="item"><a class="anchor" target="_blank" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934">Buy Room</a></li>
+            <li class="item"><a class="anchor" href="//formir.io/">Get formir</a></li>
+            <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new" target="_blank">Report issue</a></li>
+            <li class="item">
+              <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support author</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="tab-pages" style="margin-top: 0 !important;">
+      <div class="welcome">
+        <div class="room-black">
+        	<input id="room-zoom" type="checkbox" name="zoom" class="room-zoom"/>
+          <div class="room-body-black">
+            <input id="wall-1" type="radio" name="animate" checked="true"/>
+        
+            <div class="room-arena-black" id="container">
+              <div class="walls">
+                <div class="wall">
+                  <div class="item">
+                    <div class="image center padding-horizontal-3">
+                      <div>
+                        <a href="http://preview.codecanyon.net/item/the-room-pure-css-3d-slider/full_screen_preview/22595934"><img src="http://formir.io/plugins/room-preview-inline.png"/></a>
+                      </div>
+                      <div class="margin-top-3">
+                        <div class="tooltip bottom-center horizostal-center">
+                          <h2>room v1.2.1</h2>
+                          <h3><i>room is pure css<br/>
+                            3d carousel for your gallery</i></h3>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="wall">
+                 
+                </div>
+                <div class="wall">
+                  
+                </div>
+                <div class="wall">
+                 
+        
+                </div>
+                <div class="ceil"></div>
+                <div class="floor"></div>
+              </div>
+            </div>
+            <div class="navigations">
+              <!-- <label for="wall-1">1</label> -->
+              
+            </div>
+            <div class="paginations">
+              <!-- <label for="wall-1">1</label> -->
+             
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="side bottom display-block" style="position: static; box-sizing: border-box;">
+      <div class="padding-1">
+        <small class="h6"><a class="link" href="http://formir.io">Formir</a> extentions &reg; 2020 </small>
+      </div>
+    </footer>
+  </body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-104149097-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</html>

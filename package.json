@@ -1,0 +1,33 @@
+{
+  "name": "formir-home",
+  "version": "0.2.2",
+  "description": "Homepage of formir framework - formir.io",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "dependencies": {
+    "formir": "^0.2.2",
+    "less": "^3.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formir/formir.github.io.git"
+  },
+  "keywords": [
+    "homepage",
+    "formir",
+    "documentation"
+  ],
+  "author": "Konrad Kubrak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/formir/formir.github.io/issues"
+  },
+  "homepage": "https://github.com/formir/formir.github.io#readme"
+}
