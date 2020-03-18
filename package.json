@@ -13,7 +13,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,5 +29,5 @@
   "bugs": {
     "url": "https://github.com/formir/formir.github.io/issues"
   },
-  "homepage": "https://github.com/formir/formir.github.io#readme"
+  "homepage": "https://formir.io"
 }
