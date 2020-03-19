@@ -1,211 +1,114 @@
 <div class="content-holder">
-    <h1>Popup</h1>
-    <h2>Case of use</h2>
-    <h3 id="base">base <a class="anhor link small" href="#base">#</a></h3>
-    <div class="tabs section with-padding">
-      <input type="radio" name="base" id="base-1" checked="true"/>
-      <input type="radio" name="base" id="base-2"/>
-      <div class="section-header tab-navs">
-        <div class="tab-labels vertical-center button-group">
-          <label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
-          <label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
-        </div>
-      </div>
-      <div class="tab-pages section-content with-border">
-        <div include-html="../examples/popup/base.html">
-        </div>
-        <div>
-          <pre>
-            <code class="html" encode="true" include-html="../examples/popup/base.html">
-            </code>
-          </pre>
-        </div>
-      </div>
-    </div>
-  
-    <h3 id="with-tabs">with tabs <a class="anhor link small" href="#with-tabs">#</a></h3>
-    <div class="tabs section with-padding">
-      <input type="radio" name="with-tabs" id="with-tabs-1" checked="true"/>
-      <input type="radio" name="with-tabs" id="with-tabs-2"/>
-      <div class="section-header tab-navs">
-        <div class="tab-labels vertical-center button-group">
-          <label class="button button-s" for="with-tabs-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
-          <label class="button button-s" for="with-tabs-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
-        </div>
-      </div>
-      <div class="tab-pages section-content with-border">
-        <div include-html="../examples/popup/with-tabs.html">
-        </div>
-        <div>
-          <pre>
-            <code class="html" encode="true" include-html="../examples/popup/with-tabs.html">
-            </code>
-          </pre>
-        </div>
-      </div>
-    </div>
-
-    <h3 id="with-menu">with menu <a class="anhor link small" href="#with-menu">#</a></h3>
-    <div class="tabs section with-padding">
-      <input type="radio" name="with-menu" id="with-menu-1" checked="true"/>
-      <input type="radio" name="with-menu" id="with-menu-2"/>
-      <div class="section-header tab-navs">
-        <div class="tab-labels vertical-center button-group">
-          <label class="button button-s" for="with-menu-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
-          <label class="button button-s" for="with-menu-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
-        </div>
-      </div>
-      <div class="tab-pages section-content with-border">
-        <div include-html="../examples/popup/with-menu.html">
-        </div>
-        <div>
-          <pre>
-            <code class="html" encode="true" include-html="../examples/popup/with-menu.html">
-            </code>
-          </pre>
-        </div>
-      </div>
-    </div>
-  
-    <h3 id="position">with menu <a class="anhor link small" href="#position">#</a></h3>
-    <div class="tabs section with-padding">
-      <input type="radio" name="position" id="position-1" checked="true"/>
-      <input type="radio" name="position" id="position-2"/>
-      <div class="section-header tab-navs">
-        <div class="tab-labels vertical-center button-group">
-          <label class="button button-s" for="position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
-          <label class="button button-s" for="position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
-        </div>
-      </div>
-      <div class="tab-pages section-content with-border">
-        <div include-html="../examples/popup/position.html">
-        </div>
-        <div>
-          <pre>
-            <code class="html" encode="true" include-html="../examples/popup/position.html">
-            </code>
-          </pre>
-        </div>
-      </div>
-    </div>
-  
-    <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
-    <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
-    <div class="section section-content with-padding">
-      <pre>
-        <code class="less" encode="true" include-html="../examples/popup/classes.html">
-        </code>
-      </pre>
-    </div>
-    <h3 id="mixins">mixins  <small>less/formir/setup/mixins.less</small> <a class="anhor link small" href="#mixins">#</a></h3>
-    <div class="section section-content with-padding">
-      <pre>
-        <code class="less" encode="true" include-html="../examples/popup/mixins.html">
-        </code>
-      </pre>
-    </div>
-    <h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
-    <div class="section section-content with-padding">
-      <pre>
-        <code class="less" encode="true" include-html="../examples/popup/variables.html">
-        </code>
-      </pre>
-    </div>
-  </div>
-
-
-
-
-<div class="content-holder">
   <h1>Popup</h1>
-  <style>
-  .has-popup {
-    text-decoration: underline;
-  }
-  </style>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-popup" tabindex="-1" >
-      top center
-      <div class="popup center">
-        <div class="popup-header">Title of popup</div>
-        <div class="popup-content">
-          Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p>
-        </div>
-        <div class="popup-footer">footer of popup</div>
+  <h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="#base">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="base" id="base-1" checked="true"/>
+    <input type="radio" name="base" id="base-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
       </div>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-popup hoverable" tabindex="-1" >
-      top right
-      <div class="popup right">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/popup/base.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/popup/base.html">
+          </code>
+        </pre>
+      </div>
+    </div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-popup" tabindex="-1" >
-      bottom center
-      <div class="popup bottom-center">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-popup hoverable" tabindex="-1" >
-      bottom right
-      <div class="popup bottom-right">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
+
+  <h3 id="with-tabs">with tabs <a class="anhor link small" href="#with-tabs">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="with-tabs" id="with-tabs-1" checked="true"/>
+    <input type="radio" name="with-tabs" id="with-tabs-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="with-tabs-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="with-tabs-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/popup/with-tabs.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/popup/with-tabs.html">
+          </code>
+        </pre>
+      </div>
+    </div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-popup">
-      left middle
-      <div class="popup left-middle">Lorem ipsum <b>dolor sit </b>amet, consectetur</div>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-popup hoverable" tabindex="-1" >
-      rigth middle
-      <div class="popup right-middle">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-popup" tabindex="-1" >
-      top right
-      <div class="popup right">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
+
+  <h3 id="with-menu">with menu <a class="anhor link small" href="#with-menu">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="with-menu" id="with-menu-1" checked="true"/>
+    <input type="radio" name="with-menu" id="with-menu-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="with-menu-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="with-menu-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/popup/with-menu.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/popup/with-menu.html">
+          </code>
+        </pre>
+      </div>
+    </div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-popup">
-      right top
-      <div class="popup right-top">Lorem ipsum <b>dolor sit </b>amet, consectetur</div>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-popup hoverable" tabindex="-1" >
-      right bottom
-      <div class="popup right-bottom">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-popup hoverable" tabindex="-1" >
-      right top
-      <div class="popup right-top">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
+
+  <h3 id="position">with menu <a class="anhor link small" href="#position">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="position" id="position-1" checked="true"/>
+    <input type="radio" name="position" id="position-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div include-html="../examples/popup/position.html">
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true" include-html="../examples/popup/position.html">
+          </code>
+        </pre>
+      </div>
+    </div>
   </div>
-  <div style="margin: 20px 0;">
-    Lorem ipsum dolor sit amet, consectetur
-    <span class="has-popup hoverable">
-      left top
-      <div class="popup left-top">Lorem ipsum <b>dolor sit </b>amet, consectetur</div>
-    </span>
-    , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit Excepteur
-    <span class="has-popup hoverable" tabindex="-1" >
-      left bottom
-      <div class="popup left-bottom ">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <span class="has-popup" tabindex="-1" >
-      left middle
-      <div class="popup left-middle">Lorem ipsum <b>dolor sit </b>amet, consectetur<br/><p>Lorem ipsum <b>dolor sit </b>amet, consectetur</p></div>
-    </span>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/popup/classes.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="mixins">mixins  <small>less/formir/setup/mixins.less</small> <a class="anhor link small" href="#mixins">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/popup/mixins.html">
+      </code>
+    </pre>
+  </div>
+  <h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less" encode="true" include-html="../examples/popup/variables.html">
+      </code>
+    </pre>
   </div>
 </div>
