@@ -1109,13 +1109,38 @@ src                        - your application root path
         </article>
         <article>
           <div class="content-holder">
+            <h3>Known Edge ( < 80 ) bug:</h3>
+            <p>
+              Many user repor us the same issue at Edge browser with cuting images after interaction with gallery. This is know issue of Edge browser (mixing rotate-3d and animation https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/16452345/ unfortunately this page not exist), solution is to use JS short code and for example jquery (it will be not part of package): 
+            </p>
+          </div>
+            <pre>
+              <code class="js">
+                <div class="content-holder">
+
+                
+&#x3C;script&#x3E;
+  if (/Edge/.test(navigator.userAgent)) {
+    setInterval(function(){
+      $(&#x27;.room-arena&#x27;).css(&#x27;opacity&#x27;, &#x27;0.999&#x27;);
+      setTimeout(function() {
+        $(&#x27;.room-arena&#x27;).removeAttr(&#x27;style&#x27;);
+      },1);
+    }, 100);
+  }
+&#x3C;/script&#x3E;
+                </div>
+              </code>
+            </pre>
+          <div class="content-holder">
             <h3>Supported browsers and OS:</h3>
             <ul>
               <li>FF >= 20</li>
               <li>Safari > 8</li>
               <li>Chrome >= 35</li>
               <li>Opera >= 22</li>
-              <li>Edge >= 12</li>
+              <li>Edge >= 12 (with JS fix)</li>
+              <li>Edge >= 80</li>
 
               <li>Android >= 4.0</li>
               <li>iOS > 8</li>
@@ -1132,6 +1157,16 @@ src                        - your application root path
       </div>
     </footer>
   </body>
+  <script>
+    if (/Edge/.test(navigator.userAgent)) {
+      setInterval(function(){
+        $('.room-arena').css('opacity', '0.999');
+        setTimeout(function() {
+          $('.room-arena').removeAttr('style');
+        },1);
+      }, 100);
+    }
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
