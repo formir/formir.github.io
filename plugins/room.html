@@ -1,0 +1,1094 @@
+---
+layout: plugins
+url: room
+---
+{% include plugins/room/header.html %}
+<div class="tab-pages" style="margin-top: 0 !important;">
+  <div class="welcome">
+    <div class="room">
+      <input id="room-zoom" type="checkbox" name="zoom" class="room-zoom"/>
+      <div class="room-body">
+        <input id="wall-1" type="radio" name="animate" checked="true"/>
+        <input id="wall-2" type="radio" name="animate"/>
+        <input id="wall-3" type="radio" name="animate"/>
+        <input id="wall-4" type="radio" name="animate"/>
+        <input id="wall-5" type="radio" name="animate"/>
+        <input id="wall-6" type="radio" name="animate"/>
+        <input id="wall-7" type="radio" name="animate"/>
+        <input id="wall-8" type="radio" name="animate"/>
+        <input id="wall-9" type="radio" name="animate"/>
+        <input id="wall-10" type="radio" name="animate"/>
+        <input id="wall-11" type="radio" name="animate"/>
+        <input id="wall-12" type="radio" name="animate"/>
+        <div class="room-arena" id="container">
+          <div class="walls">
+            <div class="wall">
+              <div class="item">
+                <div class="image center padding-horizontal-3">
+                  <div>
+                    <a class="logo logo-m"><img src="https://formir.io/img/logo/formir-64.png"/><span> room v1.2.2 by Formir</span></a>
+                  </div>
+                  <div class="margin-top-3">
+                    <div class="tooltip bottom-center horizostal-center">
+                      <h3><i>room is pure css<br/>
+                        3d carousel for your gallery</i></h3>
+                    </div>
+                  </div>
+                   <div class="margin-top-4">
+                     <div class="tooltip bottom-center horizostal-center opacity-7">
+                       <h5>Addon for Formir<br/>pure CSS & HTML framework<br/> for RWD developing</h5>
+                     </div>
+                   </div>
+                </div>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/1.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    You can also come closer using button on hover. This interaction will slightly enlarge the image.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/5.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    You can setup each of element that you see in this gallery like:  colors of wall, image of floor etc.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/9.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                     As you see. Each image has own description under image. But you decise to apply it on your HTML.
+                  </p>
+              </div>
+            </div>
+            <div class="wall">
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/4.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    Each image will rotate in this gallery which we called a room.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/6.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    It works only with HTML and CSS, this technology is a pure magic.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/12.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    Gallery can work with limited version of available tags (in case of html editor that cuts input tag).
+                  </p>
+              </div>
+            </div>
+            <div class="wall">
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/3.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    Images are positioned in the center of the wall.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/7.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    The Gallery is fully responsive.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/11.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    Visit room <label for="tab-docs" class="link">documentation</label> page and <a href="https://formir.io">formir</a> framework page.
+                  </p>
+              </div>
+            </div>
+            <div class="wall">
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/2.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    Hung on the wall vertically or in this case horizontally.
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/8.jpg" />
+                    </a>
+                  <p  class="item-desc">
+                    You can also navigate gallery using buttons. Room will spin much faster!
+                  </p>
+              </div>
+              <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/10.jpg" />
+                  </a>
+                  <p  class="item-desc">
+                    We would like to thank to author of the photos Kamil Przybyło.
+                  </p>
+              </div>
+            </div>
+            <div class="ceil"></div>
+            <div class="floor"></div>
+          </div>
+        </div>
+        <div class="navigations">
+          <label for="wall-1">1</label>
+          <label for="wall-2">2</label>
+          <label for="wall-3">3</label>
+          <label for="wall-4">4</label>
+          <label for="wall-5">5</label>
+          <label for="wall-6">6</label>
+          <label for="wall-7">7</label>
+          <label for="wall-8">8</label>
+          <label for="wall-9">9</label>
+          <label for="wall-10">10</label>
+          <label for="wall-11">11</label>
+          <label for="wall-12">12</label>
+        </div>
+        <div class="paginations">
+          <label for="wall-1">1</label>
+          <label for="wall-2">2</label>
+          <label for="wall-3">3</label>
+          <label for="wall-4">4</label>
+          <label for="wall-5">5</label>
+          <label for="wall-6">6</label>
+          <label for="wall-7">7</label>
+          <label for="wall-8">8</label>
+          <label for="wall-9">9</label>
+          <label for="wall-10">10</label>
+          <label for="wall-11">11</label>
+          <label for="wall-12">12</label>
+        </div>
+        <label class="zoom" for="room-zoom">come over</label>
+        <label for="room-zoom" class="exit">exit</label>
+      </div>
+    </div>
+  </div>
+  <div class="examples margin-top-6">
+    <article>
+      <div class="content-holder">
+        <h1>Examples</h1>
+        <h2>Room with lights off</h2>
+      </div>
+
+      <div class="room-black">
+        <input class="room-zoom" id="room-zoom-1" type="checkbox" name="zoom-1"/>
+        <div class="room-body-black">
+          <input id="room-sample-1-1" type="radio" name="animate-1" checked="checked"/>
+          <input id="room-sample-1-2" type="radio" name="animate-1"/>
+          <input id="room-sample-1-3" type="radio" name="animate-1"/>
+          <input id="room-sample-1-4" type="radio" name="animate-1"/>
+          <input id="room-sample-1-5" type="radio" name="animate-1"/>
+          <input id="room-sample-1-6" type="radio" name="animate-1"/>
+          <input id="room-sample-1-7" type="radio" name="animate-1"/>
+          <input id="room-sample-1-8" type="radio" name="animate-1"/>
+          <div class="room-arena-black">
+            <div class="walls">
+              <div class="wall">
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/1.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    1st. element
+                  </p>
+                </div>
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/5.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    5th. element
+                  </p>
+                </div>
+              </div>
+              <div class="wall">
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/4.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    2st. element
+                  </p>
+                </div>
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/6.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    6th. element
+                  </p>
+                </div>
+              </div>
+              <div class="wall">
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/3.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    3st. element
+                  </p>
+                </div>
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/7.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    7th. element
+                  </p>
+                </div>
+              </div>
+              <div class="wall">
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/2.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    4st. element
+                  </p>
+                </div>
+                <div class="item">
+                  <a class="item-image">
+                    <img src="/img/plugins/room/examples/8.jpg" />
+                  </a>
+                  <p class="item-desc">
+                    8th. element
+                  </p>
+                </div>
+              </div>
+              <div class="ceil"></div>
+              <div class="floor"></div>
+            </div>
+          </div>
+          <div class="navigations">
+            <label for="room-sample-1-1">1</label>
+            <label for="room-sample-1-2">2</label>
+            <label for="room-sample-1-3">3</label>
+            <label for="room-sample-1-4">4</label>
+            <label for="room-sample-1-5">5</label>
+            <label for="room-sample-1-6" class="yellow">6</label>
+            <label for="room-sample-1-7" class="red">7</label>
+            <label for="room-sample-1-8" class="blue">8</label>
+          </div>
+          <div class="paginations">
+            <label for="room-sample-1-1">1</label>
+            <label for="room-sample-1-2">2</label>
+            <label for="room-sample-1-3">3</label>
+            <label for="room-sample-1-4">4</label>
+            <label for="room-sample-1-5">5</label>
+            <label for="room-sample-1-6" class="yellow">6</label>
+            <label for="room-sample-1-7" class="red">7</label>
+            <label for="room-sample-1-8" class="blue">8</label>
+          </div>
+          <label class="zoom" for="room-zoom-1">come over</label>
+          <label for="room-zoom-1" class="exit">exit</label>
+        </div>
+      </div>
+      <div class="content-holder">
+        <p>Setup your own style set with <i>less</i> variables.</p>
+        <h3>All you need is HTML:</h3>
+      </div>
+      <pre>
+        <code class="html">
+          <div class="content-holder">
+&#x3C;head&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/formir-room.min.css&#x22; /&#x3E;
+&#x3C;/head&#x3E;
+          </div>
+          <div class="content-holder">
+&#x3C;div class=&#x22;room&#x22;&#x3E;
+&#x3C;input class=&#x22;room-zoom&#x22; id=&#x22;room-zoom-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom-1&#x22;/&#x3E;
+&#x3C;div class=&#x22;room-body&#x22;&#x3E;
+&#x3C;input id=&#x22;room-sample-1-1&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-2&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-3&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-4&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-5&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-6&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-7&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-8&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;div class=&#x22;room-arena&#x22;&#x3E;
+  &#x3C;div class=&#x22;walls&#x22;&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/1.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          1st. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/5.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          5th. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/4.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          2st. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/6.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          6th. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/3.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          3st. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/7.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          7th. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/2.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          4st. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/8.jpg&#x22; /&#x3E;
+        &#x3C;/a&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+          8th. element
+        &#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;ceil&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;floor&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;navigations&#x22;&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;paginations&#x22;&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;label class=&#x22;zoom&#x22; for=&#x22;room-zoom-1&#x22;&#x3E;come over&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-zoom-1&#x22; class=&#x22;exit&#x22;&#x3E;exit&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+          </div>
+        </code>
+      </pre>
+      <div class="content-holder text-center padding-bottom-3">
+        <label for="tab-docs" class="button button-l">Go to Documentation</label>
+      </div>
+    </article>
+  </div>
+  <div class="docs  margin-top-6">
+    <article>
+      <div class="content-holder">
+        <h1>Documentation</h1>
+        <h3>Room v1.2.2</h3>
+        <ul>
+          <li>
+            <a class="link" href="#quick-start">Quick start</a>
+          </li>
+          <li>
+            <a class="link" href="#installation">Installation</a>
+          </li>
+          <li>
+            <a class="link" href="#setup-less">Setup <i>less</i></a>
+          </li>
+          <li>
+            <a class="link" href="#setup-html">Setup HTML</a>
+          </li>
+          <li>
+            <a class="link" href="#configuration">All variables and mixing</a>
+          </li>
+        </ul>
+        <h2>What it the Room is?</h2>
+        <p>The Room is an image slider written in pure CSS3 and HTML5. It is part of Formir Framework but can operate independently.
+        </p>
+        <p>The room plugin will fully work only with CSS and HTML. All of the logic is based on CSS and <code>&#x3C;input/&#x3E;</code> tag elements, that are required.</p>
+        <h2 id="quick-start">Quick start</h2>
+        <p>Copy <code>formir-room.min.css</code> or <code>formir-room-black.min.css</code> file to your application direction.</p>
+        <p>Copy code below and paste into your HTML file at a <code>&#x3C;head&#x3E;</code> part.</p>
+      </div>
+
+    <pre>
+      <code class="html">
+        <div class="content-holder">
+&#x3C;head&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/formir-room.min.css&#x22; /&#x3E;
+&#x3C;/head&#x3E;
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <p>Copy gallery code below and paste into your site body and modify wall items and images.</p>
+    </div>
+    <pre>
+        <code class="html">
+          <div class="content-holder">
+&#x3C;div class=&#x22;room&#x22;&#x3E;
+&#x3C;input class=&#x22;room-zoom&#x22; id=&#x22;room-zoom-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom-1&#x22;/&#x3E;
+&#x3C;div class=&#x22;room-body&#x22;&#x3E;
+&#x3C;input id=&#x22;room-sample-1-1&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-2&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-3&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-4&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-5&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-6&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-7&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-8&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
+&#x3C;div class=&#x22;room-arena&#x22;&#x3E;
+&#x3C;div class=&#x22;walls&#x22;&#x3E;
+  &#x3C;div class=&#x22;wall&#x22;&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/1.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        1st. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/5.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        5th. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;wall&#x22;&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/4.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        2st. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/6.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        6th. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;wall&#x22;&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/3.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        3st. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/7.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        7th. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;wall&#x22;&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/2.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        4st. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;item&#x22;&#x3E;
+      &#x3C;a class=&#x22;item-image&#x22;&#x3E;
+        &#x3C;img src=&#x22;/img/plugins/room/examples/8.jpg&#x22; /&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
+        8th. element
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;ceil&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;floor&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;navigations&#x22;&#x3E;
+&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;paginations&#x22;&#x3E;
+&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;label class=&#x22;zoom&#x22; for=&#x22;room-zoom-1&#x22;&#x3E;come over&#x3C;/label&#x3E;
+&#x3C;label for=&#x22;room-zoom-1&#x22; class=&#x22;exit&#x22;&#x3E;exit&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <h2 id="installation">Installation - full process</h2>
+      <p>This plugin is written in <i>less</i> (and optional <i>sass</i>) dynamic preprocessor style sheet language (CSS).</p>
+      <p>It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase. 
+        <br/>You can use this approach or attach the only source of room plugin <code>formir-room.less</code>.
+      </p>
+      <h3>Choice LESS or SASS</h3>
+      <p>In documentation we fucos on <i>less</i> preprocessor, but the same file structure and mixin / variables is used for SASS (scss), to know how install & compile sass file go to <a href="https://sass-lang.com/install">Sass documentation</a></p>
+      <h3>Prepare files</h3>
+      <p>Start with copy all files to your root direction:</p>
+    </div>
+    <pre>
+      <code class="dir"><div class="content-holder">
+src                        - your application root path
+less                     - your less direction
+formir
+  core
+    mixins             - less mixins
+      display.less
+      flex.less
+      functions.less
+    plugins
+      room.less        - all style and settings for room plugin
+formir-room.less       - your root file that imports all of other files
+img
+plugins
+  room
+    floor.jpg
+      </div></code>
+    </pre>
+    <div class="content-holder">
+      <h3>Include Style</h3>
+      <p>Include formir-room.less into your project.</p>
+      <p>In this step, you can include <code>formir-room.less</code> to your main less file, or move the content of <code>formir-room.less</code> to your main (manifest/root) <i>less</i> file.</p>
+      
+      <p>Use developer mode of <i>less</i> library, or compile less using backend (ex. webpack). 
+        <br/>To use .less file on your page look at  <a target="_blank" class="link" href="https://lesscss.org/usage/">less configuration page.</a></p>
+      <p>Add in your <code>&#x3C;head&#x3E;</code> tag with your HTML file on developer mode:</p>
+    </div>
+    <pre>
+      <code class="html">
+        <div class="content-holder">
+&#x3C;head&#x3E;
+&#x3C;link rel=&#x22;stylesheet/less&#x22; type=&#x22;text/css&#x22; href=&#x22;less/formir-room.less&#x22; /&#x3E;
+&#x3C;script src=&#x22;js/less.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/head&#x3E;
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <p>In production mode you can also use <i>less</i> npm package to compile your own <i>min.css</i> file. Use lessc command in bash, for example:<br/>
+        <code>$ npm install -g less</code><br/>
+        <code>$ lessc -x less/formir-room.less css/formir-room.min.css</code>
+      </p>
+    </div>
+
+    <section class="background-alternative padding-top-1 padding-bottom-1">
+      <div id="setup-less" class="content-holder">
+        <h2>Setup <i>less</i></h2>
+        <p>The Gallery is fully configurable, each of colors, borders etc. you can change in <i>less</i> file <code>less/formir/plugins/room.less</code>.</p>
+        <p><a href="#configuration" class="button button-s">See all configurations</a> of <i>less</i> file.</a></p>
+        <h3>Setup core <i>less</i> variables</h3>
+        <h4>Maximum number of items</h4>
+        <p>Pure CSS gives us some limits, before a start, please set up a maximum number of items in your gallery before compiling the project, remember The higher the number you choose, the more your CSS will weigh.</p>
+      </div>
+    </section>
+    <pre>
+      <code class="less">
+        <div class="content-holder">
+@room-max-walls: 30;  // number of max count of walls / items
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <h4>Dimensions of the room wall</h4>
+      <p>You could set wall dimensions but not with % variables, you can use rem, px, we recommend variables of viewport vh / vw.</p>
+    </div>
+    <pre>
+      <code class="less">
+        <div class="content-holder">
+@room-size-width: 100vmax;  // gallery wall width - do not use %
+@room-size-height: 100vmin; // gallery wall height - do not use %
+
+<a href="#configuration" class="link">... more</a>
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <p>Set up your perspective, zoom, and scale, for the best-suited three-dimensional experience.</p>
+    </div>
+    <pre>
+      <code class="less">
+        <div class="content-holder">
+@room-perspective: @room-size-width;  // gallery prespective - use room size for best perspective
+
+@room-scale: 1.1; // scale of room
+@room-scale-zoom: 1.5; // scale of room when zooming
+@room-offset-y: 0; // room offset in vertical (y) - use %
+
+<a href="#configuration" class="link">... more</a>
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <h4>Colors of your room</h4>
+      <p>Set up your background wall color, ceil, floor, and colors and shape of buttons.</p>
+    </div>
+    <pre>
+      <code class="less">
+        <div class="content-holder">
+@room-floor-background: url('https://formir.io/plugins/img/plugins/room/floor.jpg') repeat 110px 50px;
+@room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+
+@room-wall-background: @room-body-background;
+@room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
+
+@room-ceil-background: @room-body-background;
+@room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+
+<a href="#configuration" class="link">... more</a>
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <h4>Use our mixing to style your elements</h4>
+      <p>You can use <i>less</i> mixing to quick change the whole parts of the style.</p>
+    </div>
+    <pre>
+      <code class="less">
+        <div class="content-holder">
+.room-floor() {
+// style for floor
+}
+
+.room-wall() {
+// style for each wall
+}
+
+.room-ceil() {
+// style of ceil of room
+}
+
+<a href="#configuration" class="link">... more</a>
+        </div>
+      </code>
+    </pre>
+    <div class="content-holder">
+      <h4>Customize class HTML</h4>
+      <p>Easy change class name of all elements to prevent name duplicate on your app.</p>
+    </div>
+      <pre>
+        <code class="less">
+          <div class="content-holder">
+@room: room;  // main wrapper
+@room-body: room-body;  // body of room
+@room-arena: room-arena;  // next wrapper coled arena
+@room-walls: walls; // walls in 3d
+@room-wall: wall;
+@room-ceil: ceil;
+@room-floor: floor;
+@room-item: item; // item to display on the wall
+
+<a href="#configuration" class="link">... more</a>
+          </div>
+        </code>
+      </pre>
+    <div class="content-holder">
+      <p><a class="button primary" href="#configuration">Go to all possible variables</a></p>
+    </div>
+    <section class="background-alternative padding-top-1 padding-bottom-1">
+      <div id="setup-html" class="content-holder">
+        <h2>Setup HTML</h2>
+        <h3>Input's controls</h3>
+        <p>Plugin work without JS so we control your gallery with <code>&#x3C;input/&#x3E;</code> tag, each separate input for each item on the gallery.</p>
+        <p>Inputs and labels are related with <code>id</code> and <code>for</code> an attribute, so for each item, we will need one input, one label for navigating (next / prev), and one label for dot (for jump). That is all the logic that you need to know.</p>
+      </div>
+    </section>
+    <section class="background-primary padding-top-1 padding-bottom-1">
+      <div class="content-holder">
+        <h3>Good to know</h3>
+        <p>If you put many gallery in one page use also unique ID for each <code>&#x3C;input/&#x3E;</code> tag in your gallery code, also group of <code>&#x3C;input/&#x3E;</code> must have unique NAME attribute.</p>
+        <p>Try to not include your gallery <code>&#x3C;input/&#x3E;</code> within <code>&#x3C;form&#x3E;</code> tag if you don't must, other wide you have to clean input element before sent form if you don't have any undesirable effects.</p>
+        <p>Some browsers save state of  <code>&#x3C;input/&#x3E;</code> - if you do not want this future just set <code>AUTOCOMPLETE="off"</code> attribute to each <code>&#x3C;input/&#x3E;</code>.</p>
+      </div>
+    </section>
+    <div class="content-holder">
+      <h3>Ordering items on the walls</h3>
+      <p>A cube which is the room that has 6th wall, flor ceils and 4 walls. Every wall has own items to display. All you have to do is apply items <code>&#x3C;div class=&#x22;item&#x22;&#x3E;</code> with your image to each wall  <code>&#x3C;div class=&#x22;wall&#x22;&#x3E;</code> with specify order.</p>
+      <p>First goes item from <code>:first</code> wall, next goes <code>:first</code> item from the second wall, then <code>:first</code> item from the third wall and <code>:first</code> item from the fourth wall. If you have more then 4 pictures, this process will continue, <code>:secound</code> item from the first wall and so on and on in the circle. 
+      <p class="text-center"><img src="/img/plugins/room/items-order.png"/></p>
+      <h3>Zoom control</h3>
+      <p>Gallery has a function to switch to zoom mode, in that case, you can switch to this mode by clicking the button. In zoom mode dots are hidden, and you see only the one front image, you can switch images by clicking the next / prev button.</h3>
+      <p>Use this mockup:</p>
+      </div>
+      <pre>
+        <code class="html">
+          <div class="content-holder">
+&#x3C;div class=&#x22;room&#x22;&#x3E;
+&#x3C;input id=&#x22;room-sample-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom&#x22;/&#x3E; &#x3C;!-- This input is used for switch zoom mode --&#x3E;
+&#x3C;div class=&#x22;room-body&#x22;&#x3E;
+&#x3C;input id=&#x22;room-sample-1-1&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-2&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-3&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;input id=&#x22;room-sample-1-4&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
+&#x3C;!-- ... Inputs goes here --&#x3E;
+&#x3C;div class=&#x22;room-arena&#x22;&#x3E;
+  &#x3C;div class=&#x22;walls&#x22;&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;div class=&#x22;item&#x22;&#x3E;
+        &#x3C;div class=&#x22;item-image&#x22;&#x3E;
+          &#x3C;img src=&#x22;/img/plugins/room/examples/1.jpg&#x22; /&#x3E;   &#x3C;!-- Put your image here --&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;p class=&#x22;item-desc&#x22;&#x3E; &#x3C;!-- Description put inside --&#x3E;
+          &#x3C;!-- Descriptions goes here --&#x3E;
+        &#x3C;/p&#x3E;
+
+      &#x3C;/div&#x3E;
+      &#x3C;!-- Fifth item goes here --&#x3E;
+      &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;!-- Secound item goes here --&#x3E;
+      &#x3C;!-- Sixth item goes here --&#x3E;
+      &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;!-- Third item goes here --&#x3E;
+      &#x3C;!-- Seventh item goes here --&#x3E;
+      &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;wall&#x22;&#x3E;
+      &#x3C;!-- Fourth item goes here --&#x3E;
+      &#x3C;!-- Eighth item goes here and so on --&#x3E;
+      &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;ceil&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;floor&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;navigations&#x22;&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for first item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for secound item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for third item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for fourth item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;!-- ... Rest of navigations (prev and next arrows) labels goes here --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;paginations&#x22;&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for first item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for secound item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for third item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for fourth item, link it with his &#x3C;input/&#x3E; --&#x3E;
+  &#x3C;!-- ... Rest of paginations labels goes here --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;label class=&#x22;zoom&#x22; for=&#x22;room-zoom&#x22;&#x3E;come over&#x3C;/label&#x3E;  &#x3C;!-- Here is your UI element to enter zoom mode --&#x3E;
+&#x3C;label for=&#x22;room-zoom&#x22; class=&#x22;exit&#x22;&#x3E;exit&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element to exit zoom mode --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+          </div>
+        </code>
+      </pre>
+      <div class="content-holder text-center">
+        <label for="tab-examples" class="button button-l">Go to Example</label>
+      </div>
+      <div id="configuration" class="content-holder">
+        <h2>Setpu <i>less</i> file</h2>
+        <p>Go to file <code>less/formir/plugins/room.less</code> and change your config</p>
+        <h3>HTML classes setup</h3>
+        <p>You can specify class names for html elements, for example, to avoid name collisions in your app, remember to change classes also on your html:</p>
+      </div>
+      <pre>
+        <code class="less">
+          <div class="content-holder">
+/// CLASSES (name: defualt;)
+@room: room;  // main wrapper
+@room-body: room-body;  // body of room
+@room-arena: room-arena;  // next wrapper coled arena
+@room-walls: walls; // walls in 3d
+@room-wall: wall;
+@room-ceil: ceil;
+@room-floor: floor;
+@room-item: item; // item to display on the wall
+@room-item-image: item-image; // image container
+@room-item-desc: item-desc; // image drescription
+@room-zoom: room-zoom; // zoom control input
+@room-paginations: paginations; // pagination wrapper
+@room-navigations: navigations;
+@room-zoom-button: zoom;  // button to zoom in
+@room-exit-button: exit;  // button to live zoom
+@room-canvas: canvas; // class for border/canvas style
+
+
+          </div>
+        </code>
+      </pre>
+      <div class="content-holder">
+        <h3>Core <i>less</i> variables:</h3>
+      </div>
+      <pre>
+        <code class="less">
+          <div class="content-holder">
+
+
+/// CORE
+@room-max-walls: 30;  // number of max count of walls / items
+@room-colors: true; // enable color of button dots/arrow
+@room-desc-pre: false; // enable of room-desc as pre text
+
+          </div>
+        </code>
+      </pre>
+      <div class="content-holder">
+        <h3>All <i>less</i> variables:</h3>
+      </div>
+      <pre>
+        <code class="less">
+          <div class="content-holder">
+
+/// VARIABLES
+@room-rotate-speed: 2s; // speed of room rotation
+@room-rotate-timing: ease-in-out; // function of rotation speed animation
+
+@room-font-family: Arial, Helvetica, sans-serif; // font family
+@room-mobile-media-width: 945px; // not use % unit or calc(), you can use px, rem, cm, vh, vw etc
+
+@room-size-width: 100vmax; // size of room
+@room-size-height: 100vmin;
+@room-perspective: @room-size-width;
+
+@room-mobile-size-width: 100vw; // not use % unit or calc(), you can use px, rem, cm, vh, vw etc - recommend 100vw
+@room-mobile-size-height: 100vh; // recomment 100vh
+@room-mobile-perspective: @room-mobile-size-width;
+
+
+@room-scale: 1.1;
+@room-scale-zoom: 1.5;
+@room-offset-y: 0; // use %
+
+@room-body-background: #fff;
+
+@room-item-height: 90%;
+@room-item-width: 90%;
+
+@room-zindex: 1000;
+
+@room-text-color: #2d2d2d;
+@room-text-font-size: 14px;
+@room-text-font-size-mobile: 2vmin;
+@room-font-line-height: 1.3em;
+@room-text-margin-top: 1.5rem;
+@room-text-max-height: 30%; // max height (percent of full height) of text section
+
+@room-floor-background: url('https://formir.io/plugins/img/plugins/room/floor.jpg') repeat 110px 50px;
+@room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+
+@room-wall-background: @room-body-background;
+@room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
+
+@room-ceil-background: @room-body-background;
+@room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+
+@room-navigations-margin: 20px;
+@room-button-size: 30px;
+@room-pagination-button-size: 20px;
+@room-pagination-buttons-space: 3px;
+@room-button-border: 0 none;
+@room-button-background: #747474;
+@room-button-color: #fff;
+@room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+@room-button-current-background: #fff;
+@room-button-current-border: 1px solid @room-button-background;
+@room-button-current-color: @room-button-background;
+
+@room-buttons-position: 5%;  // horizontally (y)
+@room-button-zoom-position: 10%;
+@room-button-zoom-width: 120px;
+@room-button-exit-width: 60px;
+@room-pagination-position: 5%;
+
+@room-button-opacity: 0.5;
+
+@room-button-red-background: #A6131D;
+@room-button-blue-background: #0E2D63;
+@room-button-yellow-background: #f9f381;
+@room-button-green-background: #0F6331;
+@room-button-orange-background: #F69256;
+@room-button-pink-background: #EC5B94;
+@room-button-black-background: #000;
+@room-button-white-background: #fff;
+
+@room-button-red-color: #fff;
+@room-button-blue-color: #fff;
+@room-button-yellow-color: @room-text-color;
+@room-button-green-color: #fff;
+@room-button-orange-color: #fff;
+@room-button-pink-color: #fff;
+@room-button-black-color: #fff;
+@room-button-white-color: @room-text-color;
+@room-button-transition: opacity 0.5s linear;
+
+@room-canvas-border: 10px solid @room-button-background;
+@room-canvas-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+          </div>
+        </code>
+      </pre>
+
+      <div class="content-holder">
+          <h3>Mixings</h3>
+        </div>
+        <pre>
+          <code class="less">
+            <div class="content-holder">
+.room-floor() {
+// style for floor
+}
+
+.room-wall() {
+// style for each wall
+}
+
+.room-ceil() {
+// style of ceil of room
+}
+
+.room-pagination-current() {
+// style for current pagination of dot button
+}
+
+.room-button() {
+// style for all buttons
+}
+
+.room-prev-button() {
+// style for prev button
+}
+
+.room-next-button() {
+// style for next button
+}
+
+.room-exit-button() {
+// style for exit button
+}
+
+.room-zoom-button() {
+// style for zoom button
+}
+
+            </div>
+          </code>
+        </pre>
+    </article>
+    <article>
+      <div class="content-holder">
+        <h3>Known Edge ( < 80 ) bug:</h3>
+        <p>
+          Many user repor us the same issue at Edge browser with cuting images after interaction with gallery. This is know issue of Edge browser (mixing rotate-3d and animation https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/16452345/ unfortunately this page not exist), solution is to use JS short code and for example jquery (it will be not part of package): 
+        </p>
+      </div>
+        <pre>
+          <code class="js">
+            <div class="content-holder">
+
+            
+&#x3C;script&#x3E;
+if (/Edge/.test(navigator.userAgent)) {
+setInterval(function(){
+  $(&#x27;.room-arena&#x27;).css(&#x27;opacity&#x27;, &#x27;0.999&#x27;);
+  setTimeout(function() {
+    $(&#x27;.room-arena&#x27;).removeAttr(&#x27;style&#x27;);
+  },1);
+}, 100);
+}
+&#x3C;/script&#x3E;
+            </div>
+          </code>
+        </pre>
+      <div class="content-holder">
+        <h3>Supported browsers and OS:</h3>
+        <ul>
+          <li>FF >= 20</li>
+          <li>Safari > 8</li>
+          <li>Chrome >= 35</li>
+          <li>Opera >= 22</li>
+          <li>Edge >= 12 (with JS fix)</li>
+          <li>Edge >= 80</li>
+
+          <li>Android >= 4.0</li>
+          <li>iOS > 8</li>
+        </ul>
+        <p>Tested on the above-mentioned browsers.</p>
+        <p>To fully works browser need support 'perspecitive' and 'flex' CSS properties.
+      </div>
+    </article>
+  </div>
+</div>

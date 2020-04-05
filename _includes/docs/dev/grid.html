@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"  style="overflow-x: hidden;">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>index</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Konrad" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet/less" type="text/css" href="../../src/less/application.less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../src/js/less.min.js"></script>
+
+    <script>
+      less = {
+        env : "development",
+        async : false,
+        fileAsync : false,
+        poll : 1000,
+        functions : {},
+        dumpLineNumbers : "comments",
+        relativeUrls : false,
+        rootpath : ""
+      };
+    </script>
+  </head>
+
+  <body style="overflow-x: hidden;">
+    <h1 class="content-holder">Grid system</h1>
+    <div  style="overflow-x: hidden;" class="grids">
+       <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-2 content-holder" style="height: 400px;">
+            <div class="cell-1"></div>
+            <div class="cell-14"></div>
+            <div class="cell-1"></div>
+          </div>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-3 space-2 content-holder t-column-force" style="height: 400px;">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-2 content-holder t-column-force" style="height: 400px;">
+            <div class="cell-5 m-cell-10"></div>
+            <div class="cell-fill"></div>
+          </div>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-2 space-2 content-holder t-column-force" style="height: 400px;">
+            <div class="cell-auto">this is text that will be push conten of this box</div>
+            <div class="cell-fill"></div>
+          </div>
+        </div>
+        <br/>
+        <h3 class="content-holder">Grid with offset, auto fill/content and RWD</h3>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-2 content-holder" style="height: 400px;">
+            <div class="cell-fill t-cell-5 m-cell-16"></div>
+            <div class="cell-2 offset-1 t-offset-0 m-cell-8 mp-cell-16 t-cell-auto"></div>
+            <div class="cell-auto m-cell-8 mp-cell-16 t-cell-fill">this is text that will be push</div>
+          </div>
+        </div>
+        <br/>
+        <h3 class="content-holder">No gutter</h3>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid space-2 content-holder" style="height: 400px;">
+            <div class="cell"></div>
+            <div class="cell t-cell-10"></div>
+            <div class="cell"></div>
+          </div>
+        </div>
+        <br/>
+        <div class="content-holder" style="border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-5" style="height: 400px;">
+            <div class="cell-1 t-cell-10"></div>
+            <div class="cell-14 t-cell-4 t-offset-1"></div>
+            <div class="cell-1"></div>
+          </div>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-2" style="height: 400px;">
+            <div class="row">
+              <div class="cell-1"></div>
+              <div class="cell-14 t-13"></div>
+              <div class="cell-1 t-offset-1"></div>
+            </div>
+            <div class="row">
+              <div class="cell-7"></div>
+              <div class="cell-6"></div>
+              <div class="cell-3"></div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <div class="grid gutter-1 space-2 column" style="height: 400px;">
+            <div class="row">
+              <div class="cell-1"></div>
+              <div class="cell-14"></div>
+              <div class="cell-1"></div>
+            </div>
+            <div class="row">
+              <div class="cell-7"></div>
+              <div class="cell-6"></div>
+              <div class="cell-3"></div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <h3 class="content-holder">Grid on table</h3>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <table class="grid gutter-1 space-2" style="">
+            <tr class="row">
+              <td gutter-1 class="cell-7">a</td>
+              <td gutter-1 class="cell-7">a</td>
+              <td gutter-1 class="cell-2">a</td>
+            </tr>
+
+            <tr class="row">
+              <td  gutter-1 class="cell-1">a</td>
+              <td  gutter-1 class="cell-14">a</td>
+              <td  gutter-1 class="cell-1">a</td>
+            <tr class="row">
+              <td  gutter-1 class="cell-1">a</td>
+              <td gutter-1 class="cell-14">a</td>
+              <td gutter-1 class="cell-1">a</td>
+            </tr>
+          </table>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <table class="grid gutter-1" style="">
+            <tr class="row">
+              <td gutter-1 class="cell">a</td>
+              <td gutter-1 class="cell">a</td>
+              <td gutter-1 class="cell">a</td>
+            </tr>
+
+            <tr class="row">
+              <td  gutter-1 class="cell">a</td>
+              <td  gutter-1 class="cell">a</td>
+              <td  gutter-1 class="cell">a</td>
+            <tr class="row">
+              <td  gutter-1 class="cell">a</td>
+              <td gutter-1 class="cell">a</td>
+              <td gutter-1 class="cell">a</td>
+            </tr>
+          </table>
+        </div>
+        <br/>
+        <h3 class="content-holder">Grid on form</h3>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <form class="grid gutter-1 space-2">
+            <div class="row">
+              <div class="cell-1">
+                <input type="text"/>
+              </div>
+              <div class="cell-14">
+                <input type="text"/>
+              </div>
+              <div class="cell-1">
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell-7">
+                <input type="text"/>
+              </div>
+              <div class="cell-6">
+                <textarea></textarea>
+              </div>
+              <div class="cell-3">
+                <select></select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <form class="grid gutter-1 space-2">
+            <div class="row">
+              <div class="cell-1">
+                label:
+              </div>
+              <div class="cell-14">
+                <input type="text"/>
+              </div>
+              <div class="cell-1">
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell-7">
+                label:
+              </div>
+              <div class="cell-6">
+                <textarea rows="1"></textarea>
+              </div>
+              <div class="cell-3">
+                <select></select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <form class="grid release gutter-1 space-2">
+            <div class="row">
+              <div class="cell-1">
+                label:
+              </div>
+              <div class="cell-14">
+                <input type="text"/>
+              </div>
+              <div class="cell-1">
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell-7">
+                label:
+              </div>
+              <div class="cell-6">
+                <textarea rows="1"></textarea>
+              </div>
+              <div class="cell-3">
+                <select></select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <form class="grid label-right label-center gutter-1 space-2">
+            <div class="row">
+              <label class="cell-4">
+                label:
+              </label>
+              <div class="cell-8">
+                <input type="text"/>
+              </div>
+              <div class="cell-4">
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <label class="cell-4">
+                label:
+              </label>
+              <div class="cell-6">
+                <textarea rows="1"></textarea>
+              </div>
+              <div class="cell-6">
+                <select></select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br/>
+        <div style="width: 100%;border-top: 1px solid;border-bottom: 1px solid">
+          <form class="grid gutter-1 m-column-force label-center space-2 offset-1 t-offset-0 t-offset-right-0 offset-right-1">
+            <div class="row">
+              <label gutter-1 class="cell-6">
+                label:
+              </label>
+              <div class="cell-10 t-cell-7">
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <label gutter-1 class="cell-6">
+                label:
+              </label>
+              <div class="cell-10 t-cell-7">
+                <textarea rows="1"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br/>
+    </div>
+
+
+  </body>
+</html>

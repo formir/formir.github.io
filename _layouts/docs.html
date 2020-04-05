@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Formir - open source, pure CSS / HTML Framework</title>
+    {% include head.html %}
+    {% include docs/head.html %}
+  </head>
+
+  <body class="background-alternative">
+    <input type="checkbox" id="aside-left" name="aside" class="side-collapse"/>
+    <nav tabindex="-1" class="side left overflow">
+      <label for="aside-left" class="side-close"><i class="icon-cancel collapsed-hide"></i><i class="icon-menu expanded-hide"></i></label>
+      <ul class="menu" active="getting-started">
+        {% include docs/menu.html %}
+      </ul>
+    </nav>
+    <label for="aside-left" class="side-backdrop"></label>
+    <label for="aside-left" class="side-open expanded-hide background-white text-primary"><i class="icon-menu"></i></label>
+    {% include docs/header.html %}
+    <div id="body" class="body-content">
+      {{ content }}
+    </div>
+    {% include ga.html %}
+  </body>
+</html>

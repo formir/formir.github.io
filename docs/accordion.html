@@ -1,0 +1,191 @@
+---
+layout: docs
+active: accordion
+---
+
+<div class="content-holder">
+  <h1>Accordions</h1>
+  <div class="section section-content with-table overflow-hidden">
+    <table class="table text-left borders-horizontal hoverable-tr">
+      <thead>
+        <tr>
+          <th>Class method</th>
+          <th>on what</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><code>accordion</code></td>
+            <td>item in accordions; <code>accordion</code> could live alone</td>
+            <td></td>
+          </tr>
+        <tr>
+          <td><code>accordions</code></td>
+          <td>list in accordion</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code>arrow</code></td>
+          <td>in <code>label</code> of <code>accordion</code></td>
+          <td>display arrow in header</td>
+        </tr>
+        <tr>
+          <td><code>animated</code></td>
+          <td>on <code>accordion</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code>hoverable</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will keep open accordion when hover</td>
+        </tr>
+        <tr>
+          <td><code>focusable</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will keep open accordion when focused</td>
+        </tr>
+        <tr>
+          <td><code>label-hide</code></td>
+          <td>on <code>accordion</code></td>
+          <td>will hide header when accordion is open</td>
+        </tr>
+        <tr>
+          <td><code>grid columns</code></td>
+          <td>on <code>accordions</code></td>
+          <td>display accordion as grid</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h2>Cases of use</h2>
+  <h3 id="animated">animated <a class="anhor link small" href="#animated">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="animated" id="animated-1" checked="true"/>
+    <input type="radio" name="animated" id="animated-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="animated-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="animated-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/accordion/animated.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html" encode="true">
+            {% include docs/accordion/animated.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="hoverable">hoverable <a class="anhor link small" href="#hoverable">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="hoverable" id="hoverable-1" checked="true"/>
+    <input type="radio" name="hoverable" id="hoverable-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="hoverable-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="hoverable-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/accordion/hoverable.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/accordion/hoverable.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="focusable-animated">focusable animated <a class="anhor link small" href="#focusable-animated">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="focusable-animated" id="focusable-animated-1" checked="true"/>
+    <input type="radio" name="focusable-animated" id="focusable-animated-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="focusable-animated-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="focusable-animated-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/accordion/focusable-animated.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/accordion/focusable-animated.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="label-hide">label hide <a class="anhor link small" href="#label-hide">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="label-hide" id="label-hide-1" checked="true"/>
+    <input type="radio" name="label-hide" id="label-hide-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="label-hide-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="label-hide-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/accordion/label-hide.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/accordion/label-hide.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h3 id="grid-column">grid column <a class="anhor link small" href="#grid-column">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="grid-column" id="grid-column-1" checked="true"/>
+    <input type="radio" name="grid-column" id="grid-column-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="grid-column-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="grid-column-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/accordion/grid-column.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/accordion/grid-column.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+  <h3 id="classes">classes <a class="anhor link small" href="#classes">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less">
+      {% include docs/accordion/classes.html %}
+    </code>
+  </pre>
+  <h3 id="variables">variables <a class="anhor link small" href="#variables">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less">
+      {% include docs/accordion/variables.html %}
+    </code>
+  </pre>
+</div>

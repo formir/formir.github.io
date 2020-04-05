@@ -1,0 +1,157 @@
+---
+layout: docs
+active: alert
+---
+
+<div class="content-holder">
+    <h1>Alert</h1>
+    <div class="section section-content with-table overflow-hidden">
+      <table class="table text-left borders-horizontal hoverable-tr">
+        <thead>
+          <tr>
+            <th>Class method</th>
+            <th>on what</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>alert</code></td>
+            <td>item in alerts; <code>alert</code> could live alone</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <h2>Cases of use</h2>
+    <h3 id="states">states <a class="anhor link small" href="#states">#</a></h3>
+    <div class="tabs section with-padding">
+      <input type="radio" name="states" id="states-1" checked="true"/>
+      <input type="radio" name="states" id="states-2"/>
+      <div class="section-header tab-navs">
+        <div class="tab-labels vertical-center button-group">
+          <label class="button button-s" for="states-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+          <label class="button button-s" for="states-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+        </div>
+      </div>
+      <div class="tab-pages section-content with-border">
+        <div>
+          {% include docs/alert/states.html %}
+        </div>
+        <div>
+          <pre>
+            <code class="html">
+              {% include docs/alert/states.html %}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <h3 id="removable">removable <a class="anhor link small" href="#removable">#</a></h3>
+    <div class="tabs section with-padding">
+      <input type="radio" name="removable" id="removable-1" checked="true"/>
+      <input type="radio" name="removable" id="removable-2"/>
+      <div class="section-header tab-navs">
+        <div class="tab-labels vertical-center button-group">
+          <label class="button button-s" for="removable-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+          <label class="button button-s" for="removable-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+        </div>
+      </div>
+      <div class="tab-pages section-content with-border">
+        <div>
+          {% include docs/alert/removable.html %}
+        </div>
+        <div>
+          <pre>
+            <code class="html">
+              {% include docs/alert/removable.html %}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <h3 id="light">light <a class="anhor link small" href="#light">#</a></h3>
+    <div class="tabs section with-padding">
+      <input type="radio" name="light" id="light-1" checked="true"/>
+      <input type="radio" name="light" id="light-2"/>
+      <div class="section-header tab-navs">
+        <div class="tab-labels vertical-center button-group">
+          <label class="button button-s" for="light-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+          <label class="button button-s" for="light-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+        </div>
+      </div>
+      <div class="tab-pages section-content with-border">
+        <div>
+          {% include docs/alert/light.html %}
+        </div>
+        <div>
+          <pre>
+            <code class="html">
+              {% include docs/alert/light.html %}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <h3 id="light">alerts fixed <small>click example to show fixed elements</small> <a class="anhor link small" href="#alerts">#</a></h3>
+    <div class="tabs section with-padding">
+      <input type="radio" name="alerts" id="alerts-1"/>
+      <input type="radio" name="alerts" id="alerts-2" checked="true"/>
+      <div class="section-header tab-navs">
+        <div class="tab-labels vertical-center button-group">
+          <label class="button button-s" for="alerts-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+          <label class="button button-s" for="alerts-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+        </div>
+      </div>
+      <div class="tab-pages section-content with-border">
+        <div>
+          {% include docs/alert/alerts.html %}
+        </div>
+        <div>
+          <pre>
+            <code class="html">
+              {% include docs/alert/alerts.html %}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+    <h3 id="classes">classes <a class="anhor link small" href="#classes">#</a></h3>
+    <div class="section section-content with-padding">
+      <pre>
+        <code class="less">
+          {% include docs/alert/classes.html %}
+        </code>
+      </pre>
+    </div>
+    
+    <h3 id="core">core <small>variables</small> <a class="anhor link small" href="#core">#</a></h3>
+    <div class="section section-content with-padding">
+      <pre>
+        <code class="less">
+          {% include docs/alert/core.html %}
+        </code>
+      </pre>
+    </div>
+    
+    <h3 id="variables">variables <a class="anhor link small" href="#variables">#</a></h3>
+    <div class="section section-content with-padding">
+      <pre>
+        <code class="less">
+          {% include docs/alert/variables.html %}
+        </code>
+      </pre>
+    </div>
+    
+    <h3 id="variables">mixins <a class="anhor link small" href="#mixins">#</a></h3>
+    <div class="section section-content with-padding">
+      <pre>
+        <code class="less">
+          {% include docs/alert/mixins.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>

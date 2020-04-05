@@ -1,0 +1,34 @@
+<input type="radio" name="tab" id="tab-welcome" checked="true"/>
+<input type="radio" name="tab" id="tab-examples"/>
+<input type="radio" name="tab" id="tab-docs"/>
+<header class="header fixed tab-navs">
+  <div class="header-content">
+    <span>
+      <a class="logo logo-s display-inline"><img src="https://formir.io/img/logo/formir-64.png"/><span>room <small class="mobile-hide"> by formir</small></span></a>
+    </span>
+    <nav>
+      <input id="nav-mobile" type="checkbox" class="mobile-toggle"/>
+      <label for="nav-mobile" class="mobile-toggle-label">
+        <span class="toggle-hide">&#9776;</span>
+        <span class="toggle-show">&times;</span>
+      </label>
+      <ul class="items menu-mobile mobile-toggle-show">
+        <li class="item">
+          <label class="anchor" for="tab-welcome" onClick="window.location.href='#'+this.attributes.for.value">Home</label>
+        </li>
+        <li class="item">
+          <label class="anchor" for="tab-examples" onClick="window.location.href='#'+this.attributes.for.value">Examples</label>
+        </li>
+        <li class="item">
+          <label class="anchor" for="tab-docs" onClick="window.location.href='#'+this.attributes.for.value">Documentation</label>
+        </li>
+        <li class="item"><a class="anchor" target="_blank" href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934">Buy Room</a></li>
+        <li class="item"><a class="anchor" href="/">Get formir</a></li>
+        <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new" target="_blank">Report issue</a></li>
+        <li class="item">
+          <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support author</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

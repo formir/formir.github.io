@@ -1,0 +1,197 @@
+---
+layout: docs
+active: form
+---
+
+<div class="content-holder">
+	<h1>Forms</h1>
+
+	<h2>Cases of use</h2>
+  <h3 id="grid">grid <a class="anhor link small" href="#grid">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="grid" id="grid-1" checked="true"/>
+    <input type="radio" name="grid" id="grid-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="grid-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="grid-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/grid.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/grid.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+	</div>
+	
+	<h3 id="large">size large<a class="anhor link small" href="#large">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="large" id="large-1" checked="true"/>
+    <input type="radio" name="large" id="large-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="large-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="large-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/large.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/large.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+	</div>
+	
+	<h3 id="small">size small<a class="anhor link small" href="#small">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="small" id="small-1" checked="true"/>
+    <input type="radio" name="small" id="small-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="small-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="small-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/small.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/small.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+	<h3 id="grid-label">grid and label<a class="anhor link grid-label" href="#grid-label">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="grid-label" id="grid-label-1" checked="true"/>
+    <input type="radio" name="grid-label" id="grid-label-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="grid-label-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="grid-label-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/grid-label.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/grid-label.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="validation">validation<a class="anhor link validation" href="#validation">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="validation" id="validation-1" checked="true"/>
+    <input type="radio" name="validation" id="validation-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="validation-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="validation-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/validation.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/validation.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="status">status<a class="anhor link" href="#status">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="status" id="status-1" checked="true"/>
+    <input type="radio" name="status" id="status-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="status-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="status-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/status.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/status.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+		
+  
+  <!-- <h3 id="checkbox">checkboxes<a class="anhor link" href="#checkbox">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="checkbox" id="checkbox-1" checked="true"/>
+    <input type="radio" name="checkbox" id="checkbox-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="checkbox-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="checkbox-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/form/checkbox.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/form/checkbox.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div> -->
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+  <h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less">
+      {% include docs/form/core.html %}
+    </code>
+  </pre>
+  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less">
+      {% include docs/form/classes.html %}
+    </code>
+  </pre>
+  <h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+  <pre class="section section-content with-padding">
+    <code class="less">
+      {% include docs/form/variables.html %}
+    </code>
+  </pre>
+</div>

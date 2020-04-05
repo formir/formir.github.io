@@ -1,0 +1,122 @@
+---
+layout: docs
+active: table
+---
+
+<div class="content-holder">
+	<h1>Table</h1>
+	<h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1">Example</label>
+				<label class="button button-s" for="base-2">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div class="overflow-auto">
+				{% include docs/table/base.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/table/base.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="column">column hover <a class="anhor link small" href="#column">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="column" id="column-1" checked="true"/>
+		<input type="radio" name="column" id="column-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="column-1">Example</label>
+				<label class="button button-s" for="column-2">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div class="overflow-auto">
+				{% include docs/table/column.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/table/column.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="mobile">with mobile support <a class="anhor link small" href="#mobile">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="mobile" id="mobile-1" checked="true"/>
+		<input type="radio" name="mobile" id="mobile-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="mobile-1">Example</label>
+				<label class="button button-s" for="mobile-2">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/table/mobile.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/table/mobile.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="expandable">with expandable <a class="anhor link small" href="#expandable">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="expandable" id="expandable-1" checked="true"/>
+		<input type="radio" name="expandable" id="expandable-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="expandable-1">Example</label>
+				<label class="button button-s" for="expandable-2">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/table/expandable.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/table/expandable.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/table/classes.html %}
+			</code>
+		</pre>
+	</div>
+	<h3 id="core">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/table/variables.html %}
+			</code>
+		</pre>
+	</div>
+</div>

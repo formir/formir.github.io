@@ -1,0 +1,52 @@
+---
+layout: docs
+active: typography
+---
+
+
+<div class="content-holder">
+  <h1>Typography</h1>
+  
+  <h2>Case of use</h2>
+	<h3 id="article">article <a class="anhor link small" href="#article">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="article" id="article-1" checked="true"/>
+		<input type="radio" name="article" id="article-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="article-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="article-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/typography/article.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/typography/article.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/typography/classes.html %}
+			</code>
+		</pre>
+	</div>
+	<h3 id="core">core <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/typography/core.html %}
+			</code>
+		</pre>
+	</div>
+</div>

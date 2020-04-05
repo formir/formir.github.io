@@ -1,0 +1,126 @@
+---
+layout: docs
+active: modals
+---
+
+<div class="content-holder">
+  <h1>Modals</h1>
+  <div class="section section-content with-padding">
+    <p>To toggle modals use <code>label for=""</code> tag that points assign <code>input type="radio"</code> above modal tag.</p>
+    <p>For closing modal you need once more <code>input</code> tag that will tell when modal is close, use the same name for all input elements in the same group of modals. This solution gives you the opportunity to switch between modals in one group, the same as work gropus of radio inputs with the same name.</p>
+  </div>
+  
+  <h3 id="normal">normal <a class="anhor link small" href="#normal">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="normal" id="normal-1" checked="true"/>
+		<input type="radio" name="normal" id="normal-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="normal-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="normal-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/modals/normal.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/modals/normal.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="transparent">transparent <a class="anhor link small" href="#transparent">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="transparent" id="transparent-1" checked="true"/>
+		<input type="radio" name="transparent" id="transparent-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="transparent-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="transparent-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/modals/transparent.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/modals/transparent.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="group">group <a class="anhor link small" href="#group">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="group" id="group-1" checked="true"/>
+		<input type="radio" name="group" id="group-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="group-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="group-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/modals/group.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/modals/group.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="on_checkbox">on checkbox input <a class="anhor link small" href="#on_checkbox">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="on_checkbox" id="on_checkbox-1" checked="true"/>
+		<input type="radio" name="on_checkbox" id="on_checkbox-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-on_checkbox">
+				<label class="button button-s" for="on_checkbox-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="on_checkbox-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/modals/on_checkbox.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/modals/on_checkbox.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/modals/classes.html %}
+			</code>
+		</pre>
+	</div>
+	<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/modals/variables.html %}
+			</code>
+		</pre>
+	</div>
+</div>

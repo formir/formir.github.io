@@ -1,0 +1,242 @@
+---
+layout: docs
+active: buttons
+---
+
+<div class="content-holder buttons">
+	<h1>Buttons</h1>
+	<div class="section section-content with-table overflow-hidden">
+		<table class="table text-left borders-horizontal">
+			<thead>
+				<tr>
+					<th>Class method</th>
+					<th>on what</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>button</code></td>
+					<td>on any tag</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>button-xs</code></td>
+					<td>on <code>button</code> or on <code>buttons</code> wrapper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>button-s</code> or <code>buttons-s</code></td>
+					<td>on <code>button</code> or on <code>buttons</code> wrapper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>button-m</code> or <code>buttons-m</code></td>
+					<td>on <code>button</code> or on <code>buttons</code> wrapper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>button-l</code> or <code>buttons-l</code></td>
+					<td>on <code>button</code> or on <code>buttons</code> wrapper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>button-xl</code> or <code>buttons-xl</code></td>
+					<td>on <code>button</code> or on <code>buttons</code> wrapper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>circle</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>ellipsis</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>inverse</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>disabled</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>active</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>inverse</code></td>
+					<td>on <code>button</code></td>
+					<td>inverse colors</td>
+				</tr>
+				<tr>
+					<td><code>as-link</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>block</code></td>
+					<td>on <code>button</code></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>border-contrast</code></td>
+					<td>on <code>button</code></td>
+					<td>border more contract</td>
+				</tr>
+				<tr>
+					<td><code>transparent</code></td>
+					<td>on <code>button</code></td>
+					<td>background transparent</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h2>Case of use</h2>
+	<h3 id="sizes-colors">colors and sizes <a class="anhor link small" href="#sizes-colors">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="sizes-colors" id="sizes-colors-1" checked="true"/>
+		<input type="radio" name="sizes-colors" id="sizes-colors-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="sizes-colors-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="sizes-colors-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/buttons/sizes-colors.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/buttons/sizes-colors.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<h3 id="behavior"> behavior <a class="anhor link small" href="#behavior">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="behavior" id="behavior-1" checked="true"/>
+		<input type="radio" name="behavior" id="behavior-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="behavior-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="behavior-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/buttons/behavior.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/buttons/behavior.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<h3 id="shapes"> shapes <a class="anhor link small" href="#shapes">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="shapes" id="shapes-1" checked="true"/>
+		<input type="radio" name="shapes" id="shapes-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="shapes-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="shapes-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/buttons/shapes.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/buttons/shapes.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<h3 id="icons"> icons <a class="anhor link small" href="#icons">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="icons" id="icons-1" checked="true"/>
+		<input type="radio" name="icons" id="icons-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="icons-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="icons-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/buttons/icons.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/buttons/icons.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<h3 id="groups"> groups <a class="anhor link small" href="#groups">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="groups" id="groups-1" checked="true"/>
+		<input type="radio" name="groups" id="groups-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="groups-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="groups-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/buttons/groups.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/buttons/groups.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+	</div>
+	
+	
+	<h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes <a class="anhor link small" href="#classes">#</a></h3>
+	<pre class="section section-content with-padding">
+		<code class="less">
+			{% include docs/buttons/classes.html %}
+		</code>
+	</pre>
+	<h3 id="core">core <a class="anhor link small" href="#core">#</a></h3>
+	<pre class="section section-content with-padding">
+		<code class="less">
+			{% include docs/buttons/core.html %}
+		</code>
+	</pre>
+	<h3 id="variables">variables <a class="anhor link small" href="#variables">#</a></h3>
+	<pre class="section section-content with-padding">
+		<code class="less">
+			{% include docs/buttons/variables.html %}
+		</code>
+	</pre>
+</div>

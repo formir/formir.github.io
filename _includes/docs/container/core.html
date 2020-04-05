@@ -1,0 +1,44 @@
+// Layout Unit
+@layout-unit: px;
+@layout-steps: 8;
+@layout-factor: 0.3;
+@layout-geometric-step: @base-geometric-step;
+@layout-width: @content-max-width;
+@layout-height: @content-max-height;
+
+// Rensponsive Web Design
+
+// Break points
+@desktop-min-width: 1280px;
+@tablet-max-width: 1024px;
+@tablet-portrait-max-width: 768px;
+@mobile-max-width: 568px;
+@mobile-portrait-max-width: 320px;
+
+// Break point on mobile menu
+@mobile-menu-max-width: @tablet-portrait-max-width;
+
+
+// Z-index
+  //// Modals
+  @modal-zindex: 10000;
+
+  //// Side
+  @side-zindex: 10000;
+  //// Tooltips
+  @tooltip-zindex: 10000;
+  @tooltip-arrow-zindex: 1;
+  //// Popups
+  @popup-zindex: 10000;
+  @popup-arrow-zindex: 1;
+  //// Select
+  @select-zindex: 10000;
+
+  // Header
+  @header-zindex: 10000;
+
+
+// Content
+@content-max-width: unit(1128, @layout-unit);
+@content-min-margin: unit(20, @layout-unit);
+@content-max-height: unit(600, @layout-unit);

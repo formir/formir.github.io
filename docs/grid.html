@@ -1,0 +1,229 @@
+---
+layout: docs
+active: grid
+---
+
+<div class="content-holder grids">
+	<h1>Grid</h1>
+	<div class="section section-content with-padding">
+		<p>Grid system is most powerfull components in this framework.</p>
+		<p>To apply grid just add <code>grid</code> class to parent of nodes, nodes will have class <code>cell</code> with number of columns to span, example: <code>cell-3</code>. Maximum number of columns you can set on setup. Also if you leave only <code>cell</code> class without number this column will be auto width to rest of available space. There is also two more property of width of cell <code>cell-fill</code> and <code>cell-auto</code>, see more belov.</p>
+		<p>Gris system has vertical and horizontal space between cell, we called <code>gutter</code> and <code>space</code>, gutter is space between column, and space is between row. You can dinamicly changes this space using extra class after or before <code>grid</code>.</p>
+		<p>Cell wil auto wrap, so if you want to be sure that thay will be separata by new row, just wrap them by new parent div with class <code>row</code>.</p>
+		<p>Space and gutter will always the same, no matter if cell will wrap automaticly or wrap by <code>row</code>.</p>
+		<p>You could also change the width of cell by resposive class, breaking points are set on variables. You could user prefix <code>t-cell-{number}</code> - tablet, <code>tp-cell-{number}</code> - tablet portrait, <code>m-cell-{number}</code> - mobile, <code>mp-cell-{number}</code> - mobile portrait</p>
+		<p>One more thing: <code>offset-{number}</code> or <code>offset-right-{number}</code> use this class on cell to set offset (margin) on right and left side to cell, works also with RWD prefix.</p>
+				
+	</div>
+  
+  <h2>Case of use</h2>
+	<h3 id="base">base grid <a class="anhor link small" href="#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/base.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/base.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="offset">offset <a class="anhor link small" href="#offset">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="offset" id="offset-1" checked="true"/>
+		<input type="radio" name="offset" id="offset-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="offset-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="offset-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/offset.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/offset.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="auto">auto column <a class="anhor link small" href="#auto">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="auto" id="auto-1" checked="true"/>
+		<input type="radio" name="auto" id="auto-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="auto-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="auto-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/auto.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/auto.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="fill">fill <a class="anhor link small" href="#fill">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="fill" id="fill-1" checked="true"/>
+		<input type="radio" name="fill" id="fill-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="fill-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="fill-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/fill.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/fill.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="auto-fill">auto fill <a class="anhor link small" href="#auto-fill">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="auto-fill" id="auto-fill-1" checked="true"/>
+		<input type="radio" name="auto-fill" id="auto-fill-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="auto-fill-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="auto-fill-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/auto-fill.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/auto-fill.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="no-gutter">no-gutter <a class="anhor link small" href="#no-gutter">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="no-gutter" id="no-gutter-1" checked="true"/>
+		<input type="radio" name="no-gutter" id="no-gutter-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="no-gutter-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="no-gutter-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/no-gutter.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/no-gutter.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="table">table <a class="anhor link small" href="#table">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="table" id="table-1" checked="true"/>
+		<input type="radio" name="table" id="table-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="table-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="table-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/table.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/table.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="form">form <a class="anhor link small" href="#form">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="form" id="form-1" checked="true"/>
+		<input type="radio" name="form" id="form-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="form-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="form-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/grids/form.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/grids/form.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/grids/classes.html %}
+			</code>
+		</pre>
+	</div>
+	<h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/grids/core.html %}
+			</code>
+		</pre>
+	</div>
+</div>    

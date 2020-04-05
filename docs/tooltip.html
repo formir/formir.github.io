@@ -1,0 +1,146 @@
+---
+layout: docs
+active: tooltip
+---
+
+<div class="content-holder">
+  <h1>Tooltip</h1>
+  <h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="#base">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="base" id="base-1" checked="true"/>
+		<input type="radio" name="base" id="base-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/tooltip/base.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/tooltip/base.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="position">position, focusable <a class="anhor link small" href="#position">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="position" id="position-1" checked="true"/>
+		<input type="radio" name="position" id="position-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/tooltip/position.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/tooltip/position.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="inside">inside html, focusable <a class="anhor link small" href="#inside">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="inside" id="inside-1" checked="true"/>
+		<input type="radio" name="inside" id="inside-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="inside-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="inside-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/tooltip/inside.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/tooltip/inside.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="inside-position">inside html, focusable <a class="anhor link small" href="#inside-position">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="inside-position" id="inside-position-1" checked="true"/>
+		<input type="radio" name="inside-position" id="inside-position-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="inside-position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="inside-position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/tooltip/inside-position.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/tooltip/inside-position.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h3 id="hoverable">inside html, hoverable <a class="anhor link small" href="#hoverable">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="hoverable" id="hoverable-1" checked="true"/>
+		<input type="radio" name="hoverable" id="hoverable-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="hoverable-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="hoverable-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border with-table">
+			<div>
+				{% include docs/tooltip/hoverable.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/tooltip/hoverable.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+	<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/tooltip/classes.html %}
+			</code>
+		</pre>
+	</div>
+	<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+	<div class="section section-content with-padding">
+		<pre>
+			<code class="less">
+				{% include docs/tooltip/variables.html %}
+			</code>
+		</pre>
+	</div>
+</div>

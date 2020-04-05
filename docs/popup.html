@@ -1,0 +1,130 @@
+---
+layout: docs
+active: popup
+---
+
+<div class="content-holder">
+  <h1>Popup</h1>
+  <h2>Case of use</h2>
+  <h3 id="base">base <a class="anhor link small" href="#base">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="base" id="base-1" checked="true"/>
+    <input type="radio" name="base" id="base-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="base-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="base-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/popup/base.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/popup/base.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="with-tabs">with tabs <a class="anhor link small" href="#with-tabs">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="with-tabs" id="with-tabs-1" checked="true"/>
+    <input type="radio" name="with-tabs" id="with-tabs-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="with-tabs-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="with-tabs-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/popup/with-tabs.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/popup/with-tabs.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="with-menu">with menu <a class="anhor link small" href="#with-menu">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="with-menu" id="with-menu-1" checked="true"/>
+    <input type="radio" name="with-menu" id="with-menu-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="with-menu-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="with-menu-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/popup/with-menu.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/popup/with-menu.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="position">with menu <a class="anhor link small" href="#position">#</a></h3>
+  <div class="tabs section with-padding">
+    <input type="radio" name="position" id="position-1" checked="true"/>
+    <input type="radio" name="position" id="position-2"/>
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="position-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="position-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
+        {% include docs/popup/position.html %}
+      </div>
+      <div>
+        <pre>
+          <code class="html">
+            {% include docs/popup/position.html %}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+        {% include docs/popup/classes.html %}
+      </code>
+    </pre>
+  </div>
+  <h3 id="mixins">mixins  <small>less/formir/setup/mixins.less</small> <a class="anhor link small" href="#mixins">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+        {% include docs/popup/mixins.html %}
+      </code>
+    </pre>
+  </div>
+  <h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+        {% include docs/popup/variables.html %}
+      </code>
+    </pre>
+  </div>
+</div>

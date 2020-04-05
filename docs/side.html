@@ -1,0 +1,129 @@
+---
+layout: docs
+active: side
+---
+
+<div class="content-holder">
+  <h1>Side - sidebar</h1>
+  <h3>Mode of work</h3>
+  <div class="section section-content with-padding">
+    <p>Sidebar have 4 mode of collapsing behavior (collapse, expand, hide, hide-expand), also can be pined in 4 dirrection ( left / right and also top / bottom - independy of header or footer )</p>
+    <p>Just add your mode class before <code>aside</code> tag to your input or just to div if you using React or other JS library.</p>
+    <p>Collapse is stering by <code>input</code> type <code>checkbox</code> tag or <code>active</code> class.</p>
+    <h4>Collapse <small>.side-collapse</small></h4>
+    <p>On this mode, sidebar will be expand by default and collapse by checking input (first click of label, or add .active class)</p>
+    <h4>Expand <small>.side-expand</small></h4>
+    <p>On this mode, sidebar will collapse by default and expand by checking input (first click of label, or add .active class)</p>
+    <h4>Hide <small>.side-hide</small></h4>
+    <p>On this mode, sidebar will hide (width: 0) by default and expand by checking input (first click of label, or add .active class)</p>
+    <h4>Hide Expand  <small>.side-hide-expand</small></h4>
+    <p>On this mode, sidebar will expand by default and hide (width: 0) by checking input (first click of label, or add .active class)</p>
+	</div>
+	<h3>Important</h3>
+	<div class="section section-content with-padding background-primary">
+		<p>Sidebar (side) component, will push (left/right or top/bottom) all tag with class <code>body-content</code> that are next siblings <code>side ~ .body-content</code>.</p>
+	</div>
+  <h2>Case of use</h2>
+  <h3 id="fixed-right">fixed right<a class="anhor link small" href="#fixed-right">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="fixed-right" id="fixed-right-1"/>
+		<input type="radio" name="fixed-right" id="fixed-right-2" checked="true"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="fixed-right-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="fixed-right-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/side/fixed-right.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/side/fixed-right.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  <h3 id="fixed-bottom">fixed bottom<a class="anhor link small" href="#fixed-bottom">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="fixed-bottom" id="fixed-bottom-1"/>
+		<input type="radio" name="fixed-bottom" id="fixed-bottom-2" checked="true"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="fixed-bottom-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="fixed-bottom-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/side/fixed-bottom.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/side/fixed-bottom.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  <h3 id="relative-top">relative top<a class="anhor link small" href="#relative-top">#</a></h3>
+	<div class="tabs section with-padding">
+		<input type="radio" name="relative-top" id="relative-top-1" checked="true"/>
+		<input type="radio" name="relative-top" id="relative-top-2"/>
+		<div class="section-header tab-navs">
+			<div class="tab-labels vertical-center button-group">
+				<label class="button button-s" for="relative-top-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+				<label class="button button-s" for="relative-top-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+			</div>
+		</div>
+		<div class="tab-pages section-content with-border">
+			<div>
+				{% include docs/side/relative-top.html %}
+			</div>
+			<div>
+				<pre>
+					<code class="html">
+						{% include docs/side/relative-top.html %}
+					</code>
+				</pre>
+			</div>
+		</div>
+  </div>
+  <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+				{% include docs/side/classes.html %}
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+				{% include docs/side/core.html %}
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+				{% include docs/side/variables.html %}
+      </code>
+    </pre>
+  </div>
+  <h3 id="core">mixins  <small>less/formir/setup/mixins.less</small> <a class="anhor link small" href="#mixins">#</a></h3>
+  <div class="section section-content with-padding">
+    <pre>
+      <code class="less">
+				{% include docs/side/mixins.html %}
+      </code>
+    </pre>
+  </div>
+</div>
