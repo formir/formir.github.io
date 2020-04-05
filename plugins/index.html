@@ -2,4 +2,47 @@
 layout: plugins
 url: room
 ---
-{% include plugins/room/header.html %}
+{% include plugins/header.html %}
+
+<div class="welcome">
+  <div class="room-black">
+    <input id="room-zoom" type="checkbox" name="zoom" class="room-zoom"/>
+    <div class="room-body-black">
+      <input id="wall-1" type="radio" name="animate" checked="true"/>
+      <div class="room-arena-black" id="container">
+        <div class="walls">
+          <div class="wall">
+            <div class="item">
+              <div class="image center padding-horizontal-3">
+                <div>
+                  <a href="https://preview.codecanyon.net/item/the-room-pure-css-3d-slider/full_screen_preview/22595934">
+                    <img src="/img/plugins/room/room-preview-inline.png"/>
+                  </a>
+                </div>
+                <div class="margin-top-3">
+                  <div class="tooltip bottom-center horizostal-center">
+                    <h2>room v1.2.2</h2>
+                    <h3><i>room is pure css<br/>
+                      3d carousel for your gallery</i></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wall">
+          </div>
+          <div class="wall">
+          </div>
+          <div class="wall">
+          </div>
+          <div class="ceil"></div>
+          <div class="floor"></div>
+        </div>
+      </div>
+      <div class="navigations">
+      </div>
+      <div class="paginations">
+      </div>
+    </div>
+  </div>
+</div>
