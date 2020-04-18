@@ -1,0 +1,21 @@
+@media (max-width: @mobile-menu-max-width) {
+  .@{menu-mobile} {
+    .kofi-button, .btn-container {
+      border-radius: @mobile-menu-item-button-radius;
+      width: auto;
+      display: block !important;
+    }
+  }
+}
+@media (min-width: @mobile-menu-max-width) {
+  .items.menu-mobile {
+    .item.divider {
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255, 255, 255, 255, 0.3);
+    }
+  }
+}
+
+.mobile-toggle-label {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,59 @@
+@table-fluid-mobile-max-width: 1100px;
+@table-fluid-mobile-min-width: @table-mobile-max-width;
+@table-fluid-breakpoints: 500px, 600px, 700px, 900px, 1000px, 1101px; 
+.device {
+  border: 20px solid #000;
+  border-radius: 20px;
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  margin: -20px;
+  box-shadow: 2px 2px 0 #ccc, -2px -2px 0 #ccc;
+}
+.with-device {
+  padding: 20px;
+  .tab-navs {
+    margin-bottom: 40px;
+    .button {
+      box-sizing: border-box;
+      .align-items(center);
+      .justify-content(center);
+      height: 30px;
+      .display-flex;
+    }
+  }
+}
+
+
+.device-width-setup {
+  display: none;
+  each(@table-fluid-breakpoints, {
+    @width: @value;
+    &:nth-child(@{index}):checked {
+      ~ .device {
+        width: @width;
+      }
+    }
+    ~ .tab-navs .tab-labels {
+      .button {
+        &:nth-child(@{index}) {
+          outline: 3px 3px 3px @color-alternative;
+          & when (@index > 1) { 
+            width: extract(@table-fluid-breakpoints, @index) - extract(@table-fluid-breakpoints, (@index - 1));
+          }
+          
+          & when (@index = 1) { 
+            width: extract(@table-fluid-breakpoints, 1);
+          }
+        }
+      }
+    }
+  });
+  &:nth-child(6):checked {
+    ~ .device {
+      border-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
