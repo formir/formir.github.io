@@ -306,7 +306,7 @@ url: room
         <h3>All you need is HTML:</h3>
       </div>
       <pre>
-        <code class="html">
+        <code class="html skip">
           <div class="content-holder">
 &#x3C;head&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/formir-room.min.css&#x22; /&#x3E;
@@ -466,7 +466,7 @@ url: room
       </div>
 
     <pre>
-      <code class="html">
+      <code class="html skip">
         <div class="content-holder">
 &#x3C;head&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/formir-room.min.css&#x22; /&#x3E;
@@ -478,7 +478,7 @@ url: room
       <p>Copy gallery code below and paste into your site body and modify wall items and images.</p>
     </div>
     <pre>
-        <code class="html">
+        <code class="html skip">
           <div class="content-holder">
 &#x3C;div class=&#x22;room&#x22;&#x3E;
 &#x3C;input class=&#x22;room-zoom&#x22; id=&#x22;room-zoom-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom-1&#x22;/&#x3E;
@@ -608,7 +608,7 @@ url: room
       <p>Start with copy all files to your root direction:</p>
     </div>
     <pre>
-      <code class="dir"><div class="content-holder">
+      <code class="dir skip"><div class="content-holder">
 src                        - your application root path
 less                     - your less direction
 formir
@@ -636,7 +636,7 @@ plugins
       <p>Add in your <code>&#x3C;head&#x3E;</code> tag with your HTML file on developer mode:</p>
     </div>
     <pre>
-      <code class="html">
+      <code class="html skip">
         <div class="content-holder">
 &#x3C;head&#x3E;
 &#x3C;link rel=&#x22;stylesheet/less&#x22; type=&#x22;text/css&#x22; href=&#x22;less/formir-room.less&#x22; /&#x3E;
@@ -663,7 +663,7 @@ plugins
       </div>
     </section>
     <pre>
-      <code class="less">
+      <code class="less skip">
         <div class="content-holder">
 @room-max-walls: 30;  // number of max count of walls / items
         </div>
@@ -674,7 +674,7 @@ plugins
       <p>You could set wall dimensions but not with % variables, you can use rem, px, we recommend variables of viewport vh / vw.</p>
     </div>
     <pre>
-      <code class="less">
+      <code class="less skip">
         <div class="content-holder">
 @room-size-width: 100vmax;  // gallery wall width - do not use %
 @room-size-height: 100vmin; // gallery wall height - do not use %
@@ -687,7 +687,7 @@ plugins
       <p>Set up your perspective, zoom, and scale, for the best-suited three-dimensional experience.</p>
     </div>
     <pre>
-      <code class="less">
+      <code class="less skip">
         <div class="content-holder">
 @room-perspective: @room-size-width;  // gallery prespective - use room size for best perspective
 
@@ -704,7 +704,7 @@ plugins
       <p>Set up your background wall color, ceil, floor, and colors and shape of buttons.</p>
     </div>
     <pre>
-      <code class="less">
+      <code class="less skip">
         <div class="content-holder">
 @room-floor-background: url('https://formir.io/plugins/img/plugins/room/floor.jpg') repeat 110px 50px;
 @room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
@@ -724,7 +724,7 @@ plugins
       <p>You can use <i>less</i> mixing to quick change the whole parts of the style.</p>
     </div>
     <pre>
-      <code class="less">
+      <code class="less skip">
         <div class="content-holder">
 .room-floor() {
 // style for floor
@@ -747,7 +747,7 @@ plugins
       <p>Easy change class name of all elements to prevent name duplicate on your app.</p>
     </div>
       <pre>
-        <code class="less">
+        <code class="less skip">
           <div class="content-holder">
 @room: room;  // main wrapper
 @room-body: room-body;  // body of room
@@ -791,7 +791,7 @@ plugins
       <p>Use this mockup:</p>
       </div>
       <pre>
-        <code class="html">
+        <code class="html skip">
           <div class="content-holder">
 &#x3C;div class=&#x22;room&#x22;&#x3E;
 &#x3C;input id=&#x22;room-sample-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom&#x22;/&#x3E; &#x3C;!-- This input is used for switch zoom mode --&#x3E;
@@ -866,7 +866,7 @@ plugins
         <p>You can specify class names for html elements, for example, to avoid name collisions in your app, remember to change classes also on your html:</p>
       </div>
       <pre>
-        <code class="less">
+        <code class="less skip">
           <div class="content-holder">
 /// CLASSES (name: defualt;)
 @room: room;  // main wrapper
@@ -894,7 +894,7 @@ plugins
         <h3>Core <i>less</i> variables:</h3>
       </div>
       <pre>
-        <code class="less">
+        <code class="less skip">
           <div class="content-holder">
 
 
@@ -910,7 +910,7 @@ plugins
         <h3>All <i>less</i> variables:</h3>
       </div>
       <pre>
-        <code class="less">
+        <code class="less skip">
           <div class="content-holder">
 
 /// VARIABLES
@@ -1006,7 +1006,7 @@ plugins
           <h3>Mixings</h3>
         </div>
         <pre>
-          <code class="less">
+          <code class="less skip">
             <div class="content-holder">
 .room-floor() {
 // style for floor
@@ -1056,7 +1056,7 @@ plugins
         </p>
       </div>
         <pre>
-          <code class="js">
+          <code class="js skip">
             <div class="content-holder">
 
             

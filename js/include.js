@@ -20,8 +20,10 @@ String.fromHtmlEntities = function(string) {
 
 $(document).ready(function() {
   $('pre code').each(function(i, block) {
-    encode = $(block)[0].innerHTML.trim().toHtmlEntities()
-    $(block).html(encode);
+    if ($(block).is(':not(.skip)')) {
+      encode = $(block)[0].innerHTML.trim().toHtmlEntities();
+      $(block).html(encode);
+    }
     hljs.highlightBlock(block);
   });
 });
