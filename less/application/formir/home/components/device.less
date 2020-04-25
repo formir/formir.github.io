@@ -33,17 +33,43 @@
       ~ .device {
         width: @width;
       }
+      ~ .tab-navs {
+        .button {
+          &:nth-child(@{index}) {
+            background: @color-primary;
+            color: #fff;
+            border-color: @color-primary;
+          }
+        }
+      }
     }
     ~ .tab-navs .tab-labels {
       .button {
         &:nth-child(@{index}) {
           outline: 3px 3px 3px @color-alternative;
           & when (@index > 1) { 
-            width: extract(@table-fluid-breakpoints, @index) - extract(@table-fluid-breakpoints, (@index - 1));
+            @media (min-width: (extract(@table-fluid-breakpoints, @index) + 104px)) {
+              width: extract(@table-fluid-breakpoints, @index) - extract(@table-fluid-breakpoints, (@index - 1));
+            }
+            & when (@index < 6) {
+              @media (max-width: (extract(@table-fluid-breakpoints, @index) + 105px)) {
+                display: none;
+              }
+            }
           }
           
           & when (@index = 1) { 
-            width: extract(@table-fluid-breakpoints, 1);
+            @media (min-width: (extract(@table-fluid-breakpoints, 1) + 104px)) {
+              width: extract(@table-fluid-breakpoints, 1);
+            }
+            @media (max-width: (extract(@table-fluid-breakpoints, 1) + 105px)) {
+              display: none;
+              ~ .device {
+                border-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+              }
+            }
           }
         }
       }
@@ -54,6 +80,25 @@
       border-color: transparent;
       border-radius: 0;
       box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: (extract(@table-fluid-breakpoints, 2) + 105px)) {
+  .with-device-label {
+    display: none;
+  }
+  .with-device {
+    padding: 0;
+    .device {
+      border: 0 none;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      width: 100% !important;
+    }
+    .tab-navs {
+      display: none;
     }
   }
 }
