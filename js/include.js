@@ -23,6 +23,14 @@ $(document).ready(function() {
     if ($(block).is(':not(.skip)')) {
       encode = $(block)[0].innerHTML.trim().toHtmlEntities();
       $(block).html(encode);
+      if ($(block).closest('.section.tabs').length > 0) {
+        $(block).closest('.section.tabs').find("> input[type='radio'][checked]").each(function() {
+          $(this).get(0).checked=true;
+        });
+        $(block).closest('.section.tabs').find(".tabs input[type='radio'][checked]").each(function() {
+          $(this).get(0).checked=true;
+        });
+      }
     }
     hljs.highlightBlock(block);
   });
