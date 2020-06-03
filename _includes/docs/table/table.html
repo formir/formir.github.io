@@ -1,0 +1,335 @@
+<div class="section section-content with-padding">
+  <p>
+    With table components, we give you a complete style for table with color them that you can easy declare with our <a class="link" href="#variables">variables</a>.
+  </p>
+  <p>
+    Table will have a feature that you can add using class. All of these features you can mix, just add one more class. Here is for example mobile support, expandable rows, and body section, border, hover backgrounds, zebra, and more.
+  </p>
+</div>
+<div class="section section-content with-table overflow-hidden">
+  <table class="table text-left borders-horizontal">
+    <thead>
+      <tr>
+        <th>Class method</th>
+        <th>on what element</th>
+        <th>function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>table</code>, <code>inline-table</code></td>
+        <td>on any tag</td>
+        <td>change display to: <code>table</code>, <code>inline-table</code></td>
+      </tr>
+      <tr>
+        <td><code>tbody</code>, <code>thead</code></td>
+        <td>on any tag</td>
+        <td>change display to: <code>tbody</code> or <code>thead</code></td>
+      </tr>
+      <tr>
+        <td><code>colgroup</code>, <code>col</code></td>
+        <td>on any tag</td>
+        <td>change display to: <code>colgroup</code> or <code>col</code></td>
+      </tr>
+      <tr>
+        <td><code>tr</code>, <code>th</code>, <code>td</code></td>
+        <td>on any tag</td>
+        <td>change display to: <code>tr</code>, <code>th</code> or <code>td</code></td>
+      </tr>
+      <tr>
+        <td><code>table-mobile</code></td>
+        <td>on <code>table</code></td>
+        <td>add support for mobile view - rensponsive <a class="link" href="#mobile">go to example</a></td>
+      </tr>
+      <tr>
+        <td><code>table-fixed</code></td>
+        <td>on <code>table</code></td>
+        <td>change table to fixed column display</td>
+      </tr>
+      <tr>
+        <td><code>table-ellipsis</code></td>
+        <td>on <code>table</code></td>
+        <td>add ellipsis to table for all cell</td>
+      </tr>
+      <tr>
+        <td><code>td-ellipsis</code></td>
+        <td>on <code>td</code></td>
+        <td>add ellipsis to cell, require to set width to cell (with <code>vw</code> unit)</td>
+      </tr>
+      <tr>
+        <td><code>borders</code></td>
+        <td>on <code>table</code></td>
+        <td>add border vertical and horizontal to all rows</td>
+      </tr>
+      <tr>
+        <td><code>borders-outside</code></td>
+        <td>on <code>table</code></td>
+        <td>add borders only to table outline</td>
+      </tr>
+      <tr>
+        <td><code>borders-horizontal</code></td>
+        <td>on <code>table</code></td>
+        <td>add borders to row (horizontal)</td>
+      </tr>
+      <tr>
+        <td><code>borders-vertical</code></td>
+        <td>on <code>table</code></td>
+        <td>add borders to column (vertical)</td>
+      </tr>
+      <tr>
+        <td><code>zebra-odd</code></td>
+        <td>on <code>table</code></td>
+        <td>add background to odd rows</td>
+      </tr>
+      <tr>
+        <td><code>zebra-even</code></td>
+        <td>on <code>table</code></td>
+        <td>add background to even rows</td>
+      </tr>
+      <tr>
+        <td><code>hoverable-td</code></td>
+        <td>on <code>table</code></td>
+        <td>add background color change on hover to cell</td>
+      </tr>
+      <tr>
+        <td><code>hoverable-tr</code></td>
+        <td>on <code>table</code></td>
+        <td>add background color change on hover to row</td>
+      </tr>
+      <tr>
+        <td><code>hoverable-col</code></td>
+        <td>on <code>table</code></td>
+        <td>add background color change on hover to column, <a class="link" href="#column">go to example</a></td>
+      </tr>
+      <tr>
+        <td><code>sticky-header</code></td>
+        <td>on <code>table</code> or table wrapper <code>overflow-scroll</code></td>
+        <td>add sticky header (thead) to table</td>
+      </tr>
+      <tr>
+        <td><code>sticky-footer</code></td>
+        <td>on <code>table</code> or table wrapper <code>overflow-scroll</code></td>
+        <td>add sticky footer (tfoot) to table</td>
+      </tr>
+      <tr>
+        <td><code>sticky-body</code></td>
+        <td>on <code>table</code> or table wrapper <code>overflow-scroll</code></td>
+        <td>add sticky column (th in tbody) to table  <a class="link" href="#sticky">go to example</a></td>
+      </tr>
+      <tr>
+        <td><code>expandable</code></td>
+        <td>on <code>tbody</code> or <code>tr</code></td>
+        <td>add expandable feature, this element will be hidden by default, and show when toggled <a class="link" href="#expandable">go to example</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2>Case of use</h2>
+<h3 id="base">base / borders / hoverable row / zebra<a class="anhor link small" href="#base">#</a></h3>
+<div class="tabs section with-padding">
+  <input type="radio" name="base" id="base-1" checked="true"/>
+  <input type="radio" name="base" id="base-2"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="base-1">Example</label>
+      <label class="button button-s" for="base-2">Code</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div class="overflow-auto">
+      {% include docs/table/base.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/base.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h3 id="column">column hover <a class="anhor link small" href="#column">#</a></h3>
+<div class="tabs section with-padding">
+  <input type="radio" name="column" id="column-1" checked="true"/>
+  <input type="radio" name="column" id="column-2"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="column-1">Example</label>
+      <label class="button button-s" for="column-2">Code</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div>
+      {% include docs/table/column.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/column.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="section section-content with-padding">
+    <p><small>
+      * This features will work on a limited version with <code>overflow-scroll</code> wrapper feature
+    </small></p>
+  </div>
+</div>
+
+<h3 id="mobile">mobile support on breakpoint<a class="anhor link small" href="#mobile">#</a></h3>
+<div class="section section-content with-padding">
+  <p>Add <code>.table-mobile</code> and <code>data-th="header of column"</code> attribute and wrapper <code>span</code> tag to each of your <code>td</code> tags to apply mobile view support for your table. Look at example:</p>
+</div>
+<div class="tabs section with-padding">
+  <input type="radio" name="mobile-view" id="mobile-view-1" checked="true"/>
+  <input type="radio" name="mobile-view" id="mobile-view-2"/>
+  <input type="radio" name="mobile-view" id="mobile-view-3"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="mobile-view-1">Example</label>
+      <label class="button button-s" for="mobile-view-2">Code</label>
+      <label class="button button-s" for="mobile-view-3">Setup variables</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div>
+      {% include docs/table/mobile.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/mobile.html %}
+        </code>
+      </pre>
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/mobile-variables.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h3 id="expandable-row">expandable row / expandable body section <a class="anhor link small" href="#expandable-row">#</a></h3>
+<div class="tabs section with-padding">
+  <input type="radio" name="expandable-row" id="expandable-row-1" checked="true"/>
+  <input type="radio" name="expandable-row" id="expandable-row-2"/>
+  <input type="radio" name="expandable-row" id="expandable-row-3"/>
+  <input type="radio" name="expandable-row" id="expandable-row-4"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="expandable-row-1">Exampel - expandable row</label>
+      <label class="button button-s" for="expandable-row-2">Code - row</label>
+      <label class="button button-s" for="expandable-row-3">Expandable body section</label>
+      <label class="button button-s" for="expandable-row-4">Code -body</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div>
+      {% include docs/table/expandable-row.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/expandable-row.html %}
+        </code>
+      </pre>
+    </div>
+    <div>
+      {% include docs/table/expandable.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/expandable.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<h3 id="sticky">sticky header / footer / header in body<a class="anhor link small" href="#sticky">#</a></h3>
+<div class="tabs section with-padding">
+  <input type="radio" name="sticky" id="sticky-1" checked="true"/>
+  <input type="radio" name="sticky" id="sticky-2"/>
+  <input type="radio" name="sticky" id="sticky-3"/>
+  <input type="radio" name="sticky" id="sticky-4"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="sticky-1">Example - header</label>
+      <label class="button button-s" for="sticky-2">Header in Body</label>
+      <label class="button button-s" for="sticky-3">Footer</label>
+      <label class="button button-s" for="sticky-4">Code</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div>
+      {% include docs/table/sticky-header.html %}
+    </div>
+    <div>
+      {% include docs/table/sticky-column.html %}
+    </div>
+    <div>
+      {% include docs/table/sticky-footer.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/sticky-header.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+<h3 id="ellipsis">ellipsis table / cell<a class="anhor link small" href="#ellipsis">#</a></h3>
+<div class="tabs section with-padding">
+  <input type="radio" name="ellipsis" id="ellipsis-1" checked="true"/>
+  <input type="radio" name="ellipsis" id="ellipsis-4"/>
+  <div class="section-header tab-navs">
+    <div class="tab-labels vertical-center button-group">
+      <label class="button button-s" for="ellipsis-1">Example - ellipsis</label>
+      <label class="button button-s" for="ellipsis-2">Code - ellipsis</label>
+    </div>
+  </div>
+  <div class="tab-pages section-content with-border">
+    <div>
+      {% include docs/table/ellipsis.html %}
+    </div>
+    <div>
+      <pre>
+        <code class="html">
+          {% include docs/table/ellipsis.html %}
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+<h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
+<h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+<div class="section section-content with-padding">
+  <pre>
+    <code class="less">
+      {% include docs/table/classes.html %}
+    </code>
+  </pre>
+</div>
+<h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+<div class="section section-content with-padding">
+  <pre>
+    <code class="less">
+      {% include docs/table/core.html %}
+    </code>
+  </pre>
+</div>
+<h3 id="variables">variables  <small>less/formir/setup/variables.less</small> <a class="anhor link small" href="#variables">#</a></h3>
+<div class="section section-content with-padding">
+  <pre>
+    <code class="less">
+      {% include docs/table/variables.html %}
+    </code>
+  </pre>
+</div>

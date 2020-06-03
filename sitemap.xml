@@ -6,12 +6,32 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://formir.io/plugins/room.html</loc>
+	<loc>https://formir.io/plugins/room/index.html</loc>
 	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://formir.io/plugins/table-fluid.html</loc>
+	<loc>https://formir.io/plugins/room/examples.html</loc>
+	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://formir.io/plugins/room/docs.html</loc>
+	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://formir.io/plugins/table-fluid/index.html</loc>
+	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://formir.io/plugins/table-fluid/examples.html</loc>
+	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://formir.io/plugins/table-fluid/docs.html</loc>
 	<lastmod>2020-05-15T16:18:24+01:00</lastmod>
 	<priority>1.0</priority>
 </url>

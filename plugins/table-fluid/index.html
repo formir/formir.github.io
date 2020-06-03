@@ -1,0 +1,47 @@
+---
+layout: plugins
+url: table-fluid
+---
+{% include plugins/table-fluid/header.html %}
+<div class="margin-top-0">
+  <div class="welcome">
+    <article>
+      <div class="content-holder">
+        <h1 class="text-center">Table fluid - make your table responsive</h1>
+        <h4 class="text-center">Display as many columns in the table as will fit on the screen,<br/>switch between columns using very convenient navigation.</h4>
+        <div class="section with-padding overflow-hidden">
+          <div class="section-content with-border">
+            <p class="margin-0 margin-left-2 with-device-label">Click below to change device screen width, or change your own brower screen width. Plugin is setup from 500px to 1000px (5 breakpoins).</p>
+            <div class="with-device">
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-1"/>
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-2"/>
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-3"/>
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-4"/>
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-5" checked="true"/>
+              <input class="device-width-setup" type="radio" name="table-fluid-welcome-device" id="table-fluid-welcome-device-6"/>
+              <div class="tab-navs buttons">
+                <div class="tab-labels vertical-center button-group">
+                  <label class="button button-s button-alternative" for="table-fluid-welcome-device-1">500px - 1 column</label>
+                  <label class="button button-s button-alternative has-tooltip center" for="table-fluid-welcome-device-2" data-tooltip="2 columns">600px</label>
+                  <label class="button button-s button-alternative has-tooltip center" for="table-fluid-welcome-device-3" data-tooltip="4 columns">700px</label>
+                  <label class="button button-s button-alternative has-tooltip center" for="table-fluid-welcome-device-4" data-tooltip="5 columns">900px</label>
+                  <label class="button button-s button-alternative has-tooltip center" for="table-fluid-welcome-device-5" data-tooltip="6 columns">1000px</label>
+                  <label class="button button-s button-alternative inverse" for="table-fluid-welcome-device-6">without</label>
+                </div>
+              </div>
+              <iframe class="device" seamless sandbox src="/plugins/table-fluid/examples/fluid/scroll-inside.html" style="height: calc(50vh - 100px); min-height: 350px;">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="content-holder text-center padding-bottom-5 padding-top-3">
+          <h3 class="text-center">Why I need table fluid?</h4>
+          <p class="h4">
+            The correct layout of the table is one of the biggest problems that UX specialists face,<br/>it is very difficult to correctly present the data in the table and at the same time, <br/>it was useful and cool-look at once. We give you a ready solution, without any additional implementation.
+          </p>
+          <a href="/plugins/table-fluid/examples.html" class="button button-primary inverse">Go to more Examples</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

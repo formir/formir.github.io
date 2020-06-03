@@ -11,9 +11,9 @@
       <div class="th actions">Title</div>
     </div>
   </div>
-  <input class="expandable-toggler" type="checkbox" style="display: none;" id="expand-3"/>
-  <div class="tbody expandable-trigger">
-    <div class="tr">
+  <div class="tbody">
+    <input class="expandable-toggler" type="checkbox" style="display: none;" id="expand-4"/>
+    <div class="tr expandable-trigger">
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title" class="number"><span>500,00</span></div>
       <div class="td" data-th="Title"><span>Cell value</span></div>
@@ -21,9 +21,19 @@
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title"><span>Cell value</span></div>
-      <div class="td" data-th="Title" class="actions"><span></div>
+      <div class="td" data-th="Title" class="actions">
+        <span>
+          <label for="expand-4" class="button button-primary button-s">
+            <span class="toggle-show">expand</span>
+            <span class="toggle-hide">collapse</span>
+            with toggle text
+          </label>
+          <label for="expand-1" class="button button-primary button-s">expand</label>
+        </span>
+      </div>
     </div>
-    <div class="tr">
+    <input class="expandable-toggler" type="checkbox" style="display: none;" id="expand-1"/>
+    <div class="tr expandable">
       <div class="td" data-th="Title"><span>Cell value expand</span></div>
       <div data-th="Title" class="td number"><span>10000,00</span></div>
       <div class="td" data-th="Title"><span>Cell value expand</span></div>
@@ -61,17 +71,10 @@
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title"><span>Cell value</span></div>
-      <div class="td" data-th="Title" class="actions"><span>
-        <label for="expand-3" class="button button-primary button-s">
-          <span class="toggle-show">expand</span>
-          <span class="toggle-hide">collapse</span> with toggle text</label>
-          <label for="expand-2" class="button button-primary button-s">expand</label>
-        </span>
-      </div>
+      <div class="td" data-th="Title" class="actions"><span></div>
     </div>
   </div>
-  <input class="expandable-toggler" type="checkbox" style="display: none;" id="expand-2"/>
-  <div class="tbody expandable">
+  <div class="tbody">
     <div class="tr">
       <div class="td" data-th="Title"><span>Cell value</span></div>
       <div class="td" data-th="Title" class="number"><span>500,00</span></div>

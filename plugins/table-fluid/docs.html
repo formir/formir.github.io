@@ -1,0 +1,378 @@
+---
+layout: plugins
+url: table-fluid
+---
+{% include plugins/table-fluid/header.html %}
+<div class="margin-top-0">
+  <div class="content-holder">
+    <h1>Documentation</h1>
+    <h2>Table fluid v1.0</h2>
+    <ul>
+      <li>
+        <a class="link" href="#quick-start">Quick start</a>
+      </li>
+      <li>
+        <a class="link" href="#installation">Installation</a>
+      </li>
+      <li>
+        <a class="link" href="#setup-less">Setup <i>LESS / SASS</i></a>
+      </li>
+      <li>
+        <a class="link" href="#setup-html">Setup HTML</a>
+      </li>
+      <li>
+        <a class="link" href="#configuration">All variables and mixing</a>
+      </li>
+      <li>
+        <a class="link" href="#table-base">Base table style component by formir</a>
+      </li>
+    </ul>
+    <h2>What is Table fluid?</h2>
+    <div class="section section-content with-padding">
+      <p>
+        Table fluid adds your table ability to display on mobile devices. Table will display as many columns that will fit on the narrow screen and the user can switch between columns using navigation.
+      </p>
+      <p>
+        Table fluid is RWD (Responsive Web Design or Fluid Design) extension to basic html table written in pure CSS3 and HTML. It is part of Formir Framework but can operate independently with other table styles.
+      </p>
+      <p>
+        Table fluid will fully work only with CSS and HTML. All of the logic is based on CSS and <code>&#x3C;input/&#x3E;</code> tag elements, that are required.
+      </p>
+      <h3>What Table Fluid give me?</h3>
+      <p>
+        Possible display on screen only those columns that will fit on your screen. You can very easily set up your Own breakpoints and number columns to display in that breakpoint.
+      </p>
+      <p>
+        In a device with a narrow screen (ex. tablet), your table that has 12 columns will display only 4 columns and all others will be slide using navigation buttons and pagination.
+      </p>
+      <p>
+        This plugin also contains a more cool feature for table, for example Mobile view for table, zebra mode, hover style on row and column, toggle row or body section of table. Look at examples.
+      </p>
+    </div>
+    <h2 id="quick-start">Quick start</h2>
+    <div class="section section-content with-padding">
+      <p>
+        Copy <code>formir-table-fluid.min.css</code> and <code>formir-table.min.css</code> (if you also need style for table) file to your application direction.
+      </p>
+      <p>
+        Copy code below and paste into your HTML file at a <code>&#x3C;head&#x3E;</code> part.
+      </p>
+      <pre>
+        <code class="html">
+          <head>
+            <link rel="stylesheet" type="text/css" href="css/formir-table-fluid.min.css" />
+            <link rel="stylesheet" type="text/css" href="css/formir-table.min.css" />
+          </head>
+        </code>
+      </pre>
+      <p>
+        You can also include all formir framework <code>formir.min.css</code> instead table part <code>formir-table.min.css</code>.
+      </p>
+      <pre>
+        <code class="html">
+          <head>
+            <link rel="stylesheet" type="text/css" href="css/formir-table-fluid.min.css" />
+            <link rel="stylesheet" type="text/css" href="css/formir.min.css" />
+          </head>
+        </code>
+      </pre>
+    </div>
+    <div class="section section-content with-padding">
+      <p>Copy table fluid to your page.</p>
+      <pre>
+        <code class="html" encode="true">
+          {% include plugins/table-fluid/docs/sandbox.html %}
+        </code>
+      </pre>
+      <p>In <code>&#x3C;table&#x3E;</code> tab put your table.</p>
+      <p>For this quick example you need only set:</p>
+      <ol>
+        <li>
+          Set <b>count columns class</b> that matches your table <code>table-column-{number}</code>.
+        </li>
+      <p>
+        In our code example, there are 8 columns in table.
+      </p>
+      <p>
+        There is 3 easy thing you must also know, <a class="link" href="#setup-html">go to html setup now</a>.
+      </p>
+    </div>
+    <div class="section section-content with-padding">
+      <p>
+        Table fluid will start work on @media breakpoints setup in our default setup in compiled css file, if you need change this (we recommend) you need to use LESS or SASS compiler.
+      </p>
+      <p>
+        In default we show up fluid table on max-width device screen set to: 1024px, min-width device screen is set to: 0px.
+      </p>
+      <p>
+        Breakpoins columns to show is by default set to:
+      </p>
+      <table class="borders hoverable-tr">
+        <thead>
+          <th>Columns to show</th>
+          <th>max device width</th>
+          <th>min device width</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>6 columns</th>
+            <td>1024px</td>
+            <td>900px</td>
+          </tr>
+          <tr>
+            <th>5 columns</th>
+            <td>899px</td>
+            <td>700px</td>
+          </tr>
+          <tr>
+            <th>4 columns</th>
+            <td>699px</td>
+            <td>600px</td>
+          </tr>
+          <tr>
+            <th>2 columns</th>
+            <td>599px</td>
+            <td>500px</td>
+          </tr>
+          <tr>
+            <th>1 columns</th>
+            <td>499px</td>
+            <td>0px</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You can change this setup using LESS or SASS variables.</p>
+    </div>
+    <div class="section section-content with-padding">
+      <div class="alert light info">
+        Look at table in narrow screen size to effect 
+        <br/>
+        Notice: We add only borders style in this example.
+      </div>
+      <p class="h5">This is will be your table:</p>
+      {% include plugins/table-fluid/docs/quick-use.html %}
+    </div>
+    <h2 id="installation">Installation</h2>
+
+
+    <h2>Use LESS or SASS compiler and set up your own table fluid.</h2>
+    <div class="section section-content with-padding">
+      <p>
+        This plugin is written in LESS (and optional SASS) dynamic preprocessor style sheet language (CSS).
+      </p>
+      <p>
+        It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase.
+        <br/>
+        You can use this approach or attach the only source of table fluid plugin <code>formir-table-fluid.less</code>. Table component form formir framework is required.
+      </p>
+      <h3>Choice LESS or SASS</h3>
+      <p>
+        In this documentation, we focus on LESS preprocessor, but the same file structure and mixin/variables are used for SASS (scss), to know how install & compile sass file go to <a  class="link" href="https://sass-lang.com/install">Sass documentation</a>
+      </p>
+      <h3>Prepare files</h3>
+      <p>Start with copy all files to your root direction:</p>
+      <pre>
+        <code class="dir skip">
+src                        - your application root path
+  less                     - your less direction
+    formir
+      core
+        components
+          table.less       - this is part of basic table style
+        helpers
+          display.less
+        mixins             - less mixins
+          display.less
+          flex.less
+          functions.less
+        plugins
+          table-fluid.less  - all style and settings for table fluid plugin
+        setup
+          classes.less      - classes setup for formir framework components
+          core.less         - core setup (basic variables with breakpoins etc.)
+          variables.less    - variables for formir componets
+    formir-table-fluid.less - your root file that imports all of other files
+ 
+        </code>
+      </pre>
+      <h3>Include Style</h3>
+      <p>Include formir-table-fluid.less into your project.</p>
+      <p>
+        In this step, you can include <code>formir-table-fluid.less</code> to your main LESS file, or move the content of <code>formir-table-fluid.less</code> to your main (manifest/root) LESS file.
+      </p>
+      
+      <p>
+        Use developer mode of <i>less</i> library, or compile less using backend (ex. webpack). 
+        <br/>To use .less file on your page look at  <a target="_blank" class="link" href="https://lesscss.org/usage/">less configuration page.</a></p>
+      <p>Add in your <code>&#x3C;head&#x3E;</code> tag with your HTML file on developer mode:</p>
+      <pre>
+        <code class="html skip">
+&#x3C;head&#x3E;
+  &#x3C;link rel=&#x22;stylesheet/less&#x22; type=&#x22;text/css&#x22; href=&#x22;less/formir-table-fluid.less&#x22; /&#x3E;
+  &#x3C;script src=&#x22;js/less.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/head&#x3E;
+        </code>
+      </pre>
+      <p>
+        In production mode, you can also use LESS npm package to compile your own <i>.min.css</i> file. Use lessc command in bash, for example:
+        <br/>
+        <code>$ npm install -g less</code><br/>
+        <code>$ lessc -x less/formir-table-fluid.less css/formir-table-fluid.min.css</code>
+      </p>
+    </div>
+
+    <div class="section section-content with-padding">
+      <h2  id="setup-less">Setup <i>LESS / SASS</i></h2>
+      <div class="alert light info">
+        <p>
+          Table fluid is fully configurable, each of colors, breakpoints etc. you can change in <i>less</i> file <code>less/formir/plugins/table-fluid.less</code>.
+        </p>
+        <p>
+          Base Table formir component is configurable with others framework components in dir: <code>less/formir/setup/core.less</code> and <code>less/formir/setup/variables.less</code>.
+        </p>
+      </div>
+      <p><a href="#configuration" class="button button-s">See all configurations</a> of <i>LESS</i> file.</a></p>
+      <h3>Setup core <i>less</i> variables</h3>
+<pre>
+  <code class="less skip">
+@table-fluid-mobile-max-width: 1000px; // above this browser width fuild table will off
+@table-fluid-mobile-min-width: 0; // below this browser width fuild table will off, if you will use also mobile mode for fluid table set min-width to @table-mobile-max-width otherwise use 0
+
+
+@table-fluid-columns:     6,       5,      4,       2,       1; // number of columns to show in breakpoint
+@table-fluid-breakpoints: 900px,   700px,  600px,   500px,   @table-fluid-mobile-min-width;  // width for media query breakpoints
+@table-fluid-max-columns: 10;  // maximal columns number that will be supported, use as lowers number as you need
+
+@table-fluid-restart-include: false;   // change this to: true, if you include JS script to .checked() first input (toogle) when window resize, when not user need to click 'restrat' button to set first column to show.
+@table-active-method: checked; // checked / active  ( 'active' for JS framework only.)
+  </code>
+</pre>
+      <h4>Width screen to turn fluid table off</h4>
+      <p>
+        Not all of windows screen width size is good to show fluid table - to turn off plugin and use default table set this two variables: <code>@table-fluid-mobile-max-width</code> and <code>@table-fluid-mobile-min-width</code>
+      </p>
+      <div class="alert light warning">
+        If you will use table fluid also with mobile support form base table style component, you need to set <code>@table-fluid-mobile-min-width</code> equal to <code>@table-mobile-max-width</code>, this set will turn off table fluid when a mobile view is turned on. 
+      </div>
+      <h4>Break points and columns number</h4>
+      <p>
+        This setup is most important, you can set in two variables for each step, number of columns that will show according width of screen.
+      </p>
+      <p>
+        In our example between two width of screen 1000px and 900px will show 6 columns, between 900px and 700px will show 5 columns, 700px - 600px: 4, 600px - 500px: 2, 500px - 0px: 1 column.  
+      </p>
+      <h4>Maximum columns supported</h4>
+      <p>This number of columns will be supported by plugin, use as lowers number as you need.</p>
+      <h4>Need tabel fluid on React or other JS Framework?</h4>
+      <p>
+        You can use JS framework, in that case you cont neet input checkboxes, and only toggle <code>active</code> class in <code>fluid-toggle</code> divs to ster your fluid, we give your free hand.
+      </p>
+      <h3>Setup other <i>less</i> variables</h3>
+      <p>There is few more variables to style your fluid table:</p>
+<pre>
+  <code class="less skip">
+@table-fluid-header-min-height: 3rem;  // min height of navigation bar
+@table-fluid-header-background: @table-base-color; // background of navigation bar - this variable <code>@table-base-color</code> is from framework base variables - table base theme color.
+@table-fluid-header-color: @table-base-color-contrast; // contrast color for all buttons etc.
+  </code>
+</pre>
+      <h3>Setup your classes <i>less</i> variables</h3>
+      <p>
+        As all others framework componnet you can set your own class name on each html elements to prevent duplicate on your page or use it as widget.
+      </p>
+<pre>
+  <code class="less skip">
+@table-fluid-always-display: table-always-display;
+@table-fluid-nav: table-nav;
+@table-fluid-dot: table-dot;
+@table-fluid-dots: table-dots;
+@table-fluid-header: table-header;
+@table-fluid: table-fluid;
+@table-fluid-this: fluid-this;
+@table-fluid-none: table-none;
+@table-fluid-only-mobile: table-only-mobile;
+@table-fluid-not-mobile: table-not-mobile;
+@table-fluid-arrow: table-arrow;
+@table-fluid-toggle: fluid-toggle;
+  </code>
+</pre>
+    </div>
+    <h3>Classes as functions</h3>
+    <div class="section section-content with-table overflow-hidden">
+      <table class="table text-left borders-horizontal hoverable-tr">
+        <thead>
+          <tr>
+            <th>Class method</th>
+            <th>on what</th>
+            <th>what do</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td><code>fluid-none</code></td>
+              <td>cell and head-cell <code>td</code>, <code>th</code>, <code>.td</code>, <code>.th</code></td>
+              <td>element with this class will always be shown, fluid-table will not react on this element</td>
+            </tr>
+          <tr>
+            <td><code>table-only-mobile</code></td>
+            <td>each one</td>
+            <td>element will be hide when table-fuild is also off</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Less/Sass mixing to better style</h3>
+    <div class="section section-content with-padding">
+      <p>We give you some mixing style for style dots, arrow, or nav-bar.</p>
+<pre>
+  <code class="less skip">
+.table-arrow-style() {
+  // style your arrows
+}
+.table-fluid-dot-style() {
+  // style your dot
+}
+.table-arror-next() {
+  // style next button
+}
+.table-arrow-prev() {
+  // style prev button
+}
+.table-fluid-header() {
+  // style for table header with fluid navbar
+}
+.table-fluid-nav() {
+  // style for navbar
+}
+.table-fluid-dots() {
+  // style for dots navigation
+}
+  </code>
+</pre>
+    </div>
+    <h3 id="setup-html">Setup HTML</h3>
+    <div class="section section-content with-padding">
+      <p>Your table fluid will look like on this example:</p>
+      <pre>
+        <code class="html" encode="true">
+          {% include plugins/table-fluid/docs/sandbox.html %}
+        </code>
+      </pre>
+      <p>There are a 4 elements of table fluid plugin in your html:</p>
+      <ol>
+        <li>Set <b>count columns class</b> that matches your table <code>table-column-{number}</code>.</li>
+        <li><b>Inputs</b> - add as many tags <code>&#x3C;input type="radio" id="your_control_id" name="your_table" /&#x3E;</code> as there are columns in your table, each input must have a unique id for all page, all neet to have same <code>name</code> attribute, first neet to have <code>checked="true"</code> attribute</li>
+        <li><b>Labels arrow</b> - add as many tags <code>&#x3C;label class="table-arrow" for="your_control_id"&#x3E;&#x3C;/label&#x3E;</code> as there are columns in your table, each label must have the same for as his control <code>input</code>.</li>
+        <li><b>Labels dots</b> - add as many tags <code>&#x3C;label class="table-dot" for="your_control_id"&#x3E;&#x3C;/label&#x3E;</code> as there are columns in your table, each label must have the same for as his control <code>input</code>.</li>
+      </ol>
+      <div class="alert light warning">
+        Warning: One JS script is not mandatory but will help your table fluid works better. After screen size will change table fluid neet to be reset and first <code>&#x3C;input type="radio" id="your_control_id" name="your_table" /&#x3E;</code> need to be set as checked. We have some walkaround for this problem. If you noot include this JS user needs to click CTA button that will show in the navigation bar to reset the fluid table.
+      </div>
+    </div>
+    <h1 id="table-base">Table<small> - base component style </small></h1>
+    <div class="alert light info">
+      With a fluid table plugin, we give you all style fo formir table component that will work perfectly.
+    </div>
+    {% include docs/table/table.html %}
+  </div>
+</div>
