@@ -1,27 +1,27 @@
 @table-color: @color-body; // table text color
 @table-base-color: @color-alternative; // table base thema color
-@table-base-color-hover: lighten(@table-base-color, 10%); 
-@table-base-color-contrast: #fff;
-@table-base-color-border: @color-mute;
+@table-base-color-hover: lighten(@table-base-color, 10%);  // theme color on hover
+@table-base-color-contrast: #fff; // table base thema color - contrast for text
+@table-base-color-border: @color-mute; // table base border color
 
-@table-font-size: 1rem;
-@table-td-padding: 1rem 0.5rem;
-@table-th-padding: 0.7rem 0.5rem;
-@table-th-font-size: 0.8rem;
-@table-text-align: left;
+@table-font-size: 1rem; // table font size
+@table-td-padding: 1rem 0.5rem; // table td cell padding
+@table-th-padding: 0.7rem 0.5rem; // table th cell padding
+@table-th-font-size: 0.8rem; // table th font size
+@table-text-align: left; // table text align in table
 
-@table-tr-bgcolor-hover: lighten(@table-base-color-hover, 7%);
-@table-tr-color-hover: @table-base-color-contrast;
-@table-td-bgcolor-hover: @table-base-color-hover;
-@table-td-color-hover: @table-base-color-contrast;
-@table-col-bgcolor-hover: fade(@table-base-color-hover, 15%);
-@table-border: 1px solid lighten(@table-base-color-border, 60%);
-@table-background: @table-base-color-contrast;
-@table-zebra-bgcolor: lighten(@table-base-color-border, 60%);
+@table-tr-bgcolor-hover: lighten(@table-base-color-hover, 7%); // table row hover background
+@table-tr-color-hover: @table-base-color-contrast; // table row hover text color
+@table-td-bgcolor-hover: @table-base-color-hover; // table cell hover background
+@table-td-color-hover: @table-base-color-contrast; // table cell hover text col
+@table-col-bgcolor-hover: fade(@table-base-color-hover, 15%); // table column hover background
+@table-border: 1px solid lighten(@table-base-color-border, 60%); // table border
+@table-background: @table-base-color-contrast; // table background
+@table-zebra-bgcolor: lighten(@table-base-color-border, 60%); // background color for zebra
 
-@table-mobile-td-border: 1px solid lighten(@table-base-color-border, 60%);
-@table-mobile-th-width: 30%;
-@table-mobile-td-width: 70%;
-@table-mobile-td-padding: 0.7rem 1rem 0.7rem 1.5rem;
-@table-mobile-th-padding: 0.7rem 1.5rem 0.7rem 1rem;
-@table-td-width-vw-sizes: 10, 20, 30, 40, 50, 60, 70, 80, 90;
+@table-mobile-td-border: 1px solid lighten(@table-base-color-border, 60%); // mobile border
+@table-mobile-th-width: 30%; // width of th cell in mobile table mode (left side)
+@table-mobile-td-width: 70%; // width of td cell in mobile mode (right side)
+@table-mobile-td-padding: 0.7rem 1rem 0.7rem 1.5rem; // mobile td padding
+@table-mobile-th-padding: 0.7rem 1.5rem 0.7rem 1rem; // mobile th padding
+@table-td-width-vw-sizes: 10, 20, 30, 40, 50, 60, 70, 80, 90; // width related to viewport for td/th

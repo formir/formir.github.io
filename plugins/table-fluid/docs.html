@@ -52,28 +52,37 @@ url: table-fluid
     <h2 id="quick-start">Quick start</h2>
     <div class="section section-content with-padding">
       <p>
-        Copy <code>formir-table-fluid.min.css</code> and <code>formir-table.min.css</code> (if you also need style for table) file to your application direction.
+        Copy <code>formir-table-fluid.min.css</code> file to your application direction.
       </p>
       <p>
         Copy code below and paste into your HTML file at a <code>&#x3C;head&#x3E;</code> part.
       </p>
       <pre>
         <code class="html">
-          <head>
-            <link rel="stylesheet" type="text/css" href="css/formir-table-fluid.min.css" />
-            <link rel="stylesheet" type="text/css" href="css/formir-table.min.css" />
-          </head>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/formir-table-fluid.min.css" />
+</head>
         </code>
       </pre>
       <p>
-        You can also include all formir framework <code>formir.min.css</code> instead table part <code>formir-table.min.css</code>.
+        You can also include all formir framework <code>formir.min.css</code> and only table fluid part <code>formir-table-fluid-only.min.css</code>.
       </p>
       <pre>
         <code class="html">
-          <head>
-            <link rel="stylesheet" type="text/css" href="css/formir-table-fluid.min.css" />
-            <link rel="stylesheet" type="text/css" href="css/formir.min.css" />
-          </head>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/formir-table-fluid-only.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/formir.min.css" />
+</head>
+        </code>
+      </pre>
+      <p>
+        Or if you use others style framework (or own) for table, include only <code>formir-table-fluid-only.min.css</code>.
+      </p>
+      <pre>
+        <code class="html">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/formir-table-fluid-only.min.css" />
+</head>
         </code>
       </pre>
     </div>

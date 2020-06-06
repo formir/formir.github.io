@@ -97,6 +97,16 @@
         <td>add background color change on hover to row</td>
       </tr>
       <tr>
+        <td><code>un-hover</code></td>
+        <td>on <code>tr</code>, <code>td</code></td>
+        <td>add this class to prevent for been hover</td>
+      </tr>
+      <tr>
+        <td><code>on-hover</code></td>
+        <td>on <code>td</code>, <code>tr</code></td>
+        <td>this cell will be defalut hidden and shown when hover (cell or row)</td>
+      </tr>
+      <tr>
         <td><code>hoverable-col</code></td>
         <td>on <code>table</code></td>
         <td>add background color change on hover to column, <a class="link" href="#column">go to example</a></td>
@@ -118,8 +128,13 @@
       </tr>
       <tr>
         <td><code>expandable</code></td>
-        <td>on <code>tbody</code> or <code>tr</code></td>
+        <td>on <code>tbody</code>, <code>thead</code>, <code>tfoot</code> or <code>tr</code></td>
         <td>add expandable feature, this element will be hidden by default, and show when toggled <a class="link" href="#expandable">go to example</a></td>
+      </tr>
+      <tr>
+        <td><code>expandable-toggler</code></td>
+        <td>on <code>tbody</code>, <code>thead</code>, <code>tfoot</code> or <code>tr</code></td>
+        <td>element with this class will change after expandable section will expand <a class="link" href="#expandable">go to example</a></td>
       </tr>
     </tbody>
   </table>
@@ -216,8 +231,11 @@
 
 <h3 id="expandable-row">expandable row / expandable body section <a class="anhor link small" href="#expandable-row">#</a></h3>
 <div class="section section-content with-padding">
-  <p>Expandable section in table will rowk only with div tag with class <code>table</code> on <code>tabe-inline</code>.</p>
-  <p>Put <code>input</code> checkbox tag after trigger section or after expandable section.</p>
+  <p>Expandable section in table will work only with div tag with class <code>table</code> on <code>tabe-inline</code>.</p>
+  <p>Put <code>input</code> checkbox tag before section with <code>expandable-trigger</code> class or before section with <code>expandable</code> class.</p>
+  <p>Expandable trigger <code>expandable-trigger</code> section will change style after expandable <code>input</code> will change state to checked, you could declate own style in mixin <code>table-expanded-trigger()</code></p>
+  <p>Expandable <code>expandable</code> section will change style after expandable <code>input</code> will change state to checked, you could declate own style in mixin <code>table-expanded()</code></p>
+  <p>Section could be: <code>tr</code>, <code>tbody</code>, <code>thead</code> or <code>tfoot</code>, each of table section could be use multiple.</p>
 </div>
 <div class="tabs section with-padding">
   <input type="radio" name="expandable-row" id="expandable-row-1" checked="true"/>

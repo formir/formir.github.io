@@ -1,25 +1,6 @@
+// table tag:
 @table: table;
 @inline-table: inline-table;
-@table-scroll: table-scroll;
-@table-mobile: table-mobile;
-@table-fixed: table-fixed;
-@table-ellipsis: table-ellipsis;
-@table-td-ellipsis: td-ellipsis;
-@table-header-sticky: header-sticky;
-@table-body-sticky: body-sticky;
-@table-footer-sticky: footer-sticky;
-@table-borders-horizontal: borders-horizontal;
-@table-borders-vertical: borders-vertical;
-@table-borders: borders;
-@table-borders-outside: borders-outside;
-@table-hoverable-td: hoverable-td;
-@table-hoverable-tr: hoverable-tr;
-@table-hoverable-col: hoverable-col;
-@table-zebra-odd: zebra-odd;
-@table-zebra-even: zebra-even;
-@table-on-hover: on-hover;
-@table-number: number;
-@table-bold: bold;
 @tbody: tbody;
 @thead: thead;
 @tfoot: tfoot;
@@ -28,10 +9,31 @@
 @td: td;
 @col: col;
 @colgroup: colgroup;
-@actions: actions;
-@on-hover: on-hover;
-@expandable: expandable;
-@expandable-toggler: expandable-toggler;
-@expandable-trigger: expandable-trigger;
-@toggle-show: toggle-show;
-@toggle-hide: toggle-hide;
+
+@table-scroll: table-scroll; // table wrapper for scroll
+@table-mobile: table-mobile; // turn on mobile support
+@table-fixed: table-fixed; // turn table in to fixed layout (column will lock width)
+@table-ellipsis: table-ellipsis; // apply ellipsis on cell
+@table-header-sticky: header-sticky; // add sticky header on table
+@table-body-sticky: body-sticky; // add sticky th in tbody
+@table-footer-sticky: footer-sticky; // add sticky footer
+@table-borders-horizontal: borders-horizontal; // add border horizontal
+@table-borders-vertical: borders-vertical; // add border vertical
+@table-borders: borders; // add border horizontal and vertical
+@table-borders-outside: borders-outside; // add border outside table
+@table-hoverable-td: hoverable-td; // add hoverable in cell
+@table-hoverable-tr: hoverable-tr; // add hoverable on row
+@table-hoverable-col: hoverable-col; // add hoverable on column
+@table-zebra-odd: zebra-odd; // add zebra in odd
+@table-zebra-even: zebra-even; // add zebra in even
+@table-on-hover: on-hover; // hiddev cell valuem show cell value on hover
+@table-un-hover: un-hover; // cell or row will not react on hover
+@table-number: number; // style for numer in cell (align etc.)
+@table-bold: bold; // add bold to cell
+@actions: actions;  // style for action cell
+
+@expandable: expandable; // expandable section
+@expandable-toggler: expandable-toggler; // expandable toggler (input)
+@expandable-trigger: expandable-trigger; // expandable trigger section
+@toggle-show: toggle-show; // with this class element will show in toggler then expand
+@toggle-hide: toggle-hide;  // with this class element will hide in toggler then expand
