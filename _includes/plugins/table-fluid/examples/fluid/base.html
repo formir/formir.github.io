@@ -1,5 +1,5 @@
 <div class="table-fluid table-column-8">
-  <input class="fluid-toggle" id="base_column_1" name="base_table-fluid" type="radio" checked="true">
+  <input class="fluid-toggle" id="base_column_1" name="base_table-fluid" type="radio" checked="checked">
   <input class="fluid-toggle" id="base_column_2" name="base_table-fluid" type="radio">
   <input class="fluid-toggle" id="base_column_3" name="base_table-fluid" type="radio">
   <input class="fluid-toggle" id="base_column_4" name="base_table-fluid" type="radio">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="fluid-this">
-    <table class="borders zebra-even">
+    <table class="borders zebra-even hoverable-col hoverable-tr hoverable-td">
       <thead>
         <tr>
           <th>Loremsit amet</th>
@@ -224,7 +224,7 @@
           <td class="number">1 900,00</td>
           <td class="actions"><button class="button button-danger button-s">delete</button></td>
         </tr>
-      <tfoot>
+      </tbody><tfoot>
         <tr>
           <td>Voluptatum</td>
           <td>Delectus</td>
@@ -239,3 +239,12 @@
     </table>
   </div>
 </div>
+<script>
+  function tableFluidReset() {
+    let table_fluids = document.querySelectorAll('.table-fluid');
+    Array.prototype.forEach.call(table_fluids, function(table_fluid) {
+      table_fluid.querySelector('.fluid-toggle').checked = true;
+    });
+  }
+  window.addEventListener('resize', tableFluidReset);
+</script>

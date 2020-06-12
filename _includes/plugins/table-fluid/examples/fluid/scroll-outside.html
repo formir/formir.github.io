@@ -39,9 +39,9 @@
     <thead>
       <tr>
         <th>Loremsit amet</th>
-        <th>Adipisicing elit</th>
+        <th>Adipisicing</th>
         <th>Voluptatum</th>
-        <th>Deserunt nesciunt</th>
+        <th>Deserunt</th>
         <th>Porro magni</th>
         <th>Beatae</th>
         <th>Porro magni</th>
@@ -499,3 +499,12 @@
     </tfoot>
   </table>
 </div>
+<script>
+  function tableFluidReset() {
+    let table_fluids = document.querySelectorAll('.table-fluid');
+    Array.prototype.forEach.call(table_fluids, function(table_fluid) {
+      table_fluid.querySelector('.fluid-toggle').checked = true;
+    });
+  }
+  window.addEventListener('resize', tableFluidReset);
+</script>
