@@ -1,0 +1,70 @@
+<div class="room">
+  <input id="room-zoom" type="checkbox" name="zoom" class="room-zoom"/> <!-- This input is used for switch zoom mode, if you will not use zoom you can remove it -->
+  <input id="room-dark" type="checkbox" name="dark" class="room-dark"/> <!-- This input is used for switch dark mode, if you will not use dark button you can remove input or button label (dark mode will turn on automatically)-->
+  <div class="room-body">
+    <input id="room-1" type="radio" name="animate" checked="checked"/>
+    <input id="room-2" type="radio" name="animate" checked="checked"/>
+    <input id="room-3" type="radio" name="animate" checked="checked"/>
+    <input id="room-4" type="radio" name="animate" checked="checked"/>
+    <!-- ... Inputs goes here -->
+    <div class="room-arena">
+      <div class="walls">
+        <div class="wall">
+          <div class="item">
+            <div class="item-image">
+              <img src="img/plugins/room/examples/1.jpg" />   <!-- Put your image here -->
+            </div>
+            <p class="item-desc">
+              <span><!-- Descriptions goes here --></span>
+            </p>
+      
+          </div>
+          <!-- Fifth item goes here -->
+          <!-- Rest of items well ordered to this wall goes here ... -->
+        </div>
+        <div class="wall">
+          <!-- Secound item goes here -->
+          <!-- Sixth item goes here -->
+          <!-- Rest of items well ordered to this wall goes here ... -->
+        </div>
+        <div class="wall">
+          <!-- Third item goes here -->
+          <!-- Seventh item goes here -->
+          <!-- Rest of items well ordered to this wall goes here ... -->
+        </div>
+        <div class="wall">
+          <!-- Fourth item goes here -->
+          <!-- Eighth item goes here and so on -->
+          <!-- Rest of items well ordered to this wall goes here ... -->
+        </div>
+        <div class="ceil"></div>
+        <div class="floor"></div>
+      </div>
+    </div>
+    <div class="navigations">
+      <label for="room-1">
+        <span>1</span>
+      </label>   <!-- Here is your UI element with arrow for first item, link it with his <input/> -->
+      <label for="room-2">
+        <span>2</span>
+      </label>   <!-- Here is your UI element with arrow for secound item, link it with his <input/> -->
+      <label for="room-3">
+        <span>3</span>
+      </label>   <!-- Here is your UI element with arrow for third item, link it with his <input/> -->
+      <label for="room-4">
+        <span>4</span>
+      </label>   <!-- Here is your UI element with arrow for fourth item, link it with his <input/> -->
+      <!-- ... Rest of navigations (prev and next arrows) labels goes here -->
+    </div>
+    <div class="paginations">
+      <label for="room-1">1</label> <!-- Here is your UI element with number for first item, link it with his <input/> -->
+      <label for="room-2">2</label> <!-- Here is your UI element with number for secound item, link it with his <input/> -->
+      <label for="room-3">3</label> <!-- Here is your UI element with number for third item, link it with his <input/> -->
+      <label for="room-4">4</label> <!-- Here is your UI element with number for fourth item, link it with his <input/> -->
+      <!-- ... Rest of paginations labels goes here -->
+    </div>
+    <label for="room-zoom" class="zoom"></label>  <!-- Here is your UI element to enter zoom mode -->
+    <label for="room-dark" class="dark"></label>  <!-- Here is your UI element to switch dark mode -->
+  </div>
+</div>
+        

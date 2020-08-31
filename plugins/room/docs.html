@@ -3,321 +3,222 @@ layout: plugins
 url: room
 ---
 {% include plugins/room/header.html %}
-<div class="docs  margin-top-6">
-  <article>
-    <div class="content-holder">
-      <h1>Documentation</h1>
-      <h3>Room v1.2.2</h3>
-      <ul>
-        <li>
-          <a class="link" href="#quick-start">Quick start</a>
-        </li>
-        <li>
-          <a class="link" href="#installation">Installation</a>
-        </li>
-        <li>
-          <a class="link" href="#setup-less">Setup <i>less</i></a>
-        </li>
-        <li>
-          <a class="link" href="#setup-html">Setup HTML</a>
-        </li>
-        <li>
-          <a class="link" href="#configuration">All variables and mixing</a>
-        </li>
-      </ul>
-      <h2>What it the Room is?</h2>
-      <p>The Room is an image slider written in pure CSS3 and HTML5. It is part of Formir Framework but can operate independently.
-      </p>
+<div class="margin-top-0">
+  <div class="content-holder">
+    <h1>Documentation</h1>
+    <h2>Room v2.0.0</h2>
+    <ul>
+      <li>
+        <a class="link" href="#quick-start">Quick start</a>
+      </li>
+      <li>
+        <a class="link" href="#installation">Installation</a>
+      </li>
+      <li>
+        <a class="link" href="#setup-less">Set up <i>less</i></a>
+      </li>
+      <li>
+        <a class="link" href="#setup-html">Set up HTML</a>
+      </li>
+      <li>
+        <a class="link" href="#configuration">All variables and mixing</a>
+      </li>
+    </ul>
+    <h2>What it the Room is?</h2>
+    <div class="section section-content with-padding">
+      <p>The Room is an image slider written in pure CSS3 and HTML5. It is part of Formir Framework but can operate independently.</p>
       <p>The room plugin will fully work only with CSS and HTML. All of the logic is based on CSS and <code>&#x3C;input/&#x3E;</code> tag elements, that are required.</p>
-      <h2 id="quick-start">Quick start</h2>
+      <p>The Room gallery have manualy (button control or class name control) and automatic function of dark mode, you can set your own colors for both mode.</p>
+    </div>
+    <h3 id="quick-start">Quick start</h3>
+    <div class="section section-content with-padding">
       <p>Copy <code>formir-room.min.css</code> or <code>formir-room-black.min.css</code> file to your application direction.</p>
       <p>Copy code below and paste into your HTML file at a <code>&#x3C;head&#x3E;</code> part.</p>
+      <pre>
+        <code class="html">
+<link rel="stylesheet" type="text/css" href="css/formir-room.min.css" />
+        </code>
+      </pre>
+      <p>Copy gallery code below and paste into your site body and modify wall items and images.</p>
+      <pre>
+        <code class="html" encode="true">
+{% include plugins/room/docs/quick-use.html %}
+        </code>
+      </pre>
     </div>
-
-  <pre>
-    <code class="html skip">
-      <div class="content-holder">
-&#x3C;head&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/formir-room.min.css&#x22; /&#x3E;
-&#x3C;/head&#x3E;
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <p>Copy gallery code below and paste into your site body and modify wall items and images.</p>
-  </div>
-  <pre>
-      <code class="html skip">
-        <div class="content-holder">
-&#x3C;div class=&#x22;room&#x22;&#x3E;
-&#x3C;input class=&#x22;room-zoom&#x22; id=&#x22;room-zoom-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom-1&#x22;/&#x3E;
-&#x3C;div class=&#x22;room-body&#x22;&#x3E;
-&#x3C;input id=&#x22;room-sample-1-1&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22; checked=&#x22;checked&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-2&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-3&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-4&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-5&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-6&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-7&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-8&#x22; type=&#x22;radio&#x22; name=&#x22;animate-1&#x22;/&#x3E;
-&#x3C;div class=&#x22;room-arena&#x22;&#x3E;
-&#x3C;div class=&#x22;walls&#x22;&#x3E;
-&#x3C;div class=&#x22;wall&#x22;&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/1.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      1st. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/5.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      5th. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;wall&#x22;&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/4.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      2st. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/6.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      6th. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;wall&#x22;&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/3.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      3st. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/7.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      7th. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;wall&#x22;&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/2.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      4st. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;item&#x22;&#x3E;
-    &#x3C;a class=&#x22;item-image&#x22;&#x3E;
-      &#x3C;img src=&#x22;/img/plugins/room/examples/8.jpg&#x22; /&#x3E;
-    &#x3C;/a&#x3E;
-    &#x3C;p class=&#x22;item-desc&#x22;&#x3E;
-      8th. element
-    &#x3C;/p&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ceil&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;floor&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;navigations&#x22;&#x3E;
-&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;paginations&#x22;&#x3E;
-&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-5&#x22;&#x3E;5&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-6&#x22; class=&#x22;yellow&#x22;&#x3E;6&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-7&#x22; class=&#x22;red&#x22;&#x3E;7&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-sample-1-8&#x22; class=&#x22;blue&#x22;&#x3E;8&#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;label class=&#x22;zoom&#x22; for=&#x22;room-zoom-1&#x22;&#x3E;come over&#x3C;/label&#x3E;
-&#x3C;label for=&#x22;room-zoom-1&#x22; class=&#x22;exit&#x22;&#x3E;exit&#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <h2 id="installation">Installation - full process</h2>
-    <p>This plugin is written in <i>less</i> (and optional <i>sass</i>) dynamic preprocessor style sheet language (CSS).</p>
-    <p>It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase. 
-      <br/>You can use this approach or attach the only source of room plugin <code>formir-room.less</code>.
-    </p>
-    <h3>Choice LESS or SASS</h3>
-    <p>In documentation we fucos on <i>less</i> preprocessor, but the same file structure and mixin / variables is used for SASS (scss), to know how install & compile sass file go to <a href="https://sass-lang.com/install">Sass documentation</a></p>
-    <h3>Prepare files</h3>
-    <p>Start with copy all files to your root direction:</p>
-  </div>
-  <pre>
-    <code class="dir skip"><div class="content-holder">
-src                        - your application root path
-less                     - your less direction
-formir
-core
-  mixins             - less mixins
-    display.less
-    flex.less
-    functions.less
-  plugins
-    room.less        - all style and settings for room plugin
-formir-room.less       - your root file that imports all of other files
-img
-plugins
-room
-  floor.jpg
-    </div></code>
-  </pre>
-  <div class="content-holder">
+    <h2 id="installation">Installation</h2>
+    <div class="section section-content with-padding">
+      <p>This plugin is written in <i>less</i> (and optional <i>sass</i>) dynamic preprocessor style sheet language (CSS).</p>
+      <p>It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase. 
+        <br/>You can use this approach or attach the only source of room plugin <code>formir-room.less</code>.
+      </p>
+      <h4>Choice LESS or SASS</h4>
+      <p>In documentation we fucos on <i>less</i> preprocessor, but the same file structure and mixin / variables is used for SASS (scss), to know how install & compile sass file go to <a href="https://sass-lang.com/install">Sass documentation</a></p>
+      <h4>Prepare files</h4>
+      <p>Start with copy all files to your root direction:</p>
+      <pre>
+        <code class="dir skip">
+  src                        - your application root path
+    less                     - your less or sass direction
+      formir
+        core
+          mixins             - less mixins
+            display.less
+            flex.less
+            functions.less
+          plugins
+            room.less        - all style and settings for room plugin
+        formir-room.less     - your root file that imports all of other files
+    img
+      plugins
+        room
+          floor.jpg
+    font                     - icons for room
+      room.woff
+      ...
+      
+        </code>
+      </pre>
+    </div>
+  
     <h3>Include Style</h3>
-    <p>Include formir-room.less into your project.</p>
-    <p>In this step, you can include <code>formir-room.less</code> to your main less file, or move the content of <code>formir-room.less</code> to your main (manifest/root) <i>less</i> file.</p>
-    
-    <p>Use developer mode of <i>less</i> library, or compile less using backend (ex. webpack). 
-      <br/>To use .less file on your page look at  <a target="_blank" class="link" href="https://lesscss.org/usage/">less configuration page.</a></p>
-    <p>Add in your <code>&#x3C;head&#x3E;</code> tag with your HTML file on developer mode:</p>
-  </div>
-  <pre>
-    <code class="html skip">
-      <div class="content-holder">
-&#x3C;head&#x3E;
-&#x3C;link rel=&#x22;stylesheet/less&#x22; type=&#x22;text/css&#x22; href=&#x22;less/formir-room.less&#x22; /&#x3E;
-&#x3C;script src=&#x22;js/less.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;/head&#x3E;
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <p>In production mode you can also use <i>less</i> npm package to compile your own <i>min.css</i> file. Use lessc command in bash, for example:<br/>
-      <code>$ npm install -g less</code><br/>
-      <code>$ lessc -x less/formir-room.less css/formir-room.min.css</code>
-    </p>
-  </div>
-
-  <section class="background-alternative padding-top-1 padding-bottom-1">
-    <div id="setup-less" class="content-holder">
-      <h2>Setup <i>less</i></h2>
+    <div class="section section-content with-padding">
+      <p>Include formir-room.less into your project.</p>
+      <p>In this step, you can include <code>formir-room.less</code> to your main less file, or move the content of <code>formir-room.less</code> to your main (manifest/root) <i>less</i> file.</p>
+      
+      <p>Use developer mode of <i>less</i> library, or compile less using backend (ex. webpack). 
+        <br/>To use .less file on your page look at  <a target="_blank" class="link" href="https://lesscss.org/usage/">less configuration page.</a></p>
+      <p>Add in your <code>&#x3C;head&#x3E;</code> tag with your HTML file on developer mode:</p>
+      <pre>
+        <code class="html">
+<link rel="stylesheet/less" type="text/css" href="less/formir-room.less" />
+<script src="js/less.min.js"></script>
+        </code>
+      </pre>
+      <p>In production mode you can also use <i>less</i> npm package to compile your own <i>min.css</i> file. Use lessc command in bash, for example:<br/>
+        <code>$ npm install -g less</code><br/>
+        <code>$ lessc -x less/formir-room.less css/formir-room.min.css</code>
+      </p>
+    </div>
+    <h3>Set up <i>less</i></h3>
+    <div class="section section-content with-padding" id="setup-less">
       <p>The Gallery is fully configurable, each of colors, borders etc. you can change in <i>less</i> file <code>less/formir/plugins/room.less</code>.</p>
       <p><a href="#configuration" class="button button-s">See all configurations</a> of <i>less</i> file.</a></p>
-      <h3>Setup core <i>less</i> variables</h3>
+      <h4>Setup core <i>less</i> variables</h4>
       <h4>Maximum number of items</h4>
       <p>Pure CSS gives us some limits, before a start, please set up a maximum number of items in your gallery before compiling the project, remember The higher the number you choose, the more your CSS will weigh.</p>
-    </div>
-  </section>
-  <pre>
-    <code class="less skip">
-      <div class="content-holder">
+      <pre>
+        <code class="less skip">
 @room-max-walls: 30;  // number of max count of walls / items
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <h4>Dimensions of the room wall</h4>
-    <p>You could set wall dimensions but not with % variables, you can use rem, px, we recommend variables of viewport vh / vw.</p>
-  </div>
-  <pre>
-    <code class="less skip">
-      <div class="content-holder">
+        </code>
+      </pre>
+      <h4>Dimensions of the room wall</h4>
+      <p>You could set wall dimensions but not with % variables, you can use rem, px, we recommend variables of viewport vh / vw.</p>
+      <pre>
+        <code class="less skip">
 @room-size-width: 100vmax;  // gallery wall width - do not use %
 @room-size-height: 100vmin; // gallery wall height - do not use %
 
-<a href="#configuration" class="link">... more</a>
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <p>Set up your perspective, zoom, and scale, for the best-suited three-dimensional experience.</p>
-  </div>
-  <pre>
-    <code class="less skip">
-      <div class="content-holder">
+        </code>
+      </pre>
+      <a href="#configuration" class="link">... more</a>
+      <p>Set up your perspective, zoom, and scale, for the best-suited three-dimensional experience.</p>
+      <pre>
+        <code class="less skip">
 @room-perspective: @room-size-width;  // gallery prespective - use room size for best perspective
 
 @room-scale: 1.1; // scale of room
 @room-scale-zoom: 1.5; // scale of room when zooming
 @room-offset-y: 0; // room offset in vertical (y) - use %
-
-<a href="#configuration" class="link">... more</a>
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <h4>Colors of your room</h4>
-    <p>Set up your background wall color, ceil, floor, and colors and shape of buttons.</p>
+        </code>
+      </pre>
+      <a href="#configuration" class="link">... more</a>
+    </div>
+  
+    <h2>Set up your light and dark mode</h2>
+    <div class="section section-content with-padding">
+      <h4>Colors of your room</h4>
+      <p>Set up your background wall color, ceil, floor, and colors and shape of buttons.</p>
+      <h4>Light (default) mode</h4>
+    <pre>
+      <code class="less skip">
+@light-room-body-background: #fff;
+@light-room-text-color: #2d2d2d;
+@light-room-floor-background: #bb7631 url('../img/plugins/room/floor.jpg') repeat 180px 180px;
+@light-room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+@light-room-wall-background: @light-room-body-background url('../img/plugins/room/wall.jpg') repeat 180px 180px;
+@light-room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
+@light-room-ceil-background: @light-room-body-background url('../img/plugins/room/wall.jpg') repeat 180px 180px;
+@light-room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+@light-room-button-background: #3c3642;
+@light-room-button-color: #fff;
+@light-room-button-border: 0 none;
+@light-room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+@light-room-button-current-background: #fff;
+@light-room-button-current-border: 0 none;
+@light-room-button-current-color: @light-room-button-background;
+@light-room-button-current-shadow: none;
+@light-room-canvas-border: 10px solid @light-room-button-background;
+@light-room-canvas-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      </code>
+    </pre>
+    <a href="#configuration" class="link">... more</a>
+    <h4>Dark mode</h4>
+    <p>There is 3 way to turn on dark mode:</p>
+    <ol>
+      <li>Automatically by dark mode in OS - remember to remove <code>input</code> control</li>
+      <li>By add class to <code>room</code>, just add next class <code>room-dark</code> - remember to remove <code>input</code> control</li>
+      <li>Allow user change add extra <code>input</code> tag and <code>label</code></li>
+    </ol>
+    <pre>
+      <code class="less skip">
+@dark-room-body-background: #1c1e24;
+@dark-room-text-color: #fff;
+@dark-room-floor-background: #241c11 url('../img/plugins/room/dark-floor.jpg') repeat 150px 150px;
+@dark-room-floor-shadow: none;
+@dark-room-wall-background: #1c1e24 url('../img/plugins/room/dark-wall.jpg') repeat 150px 150px;
+@dark-room-wall-shadow: 0 0 50px rgba(0,0,0,0.7),0 0 100px rgba(0,0,0,0.7) inset;
+@dark-room-ceil-background: #1c1e24 url('../img/plugins/room/dark-wall.jpg') repeat 150px 150px;
+@dark-room-ceil-shadow: 0 0 100px rgba(0,0,0,0.7),0 0 150px rgba(0,0,0,0.7) inset;
+@dark-room-button-background: #fff;
+@dark-room-button-color: #000;
+@dark-room-button-border: 0 none;
+@dark-room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+@dark-room-button-current-background: #000;
+@dark-room-button-current-border: 0 none;
+@dark-room-button-current-color: #fff;
+@dark-room-button-current-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+@dark-room-canvas-border: 10px solid @room-button-background;
+@dark-room-canvas-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      </code>
+    </pre>
+    <a href="#configuration" class="link">... more</a>
   </div>
-  <pre>
-    <code class="less skip">
-      <div class="content-holder">
-@room-floor-background: url('https://formir.io/plugins/img/plugins/room/floor.jpg') repeat 110px 50px;
-@room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
-
-@room-wall-background: @room-body-background;
-@room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
-
-@room-ceil-background: @room-body-background;
-@room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
-
-<a href="#configuration" class="link">... more</a>
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
+  <div class="section section-content with-padding">
     <h4>Use our mixing to style your elements</h4>
     <p>You can use <i>less</i> mixing to quick change the whole parts of the style.</p>
-  </div>
-  <pre>
-    <code class="less skip">
-      <div class="content-holder">
+    <pre>
+      <code class="less skip">
 .room-floor() {
-// style for floor
+  // style for floor
 }
 
 .room-wall() {
-// style for each wall
+  // style for each wall
 }
 
 .room-ceil() {
-// style of ceil of room
+  // style of ceil of room
 }
-
-<a href="#configuration" class="link">... more</a>
-      </div>
-    </code>
-  </pre>
-  <div class="content-holder">
-    <h4>Customize class HTML</h4>
-    <p>Easy change class name of all elements to prevent name duplicate on your app.</p>
-  </div>
-    <pre>
-      <code class="less skip">
-        <div class="content-holder">
+        </code>
+      </pre>
+      <a href="#configuration" class="link">... more</a>
+    </div>
+    <div class="section section-content with-padding">
+      <h4>Customize class HTML</h4>
+      <p>Easy change class name of all elements to prevent name duplicate on your app.</p>
+      <pre>
+        <code class="less skip">
 @room: room;  // main wrapper
 @room-body: room-body;  // body of room
 @room-arena: room-arena;  // next wrapper coled arena
@@ -326,119 +227,53 @@ room
 @room-ceil: ceil;
 @room-floor: floor;
 @room-item: item; // item to display on the wall
-
-<a href="#configuration" class="link">... more</a>
-        </div>
-      </code>
-    </pre>
-  <div class="content-holder">
-    <p><a class="button primary" href="#configuration">Go to all possible variables</a></p>
-  </div>
-  <section class="background-alternative padding-top-1 padding-bottom-1">
-    <div id="setup-html" class="content-holder">
-      <h2>Setup HTML</h2>
+        </code>
+      </pre>
+      <a href="#configuration" class="link">... more</a>
+      <p><a class="button primary" href="#configuration">Go to all possible variables</a></p>
+    </div>
+    <h3>Set up HTML</h3>
+    <div class="section section-content with-padding"  id="setup-html">
       <h3>Input's controls</h3>
       <p>Plugin work without JS so we control your gallery with <code>&#x3C;input/&#x3E;</code> tag, each separate input for each item on the gallery.</p>
       <p>Inputs and labels are related with <code>id</code> and <code>for</code> an attribute, so for each item, we will need one input, one label for navigating (next / prev), and one label for dot (for jump). That is all the logic that you need to know.</p>
     </div>
-  </section>
-  <section class="background-primary padding-top-1 padding-bottom-1">
-    <div class="content-holder">
-      <h3>Good to know</h3>
+    <h3>Good to know</h3>
+    <div class="section section-content with-padding background-primary">
       <p>If you put many gallery in one page use also unique ID for each <code>&#x3C;input/&#x3E;</code> tag in your gallery code, also group of <code>&#x3C;input/&#x3E;</code> must have unique NAME attribute.</p>
       <p>Try to not include your gallery <code>&#x3C;input/&#x3E;</code> within <code>&#x3C;form&#x3E;</code> tag if you don't must, other wide you have to clean input element before sent form if you don't have any undesirable effects.</p>
       <p>Some browsers save state of  <code>&#x3C;input/&#x3E;</code> - if you do not want this future just set <code>AUTOCOMPLETE="off"</code> attribute to each <code>&#x3C;input/&#x3E;</code>.</p>
     </div>
-  </section>
-  <div class="content-holder">
-    <h3>Ordering items on the walls</h3>
-    <p>A cube which is the room that has 6th wall, flor ceils and 4 walls. Every wall has own items to display. All you have to do is apply items <code>&#x3C;div class=&#x22;item&#x22;&#x3E;</code> with your image to each wall  <code>&#x3C;div class=&#x22;wall&#x22;&#x3E;</code> with specify order.</p>
-    <p>First goes item from <code>:first</code> wall, next goes <code>:first</code> item from the second wall, then <code>:first</code> item from the third wall and <code>:first</code> item from the fourth wall. If you have more then 4 pictures, this process will continue, <code>:secound</code> item from the first wall and so on and on in the circle. 
-    <p class="text-center"><img src="/img/plugins/room/items-order.png"/></p>
-    <h3>Zoom control</h3>
-    <p>Gallery has a function to switch to zoom mode, in that case, you can switch to this mode by clicking the button. In zoom mode dots are hidden, and you see only the one front image, you can switch images by clicking the next / prev button.</h3>
-    <p>Use this mockup:</p>
+    <div class="section section-content with-padding" >
+      <h4>Ordering items on the walls</h4>
+      <p>A cube which is the room that has 6th wall, flor ceils and 4 walls. Every wall has own items to display. All you have to do is apply items <code>&#x3C;div class=&#x22;item&#x22;&#x3E;</code> with your image to each wall  <code>&#x3C;div class=&#x22;wall&#x22;&#x3E;</code> with specify order.</p>
+      <p>First goes item from <code>:first</code> wall, next goes <code>:first</code> item from the second wall, then <code>:first</code> item from the third wall and <code>:first</code> item from the fourth wall. If you have more then 4 pictures, this process will continue, <code>:secound</code> item from the first wall and so on and on in the circle. 
+      <p class="text-center"><img src="/img/plugins/room/items-order.png"/></p>
+      <h4>Zoom control</h4>
+      <p>Gallery has a function to switch to zoom mode, in that case, you can switch to this mode by clicking the button. In zoom mode dots are hidden, and you see only the one front image, you can switch images by clicking the next / prev button.</h3>
+      <h4>Dark mode control</h4>
+      <p>Gallery has a function to manualy switch to dark mode, you can switch to this mode by clicking the button. Dark mode will automoticly turn on when browser is using dark mode.</h3>
+      <h4>HTML sandbox</h4>
+      <p>Use this mockup:</p>
+      <pre>
+        <code class="html" encode="true">
+          {% include plugins/room/docs/sandbox.html %}
+        </code>
+      </pre>
+      <div class="text-center">
+        <a href="/plugins/room/examples.html" class="button button-l">Go to Example</a>
+      </div>
     </div>
-    <pre>
-      <code class="html skip">
-        <div class="content-holder">
-&#x3C;div class=&#x22;room&#x22;&#x3E;
-&#x3C;input id=&#x22;room-sample-1&#x22; type=&#x22;checkbox&#x22; name=&#x22;zoom&#x22;/&#x3E; &#x3C;!-- This input is used for switch zoom mode --&#x3E;
-&#x3C;div class=&#x22;room-body&#x22;&#x3E;
-&#x3C;input id=&#x22;room-sample-1-1&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-2&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-3&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
-&#x3C;input id=&#x22;room-sample-1-4&#x22; type=&#x22;radio&#x22; name=&#x22;animate&#x22; checked=&#x22;checked&#x22;/&#x3E;
-&#x3C;!-- ... Inputs goes here --&#x3E;
-&#x3C;div class=&#x22;room-arena&#x22;&#x3E;
-&#x3C;div class=&#x22;walls&#x22;&#x3E;
-  &#x3C;div class=&#x22;wall&#x22;&#x3E;
-    &#x3C;div class=&#x22;item&#x22;&#x3E;
-      &#x3C;div class=&#x22;item-image&#x22;&#x3E;
-        &#x3C;img src=&#x22;/img/plugins/room/examples/1.jpg&#x22; /&#x3E;   &#x3C;!-- Put your image here --&#x3E;
-      &#x3C;/div&#x3E;
-      &#x3C;p class=&#x22;item-desc&#x22;&#x3E; &#x3C;!-- Description put inside --&#x3E;
-        &#x3C;!-- Descriptions goes here --&#x3E;
-      &#x3C;/p&#x3E;
-
-    &#x3C;/div&#x3E;
-    &#x3C;!-- Fifth item goes here --&#x3E;
-    &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;wall&#x22;&#x3E;
-    &#x3C;!-- Secound item goes here --&#x3E;
-    &#x3C;!-- Sixth item goes here --&#x3E;
-    &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;wall&#x22;&#x3E;
-    &#x3C;!-- Third item goes here --&#x3E;
-    &#x3C;!-- Seventh item goes here --&#x3E;
-    &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;wall&#x22;&#x3E;
-    &#x3C;!-- Fourth item goes here --&#x3E;
-    &#x3C;!-- Eighth item goes here and so on --&#x3E;
-    &#x3C;!-- Rest of items well ordered to this wall goes here ... --&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;ceil&#x22;&#x3E;&#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;floor&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;navigations&#x22;&#x3E;
-&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for first item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for secound item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for third item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E;   &#x3C;!-- Here is your UI element with arrow for fourth item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;!-- ... Rest of navigations (prev and next arrows) labels goes here --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;paginations&#x22;&#x3E;
-&#x3C;label for=&#x22;room-sample-1-1&#x22;&#x3E;1&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for first item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-2&#x22;&#x3E;2&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for secound item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-3&#x22;&#x3E;3&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for third item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;label for=&#x22;room-sample-1-4&#x22;&#x3E;4&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element with number for fourth item, link it with his &#x3C;input/&#x3E; --&#x3E;
-&#x3C;!-- ... Rest of paginations labels goes here --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;label class=&#x22;zoom&#x22; for=&#x22;room-zoom&#x22;&#x3E;come over&#x3C;/label&#x3E;  &#x3C;!-- Here is your UI element to enter zoom mode --&#x3E;
-&#x3C;label for=&#x22;room-zoom&#x22; class=&#x22;exit&#x22;&#x3E;exit&#x3C;/label&#x3E; &#x3C;!-- Here is your UI element to exit zoom mode --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-        </div>
-      </code>
-    </pre>
-    <div class="content-holder text-center">
-      <a href="/plugins/room/examples.html" class="button button-l">Go to Example</a>
-    </div>
-    <div id="configuration" class="content-holder">
-      <h2>Setpu <i>less</i> file</h2>
-      <p>Go to file <code>less/formir/plugins/room.less</code> and change your config</p>
-      <h3>HTML classes setup</h3>
-      <p>You can specify class names for html elements, for example, to avoid name collisions in your app, remember to change classes also on your html:</p>
-    </div>
+  <h3>Set up <i>less</i> file</h3>
+  <div class="section section-content with-padding" id="configuration">
+    <p>Go to file <code>less/formir/plugins/room.less</code> and change your config</p>
+    <h4>HTML classes setup</h4>
+    <p>You can specify class names for html elements, for example, to avoid name collisions in your app, remember to change classes also on your html:</p>
     <pre>
       <code class="less skip">
-        <div class="content-holder">
 /// CLASSES (name: defualt;)
 @room: room;  // main wrapper
+@room-dark: room-dark;
 @room-body: room-body;  // body of room
 @room-arena: room-arena;  // next wrapper coled arena
 @room-walls: walls; // walls in 3d
@@ -452,44 +287,34 @@ room
 @room-paginations: paginations; // pagination wrapper
 @room-navigations: navigations;
 @room-zoom-button: zoom;  // button to zoom in
+@room-dark-button: dark;
 @room-exit-button: exit;  // button to live zoom
 @room-canvas: canvas; // class for border/canvas style
 
 
-        </div>
-      </code>
-    </pre>
-    <div class="content-holder">
-      <h3>Core <i>less</i> variables:</h3>
-    </div>
-    <pre>
-      <code class="less skip">
-        <div class="content-holder">
-
-
+        </code>
+      </pre>
+      <h4>Core <i>less</i> variables:</h4>
+      <pre>
+        <code class="less skip">
 /// CORE
 @room-max-walls: 30;  // number of max count of walls / items
 @room-colors: true; // enable color of button dots/arrow
 @room-desc-pre: false; // enable of room-desc as pre text
-
-        </div>
-      </code>
-    </pre>
-    <div class="content-holder">
-      <h3>All <i>less</i> variables:</h3>
-    </div>
-    <pre>
-      <code class="less skip">
-        <div class="content-holder">
+        </code>
+      </pre>
+      <h4>All <i>less</i> variables:</h4>
+      <pre>
+        <code class="less skip">
 
 /// VARIABLES
-@room-rotate-speed: 2s; // speed of room rotation
-@room-rotate-timing: ease-in-out; // function of rotation speed animation
+@room-rotate-speed: 2s;
+@room-rotate-timing: ease-in-out;
 
-@room-font-family: Arial, Helvetica, sans-serif; // font family
+@room-font-family: Arial, Helvetica, sans-serif;
 @room-mobile-media-width: 945px; // not use % unit or calc(), you can use px, rem, cm, vh, vw etc
 
-@room-size-width: 100vmax; // size of room
+@room-size-width: 100vmax;
 @room-size-height: 100vmin;
 @room-perspective: @room-size-width;
 
@@ -502,161 +327,184 @@ room
 @room-scale-zoom: 1.5;
 @room-offset-y: 0; // use %
 
-@room-body-background: #fff;
-
 @room-item-height: 90%;
 @room-item-width: 90%;
 
 @room-zindex: 1000;
 
-@room-text-color: #2d2d2d;
 @room-text-font-size: 14px;
 @room-text-font-size-mobile: 2vmin;
 @room-font-line-height: 1.3em;
 @room-text-margin-top: 1.5rem;
-@room-text-max-height: 30%; // max height (percent of full height) of text section
+@room-text-max-height: 20%;
+@room-text-min-height: 10%;
+@room-text-max-width: 70%;
+@room-text-padding: 20px 0;
 
-@room-floor-background: url('https://formir.io/plugins/img/plugins/room/floor.jpg') repeat 110px 50px;
-@room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
-
-@room-wall-background: @room-body-background;
-@room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
-
-@room-ceil-background: @room-body-background;
-@room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
 
 @room-navigations-margin: 20px;
-@room-button-size: 30px;
-@room-pagination-button-size: 20px;
+@room-button-size: 35px;
+@room-pagination-button-size: 25px;
 @room-pagination-buttons-space: 3px;
-@room-button-border: 0 none;
-@room-button-background: #747474;
-@room-button-color: #fff;
-@room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 
-@room-button-current-background: #fff;
-@room-button-current-border: 1px solid @room-button-background;
-@room-button-current-color: @room-button-background;
 
 @room-buttons-position: 5%;  // horizontally (y)
 @room-button-zoom-position: 10%;
-@room-button-zoom-width: 120px;
-@room-button-exit-width: 60px;
+@room-button-dark-position: 10%;
+@room-button-zoom-width: @room-button-size;
+@room-button-exit-width: @room-button-size;
+@room-button-dark-width: @room-button-size;
 @room-pagination-position: 5%;
 
-@room-button-opacity: 0.5;
+@room-button-opacity: 1;
 
-@room-button-red-background: #A6131D;
-@room-button-blue-background: #0E2D63;
-@room-button-yellow-background: #f9f381;
-@room-button-green-background: #0F6331;
-@room-button-orange-background: #F69256;
-@room-button-pink-background: #EC5B94;
-@room-button-black-background: #000;
-@room-button-white-background: #fff;
+// Css variables - you can use this variables to modify colors (if you use static ligth or dark mode) without less/sass compiler
 
-@room-button-red-color: #fff;
-@room-button-blue-color: #fff;
-@room-button-yellow-color: @room-text-color;
-@room-button-green-color: #fff;
-@room-button-orange-color: #fff;
-@room-button-pink-color: #fff;
-@room-button-black-color: #fff;
-@room-button-white-color: @room-text-color;
-@room-button-transition: opacity 0.5s linear;
+@room-body-background: var(--room-body-background);
+@room-text-color: var(--room-text-color);
+@room-floor-background: var(--room-floor-background);
+@room-floor-shadow: var(--room-floor-shadow);
+@room-wall-background: var(--room-wall-background);
+@room-wall-shadow: var(--room-wall-shadow);
+@room-ceil-background: var(--room-ceil-background);
+@room-ceil-shadow: var(--room-ceil-shadow);
+@room-button-background: var(--room-button-background);
+@room-button-color: var(--room-button-color);
+@room-button-border: var(--room-button-border);
+@room-button-shadow: var(--room-button-shadow);
+@room-button-current-background: var(--room-button-current-background);
+@room-button-current-border: var(--room-button-current-border);
+@room-button-current-color: var(--room-button-current-color);
+@room-button-current-shadow: var(--room-button-current-shadow);
+@room-canvas-border: var(--room-canvas-border);
+@room-canvas-shadow: var(--room-canvas-shadow);
 
-@room-canvas-border: 10px solid @room-button-background;
-@room-canvas-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        </div>
+// Light theme:
+@light-room-body-background: #fff;
+@light-room-text-color: #2d2d2d;
+@light-room-floor-background: #bb7631 url('../img/plugins/room/floor.jpg') repeat 180px 180px;
+@light-room-floor-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+@light-room-wall-background: @light-room-body-background url('../img/plugins/room/wall.jpg') repeat 180px 180px;
+@light-room-wall-shadow: 0 0 50px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.2) inset;
+@light-room-ceil-background: @light-room-body-background url('../img/plugins/room/wall.jpg') repeat 180px 180px;
+@light-room-ceil-shadow: 0 0 100px rgba(0, 0, 0, 0.1), 0 0 150px rgba(0, 0, 0, 0.2) inset;
+@light-room-button-background: #3c3642;
+@light-room-button-color: #fff;
+@light-room-button-border: 0 none;
+@light-room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+@light-room-button-current-background: #fff;
+@light-room-button-current-border: 0 none;
+@light-room-button-current-color: @light-room-button-background;
+@light-room-button-current-shadow: none;
+@light-room-canvas-border: 10px solid @light-room-button-background;
+@light-room-canvas-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+// Dark theme:
+@dark-room-body-background: #1c1e24;
+@dark-room-text-color: #fff;
+@dark-room-floor-background: #241c11 url('../img/plugins/room/dark-floor.jpg') repeat 150px 150px;
+@dark-room-floor-shadow: none;
+@dark-room-wall-background: #1c1e24 url('../img/plugins/room/dark-wall.jpg') repeat 150px 150px;
+@dark-room-wall-shadow: 0 0 50px rgba(0,0,0,0.7),0 0 100px rgba(0,0,0,0.7) inset;
+@dark-room-ceil-background: #1c1e24 url('../img/plugins/room/dark-wall.jpg') repeat 150px 150px;
+@dark-room-ceil-shadow: 0 0 100px rgba(0,0,0,0.7),0 0 150px rgba(0,0,0,0.7) inset;
+@dark-room-button-background: #fff;
+@dark-room-button-color: #000;
+@dark-room-button-border: 0 none;
+@dark-room-button-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+@dark-room-button-current-background: #000;
+@dark-room-button-current-border: 0 none;
+@dark-room-button-current-color: #fff;
+@dark-room-button-current-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+@dark-room-canvas-border: 10px solid @room-button-background;
+@dark-room-canvas-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
       </code>
     </pre>
-
-    <div class="content-holder">
-        <h3>Mixings</h3>
-      </div>
-      <pre>
-        <code class="less skip">
-          <div class="content-holder">
+    <h4>Mixings</h4>
+    <pre>
+      <code class="less skip">
 .room-floor() {
-// style for floor
+  // style for floor
 }
 
 .room-wall() {
-// style for each wall
+  // style for each wall
 }
 
 .room-ceil() {
-// style of ceil of room
+  // style of ceil of room
+}
+
+.room-item-desc() {
+  // style description below image
 }
 
 .room-pagination-current() {
-// style for current pagination of dot button
+  // style for current pagination of dot button
 }
 
 .room-button() {
-// style for all buttons
+  // style for all buttons
 }
 
 .room-prev-button() {
-// style for prev button
+  // style for prev button
 }
 
 .room-next-button() {
-// style for next button
+  // style for next button
 }
 
 .room-exit-button() {
-// style for exit button
+  // style for exit button
 }
 
 .room-zoom-button() {
-// style for zoom button
+  // style for zoom button
 }
 
-          </div>
-        </code>
-      </pre>
-  </article>
-  <article>
-    <div class="content-holder">
-      <h3>Known Edge ( < 80 ) bug:</h3>
-      <p>
-        Many user repor us the same issue at Edge browser with cuting images after interaction with gallery. This is know issue of Edge browser (mixing rotate-3d and animation https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/16452345/ unfortunately this page not exist), solution is to use JS short code and for example jquery (it will be not part of package): 
-      </p>
-    </div>
-      <pre>
-        <code class="js skip">
-          <div class="content-holder">
-
-          
-&#x3C;script&#x3E;
-if (/Edge/.test(navigator.userAgent)) {
-setInterval(function(){
-$(&#x27;.room-arena&#x27;).css(&#x27;opacity&#x27;, &#x27;0.999&#x27;);
-setTimeout(function() {
-  $(&#x27;.room-arena&#x27;).removeAttr(&#x27;style&#x27;);
-},1);
-}, 100);
+.room-dark-button() {
+  // style for dark mode button
 }
-&#x3C;/script&#x3E;
-          </div>
+
+.room-dark-button-active() {
+  // style for activated dark mode on button
+}
+
         </code>
       </pre>
-    <div class="content-holder">
-      <h3>Supported browsers and OS:</h3>
-      <ul>
-        <li>FF >= 20</li>
-        <li>Safari > 8</li>
-        <li>Chrome >= 35</li>
-        <li>Opera >= 22</li>
-        <li>Edge >= 12 (with JS fix)</li>
-        <li>Edge >= 80</li>
+    <h4>Known Edge ( < 80 ) bug:</h4>
+    <p>
+      Many user repor us the same issue at Edge browser with cuting images after interaction with gallery. This is know issue of Edge browser (mixing rotate-3d and animation https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/16452345/ unfortunately this page not exist), solution is to use JS short code and for example jquery (it will be not part of package): 
+    </p>
+    <pre>
+      <code class="js">
+<script>
+  if (/Edge/.test(navigator.userAgent)) {
+    setInterval(function() {
+      $('.room-arena').css('opacity', '0.999');
+      setTimeout(function() {
+        $('.room-arena').removeAttr('style');
+      },1);
+    }, 100);
+  }
+</script>
+      </code>
+    </pre>
+    <h4>Supported browsers and OS:</h4>
+    <ul>
+      <li>FF >= 20</li>
+      <li>Safari > 8</li>
+      <li>Chrome >= 35</li>
+      <li>Opera >= 22</li>
+      <li>Edge >= 12 (with JS fix)</li>
+      <li>Edge >= 80</li>
 
-        <li>Android >= 4.0</li>
-        <li>iOS > 8</li>
-      </ul>
-      <p>Tested on the above-mentioned browsers.</p>
-      <p>To fully works browser need support 'perspecitive' and 'flex' CSS properties.
-    </div>
-  </article>
+      <li>Android >= 4.0</li>
+      <li>iOS > 8</li>
+    </ul>
+    <p>Tested on the above-mentioned browsers.</p>
+    <p>To fully works browser need support 'perspecitive' and 'flex' CSS properties.
+  </div>
 </div>

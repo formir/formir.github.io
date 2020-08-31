@@ -4,8 +4,9 @@ url: room
 ---
 {% include plugins/room/header.html %}
 <div class="welcome">
-  <div class="room">
+  <div class="room" style="width: 100%; padding-bottom: calc(100vmin - 95px); height: calc(100vh - 95px);">
     <input id="room-zoom" type="checkbox" name="zoom" class="room-zoom"/>
+    <input id="room-dark" type="checkbox" name="dark" class="room-dark"/>
     <div class="room-body">
       <input id="wall-1" type="radio" name="animate" checked="true"/>
       <input id="wall-2" type="radio" name="animate"/>
@@ -16,36 +17,57 @@ url: room
       <input id="wall-7" type="radio" name="animate"/>
       <input id="wall-8" type="radio" name="animate"/>
       <input id="wall-9" type="radio" name="animate"/>
-      <input id="wall-10" type="radio" name="animate"/>
-      <input id="wall-11" type="radio" name="animate"/>
-      <input id="wall-12" type="radio" name="animate"/>
       <div class="room-arena" id="container">
         <div class="walls">
           <div class="wall">
             <div class="item">
               <div class="image center padding-horizontal-3">
                 <div>
-                  <a class="logo logo-m"><img src="https://formir.io/img/logo/formir-64.png"/><span> room v1.2.2 by Formir</span></a>
+                  <a class="logo logo-m"><img src="https://formir.io/img/logo/formir-64.png"/><span> room v2.0.0 by Formir</span></a>
                 </div>
                 <div class="margin-top-3">
-                  <div class="tooltip bottom-center horizostal-center">
-                    <h3><i>room is pure css<br/>
-                      3d carousel for your gallery</i></h3>
+                  <div class="tooltip bottom-center horizostal-center padding-left-3 padding-right-3">
+                    <h3><i>Pure CSS / HTML 3D - animated slider </i></h3>
                   </div>
                 </div>
-                  <div class="margin-top-4">
-                    <div class="tooltip bottom-center horizostal-center opacity-7">
-                      <h5>Addon for Formir<br/>pure CSS & HTML framework<br/> for RWD developing</h5>
-                    </div>
-                  </div>
+                <div class="margin-top-5">
+                  <a href="https://codecanyon.net/item/the-room-pure-css-3d-slider/22595934" class="button button-xl button-alternative">Buy Room Plugin</a>
+                </div>
+                <div class="margin-top-2">
+                  <a href="/plugins/room/docs.html" class="button button-l button-primary">Go to documentation</a>
+                </div>
               </div>
             </div>
             <div class="item">
                 <a class="item-image">
+                  <img src="/img/plugins/room/examples/4.jpg" />
+                </a>
+                <p  class="item-desc">
+                  <span>
+                    You can setup each of element that you see in this gallery like:  colors of wall, image of floor etc.
+                  </span>
+                </p>
+            </div>
+            <div class="item">
+                <a class="item-image">
+                  <img src="/img/plugins/room/examples/8.jpg" />
+                </a>
+                <p  class="item-desc">
+                  <span>
+                      As you see. Each image has own description under image. But you decise to apply it on your HTML.
+                  </span>
+                  </p>
+            </div>
+          </div>
+          <div class="wall">
+            <div class="item">
+                <a class="item-image">
                   <img src="/img/plugins/room/examples/1.jpg" />
                 </a>
-                <p class="item-desc">
-                  You can also come closer using button on hover. This interaction will slightly enlarge the image.
+                <p  class="item-desc">
+                  <span>
+                    Each image will rotate in this gallery which we called a room.
+                  </span>
                 </p>
             </div>
             <div class="item">
@@ -53,67 +75,9 @@ url: room
                   <img src="/img/plugins/room/examples/5.jpg" />
                 </a>
                 <p  class="item-desc">
-                  You can setup each of element that you see in this gallery like:  colors of wall, image of floor etc.
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/9.jpg" />
-                </a>
-                <p  class="item-desc">
-                    As you see. Each image has own description under image. But you decise to apply it on your HTML.
-                </p>
-            </div>
-          </div>
-          <div class="wall">
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/4.jpg" />
-                </a>
-                <p  class="item-desc">
-                  Each image will rotate in this gallery which we called a room.
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/6.jpg" />
-                </a>
-                <p  class="item-desc">
-                  It works only with HTML and CSS, this technology is a pure magic.
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/12.jpg" />
-                </a>
-                <p  class="item-desc">
-                  Gallery can work with limited version of available tags (in case of html editor that cuts input tag).
-                </p>
-            </div>
-          </div>
-          <div class="wall">
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/3.jpg" />
-                </a>
-                <p  class="item-desc">
-                  Images are positioned in the center of the wall.
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/7.jpg" />
-                </a>
-                <p  class="item-desc">
-                  The Gallery is fully responsive.
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/11.jpg" />
-                </a>
-                <p  class="item-desc">
-                  Visit room <label for="tab-docs" class="link">documentation</label> page and <a href="https://formir.io">formir</a> framework page.
+                  <span>
+                    It works only with HTML and CSS, this technology is a pure magic.
+                  </span>
                 </p>
             </div>
           </div>
@@ -123,23 +87,41 @@ url: room
                   <img src="/img/plugins/room/examples/2.jpg" />
                 </a>
                 <p  class="item-desc">
-                  Hung on the wall vertically or in this case horizontally.
+                  <span>
+                    Zoom in by clicking magnify icon at the top center.
+                  </span>
                 </p>
             </div>
             <div class="item">
                 <a class="item-image">
-                  <img src="/img/plugins/room/examples/8.jpg" />
-                  </a>
-                <p  class="item-desc">
-                  You can also navigate gallery using buttons. Room will spin much faster!
-                </p>
-            </div>
-            <div class="item">
-                <a class="item-image">
-                  <img src="/img/plugins/room/examples/10.jpg" />
+                  <img src="/img/plugins/room/examples/6.jpg" />
                 </a>
                 <p  class="item-desc">
-                  We would like to thank to author of the photos Kamil Przybyło.
+                  <span>
+                    The Gallery is fully responsive.
+                  </span>
+                </p>
+            </div>
+          </div>
+          <div class="wall">
+            <div class="item">
+                <a class="item-image">
+                  <img src="/img/plugins/room/examples/3.jpg" />
+                </a>
+                <p  class="item-desc">
+                  <span>
+                    Try dark mode - click on the light bulb icon on the right top.
+                  </span>
+                </p>
+            </div>
+            <div class="item">
+                <a class="item-image">
+                  <img src="/img/plugins/room/examples/7.jpg" />
+                  </a>
+                <p  class="item-desc">
+                  <span>
+                    You can also navigate gallery using buttons. Room will spin much faster!
+                  </span>
                 </p>
             </div>
           </div>
@@ -148,18 +130,33 @@ url: room
         </div>
       </div>
       <div class="navigations">
-        <label for="wall-1">1</label>
-        <label for="wall-2">2</label>
-        <label for="wall-3">3</label>
-        <label for="wall-4">4</label>
-        <label for="wall-5">5</label>
-        <label for="wall-6">6</label>
-        <label for="wall-7">7</label>
-        <label for="wall-8">8</label>
-        <label for="wall-9">9</label>
-        <label for="wall-10">10</label>
-        <label for="wall-11">11</label>
-        <label for="wall-12">12</label>
+        <label for="wall-1">
+          <span>1</span>
+        </label>
+        <label for="wall-2">
+          <span>2</span>
+        </label>
+        <label for="wall-3">
+          <span>3</span>
+        </label>
+        <label for="wall-4">
+          <span>4</span>
+        </label>
+        <label for="wall-5">
+          <span>5</span>
+        </label>
+        <label for="wall-6">
+          <span>6</span>
+        </label>
+        <label for="wall-7">
+          <span>7</span>
+        </label>
+        <label for="wall-8">
+          <span>8</span>
+        </label>
+        <label for="wall-9">
+          <span>9</span>
+        </label>
       </div>
       <div class="paginations">
         <label for="wall-1">1</label>
@@ -171,12 +168,10 @@ url: room
         <label for="wall-7">7</label>
         <label for="wall-8">8</label>
         <label for="wall-9">9</label>
-        <label for="wall-10">10</label>
-        <label for="wall-11">11</label>
-        <label for="wall-12">12</label>
       </div>
-      <label class="zoom" for="room-zoom">come over</label>
-      <label for="room-zoom" class="exit">exit</label>
+      <label for="room-zoom" class="zoom"></label>
+      <label for="room-zoom" class="exit"></label>
+      <label for="room-dark" class="dark"></label>
     </div>
   </div>
 </div>
