@@ -27,18 +27,18 @@ url: index
   </article>
   <h2>Setup Formir</h2>
   <article class="section section-content with-padding">
-    <p>Formir is writen on LESS. Files are split by core elements, template elements that is an extention to core, and application files that will be not part of component of formir but it will be your own styles.</p>
-    <p>Start with install or copy framework files to own direction. All files are included in file: <code>less/formir.less</code> you could also use example of application in file <code>application.less</code> - this is a compilation for this page. All start with this file - you could remove or change the direction, copy from vendor to your direction and modify.</p>
-    <p>All classes used on this framework is customisable to prevent name collision - <code>less/setup/classes.less</code></p>
-    <p>All core variables - the most important for all components are store in - <code>less/setup/core.less</code> for example number of columns for grid, or unit for each dimention variables, RWD breaking points.</p>
+    <p>Formir is written on LESS. Files are split by core elements, template elements that are an extension to the core, and application files that will be not part of a component of formir but it will be your own styles.</p>
+    <p>Start with install or copy framework files to own direction. All files are included in file: <code>less/formir.less</code>  you could also use the example of application in file <code>application.less</code> - this is a compilation for this page. All start with this file - you could remove or change the direction, copy from vendor to your direction and modify.</p>
+    <p>All classes used on this framework is customizable to prevent name collision - <code>less/setup/classes.less</code></p>
+    <p>All core variables - the most important for all components are store in - <code>less/setup/core.less</code> for example number of columns for the grid, or unit for each dimension variables, RWD breaking points.</p>
     <p>All other variables for each components are store in - <code>less/setup/variables.less</code>.</p>
     <p>Mixins are store in direction - <code>less/core/mixins/</code> there is a lot of prefix function.</p>
-    <p>In core there is a logic of css, we dont't remomment to change this files, use variables or templates file mixins (each components template has own class mixin to do the job) - but feel free if such a need arises. Remember to copy all files that will be changes from node_modules and change the include direction.</p>
+    <p>In the core there is a logic of CSS, we don't recommend changing these files, use variables or templates file mixins (each component's template has owned class mixin to do the job) - but feel free if such a need arises. Remember to copy all files that will be changed from node_modules and change the include direction..</p>
   </article>
   <h2 id="import">One file to import all components<small>less/formir.less</small>  <a class="anhor link small" href="#import">#</a></h2>
   <h3 id="import-setup">import setup <a class="anhor link small" href="#import-setup">#</a></h3>
   <div class="section section-content with-padding">
-    <p>In this section we import all setup files, classes, core and variables for core part of framework and your themes.</p>
+    <p>In this section, we import all setup files, classes, core and variables for the core part of the framework and your themes.</p>
     <pre>
       <code class="less">
         {% include docs/getting-started/import-setup.html %}
@@ -56,7 +56,7 @@ url: index
   </div>
   <h3 id="import-themes">import themes <a class="anhor link small" href="#import-themes">#</a></h3>
   <div class="section section-content with-padding">
-    <p>In section you can import your own changes in style using mixins or other selectors that are part of this files. Try to use the same name of path.</p>
+    <p>In the section, you can import your own changes in style using mixins or other selectors that are part of these files. Try to use the same name of the path.</p>
     <pre>
       <code class="less">
         {% include docs/getting-started/import-themes.html %}
