@@ -96,7 +96,7 @@ layout: default
 <section class="full-height center-vertically">
   <div class="content-holder width-6 text-center">
     <div class="grids">
-      <h2 id="grid-system margin-bottom-5"><i class="icon-th"></i> Grid system</h2>
+      <h2 class="grid-system margin-bottom-5"><i class="icon-th"></i> Grid system</h2>
       <div class="grid gutter-1 space-1" id="grid-1" data-class="grid">
         <div class="cell-1 mp-cell-16 t-cell-2 m-cell-8">&nbsp;</div>
         <div class="cell-15 mp-cell-16 t-cell-7 m-cell-8">&nbsp;</div>
@@ -111,7 +111,7 @@ layout: default
       </div>
       <h4 class="padding-top-3">You can easily change the number of columns or space between rows & columns,<br/> use row wrapper or not - no matter - always will work great!</h4>
       <p>So feel free and <label>change your gutter <input id="input-gutter" style="width: 50px;" min="0" max="4" value="1" type="number" onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('gutter-' + $(this).val()).addClass('space-' + $('#input-space').val())"/></label><label> or space <input id="input-space" style="width: 50px;" min="0" max="4" value="1" class="width-1" type="number"  onChange="$('#grid-1').removeAttr('class').addClass($('#grid-1').data('class')).addClass('space-' + $(this).val()).addClass('gutter-' + $('#input-gutter').val())"/></label></p>
-      <div class="tooltip opacity-7  bottom-center horizostal-center show">And one more thing: number of columns and steps are customizable.</small></div>
+      <div class="tooltip opacity-7  bottom-center horizostal-center show"><small>And one more thing: number of columns and steps are customizable.</small></div>
     </div>
   </div>
 </section>
@@ -154,7 +154,7 @@ layout: default
         <form class="grid grid-form offset-6 offset-right-6 m-offset-0 m-offset-right-0">
           <div class="row">
             <div class="cell">
-              <span class="select input-l min-width-1">
+              <div class="select input-l min-width-1">
                 <input type="checkbox"/>
                 <div class="select-content">
                   <input id="a0" name="select-box" type="radio">
@@ -173,7 +173,7 @@ layout: default
                   <label for="a6">Option 6</label>
                   <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
                 </div>
-              </span>
+              </div>
             </div>
           </div>
         </form>
@@ -183,7 +183,7 @@ layout: default
         <form class="grid grid-form offset-3 offset-right-3 m-offset-0 m-offset-right-0">
           <div class="row">
             <div class="cell">
-              <span class="select input-l">
+              <div class="select input-l">
                 <input type="checkbox"/>
                 <div class="select-content">
                   <input id="c0" type="checkbox">
@@ -210,7 +210,7 @@ layout: default
                   <label for="c10">Option 10</label>
                   <div class="placeholder" data-selected="Selected" data-placeholder="Select any"></div>
                 </div>
-              </span>
+              </div>
             </div>
           </div>
         </form>
@@ -359,14 +359,14 @@ layout: default
           <a class="github-button" href="https://github.com/formir/formir/issues" data-size="large" aria-label="Issue formir/formir on GitHub">Issue</a>
           <a class="github-button" href="https://github.com/formir/formir/archive/v0.3.0.zip" data-size="large" aria-label="Download formir/formir on GitHub">Download</a>
         </p>
-        <p>Free & Open Source (MIT) &nbsp;&nbsp; - &nbsp;&nbsp; v0.3.0 &nbsp;&nbsp; - &nbsp;&nbsp; &copy 2020 Konrad Kubrak &nbsp;&nbsp; - &nbsp;&nbsp; <a class="link" href="mailto:support@formir.io">support@formir.io</a></p>
+        <p>Free & Open Source (MIT) &nbsp;&nbsp; - &nbsp;&nbsp; v0.3.0 &nbsp;&nbsp; - &nbsp;&nbsp; &copy; 2020 Konrad Kubrak &nbsp;&nbsp; - &nbsp;&nbsp; <a class="link" href="mailto:support@formir.io">support@formir.io</a></p>
       </div>
       <div class="cell-fill m-cell-16 items-end vertical-items-end">
         <a href="https://www.browserstack.com" target="_blank" class="has-tooltip no-wrap background-color-2 padding-1 text-primary margin-bottom-2" style="border-radius: 10px;">
           <small>supported by</small>
           <img class="width-1" style="vertical-align: middle;" src="/img/browser-stack.png" alt="Browser Stack"/>
           <div class="tooltip right" style="font-size: 1rem;">
-            <p  class="margin-0">BrowserStack is supporting <b>formir</b> allowing us to</br> use their service and infrastructure to test the code.</br> Thank you for supporting the open cource community!</p>
+            <p  class="margin-0">BrowserStack is supporting <b>formir</b> allowing us to<br/> use their service and infrastructure to test the code.<br/> Thank you for supporting the open cource community!</p>
             <p class="margin-0 margin-top-1"><b>BrowserStack</b> is a cloud-based cross-browser <br/> testing tool that enables developers to test<br/> their websites across various browsers on different<br/> operating systems and mobile devices, without requiring users<br/> to install virtual machines, devices or emulators.</p>
           </div>
         </a>

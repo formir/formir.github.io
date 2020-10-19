@@ -6,7 +6,7 @@ url: slider
 <div class="welcome">
   <div class="slider ratio-16-9">
     <input id="slide-fullscreen" type="checkbox" name="fullscreen" class="fullscreen-toggle"/>
-    <div class="slider-body">
+    <div class="slider-body" style="padding-bottom: calc(100vh - 95px)">
       <input id="slide-1" type="radio" name="animate" checked="checked"/>
       <input id="slide-2" type="radio" name="animate"/>
       <input id="slide-3" type="radio" name="animate"/>
@@ -17,9 +17,18 @@ url: slider
       <input id="slide-8" type="radio" name="animate"/>
       <div class="slider-arena">
         <div class="item">
-          <a class="item-image">
+          <div class="item-image">
             <img src="/img/plugins/room/examples/1.jpg" />
-          </a>
+            <div style="position: absolute; top: 0; display: flex; align-items: center; justify-content: center; left: 0; right: 0; bottom: 0; color: #000">
+              <div class="align-center">
+                <h1>Fully pure css slider is here!</h1>
+                <h3>Two version of animation, 4 ratio proportion setting, 2 style, fullscreen & dark mode and more!</h3>
+                <div class="margin-top-2">
+                  <a href="/plugins/slider/docs.html" class="button button-l button-primary">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="item">
           <a class="item-image">
