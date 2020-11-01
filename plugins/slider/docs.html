@@ -24,11 +24,11 @@ url: slider
         <a class="link" href="#configuration">All variables and mixing</a>
       </li>
     </ul>
-    <h2>What it the Slider is?</h2>
+    <h2>What the Slider is?</h2>
     <div class="section section-content with-padding">
       <p>This plugin is an image slider written in pure CSS3 and HTML5. It is part of Formir Framework but can operate independently.</p>
       <p>The slider plugin will fully work only with CSS and HTML. All of the logic is based on CSS and <code>&#x3C;input/&#x3E;</code> tag elements, that are required.</p>
-      <p>Slider have manualy (button control or class name control) and automatic function of dark mode, you can set your own colors for both mode.</p>
+      <p>Slider have manually (button control or class name control) and automatic function of dark mode, you can set your colors for both modes.</p>
     </div>
     <h3 id="quick-start">Quick start</h3>
     <div class="section section-content with-padding">
@@ -49,11 +49,11 @@ url: slider
     <h2 id="installation">Installation</h2>
     <div class="section section-content with-padding">
       <p>This plugin is written in <i>less</i> (and optional <i>sass</i>) dynamic preprocessor style sheet language (CSS).</p>
-      <p>It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase. 
+      <p>It is part of Formir CSS Framework. Formir gives you an idea of how to neatly sort and attach style files before compiling them in your project during the development phase.  
         <br/>You can use this approach or attach the only source of slider plugin <code>formir-slider.less</code>.
       </p>
       <h4>Choice LESS or SASS</h4>
-      <p>In documentation we fucos on <i>less</i> preprocessor, but the same file structure and mixin / variables is used for SASS (scss), to know how install & compile sass file go to <a href="https://sass-lang.com/install">Sass documentation</a></p>
+      <p>In the documentation we focus on <i>less</i> preprocessor, but the same file structure and mixin / variables is used for SASS (scss), to know how to install & to compile sass file go to <a href="https://sass-lang.com/install">Sass documentation</a></p>
       <h4>Prepare files</h4>
       <p>Start with copy all files to your root direction:</p>
       <pre>
@@ -91,7 +91,7 @@ url: slider
 <script src="js/less.min.js"></script>
         </code>
       </pre>
-      <p>In production mode you can also use <i>less</i> npm package to compile your own <i>min.css</i> file. Use lessc command in bash, for example:<br/>
+      <p>In production mode, you can also use <i>less</i> npm package to compile your own <i>min.css</i> file. Use lessc command in bash, for example:<br/>
         <code>$ npm install -g less</code><br/>
         <code>$ lessc -x less/formir-slider.less css/formir-slider.min.css</code>
       </p>
@@ -106,25 +106,6 @@ url: slider
       <pre>
         <code class="less skip">
 @slider-max-items: 30;  // number of max count of items / items
-        </code>
-      </pre>
-      <h4>Dimensions of the slider item</h4>
-      <p>You could set item dimensions ratio by using special class name.</p>
-      <pre>
-        <code class="less skip">
-@slider-size-width: 100vmax;  // slider item width - do not use %
-@slider-size-height: 100vmin; // slider item height - do not use %
-
-        </code>
-      </pre>
-      <a href="#configuration" class="link">... more</a>
-      <pre>
-        <code class="less skip">
-@slider-perspective: @slider-size-width;  // slider prespective - use slider size for best perspective
-
-@slider-scale: 1.1; // scale of slider
-@slider-scale-zoom: 1.5; // scale of slider when zooming
-@slider-offset-y: 0; // slider offset in vertical (y) - use %
         </code>
       </pre>
       <a href="#configuration" class="link">... more</a>
@@ -176,7 +157,7 @@ url: slider
   </div>
   <div class="section section-content with-padding">
     <h4>Use our mixing to style your elements</h4>
-    <p>You can use <i>less</i> mixing to quick change the whole parts of the style.</p>
+    <p>You can use <i>less</i> mixing to quickly change the whole parts of the style.</p>
     <pre>
       <code class="less skip">
 .icon-slider() {
@@ -205,7 +186,7 @@ url: slider
     </div>
     <div class="section section-content with-padding">
       <h4>Customize class HTML</h4>
-      <p>Easy change class name of all elements to prevent name duplicate on your app.</p>
+      <p>Change class name of all elements to prevent name duplicate on your app.</p>
       <pre>
         <code class="less skip">
 @slider: slider;  // main wrapper
@@ -236,28 +217,145 @@ url: slider
     <div class="section section-content with-padding"  id="setup-html">
       <h3>Input's controls</h3>
       <p>Plugin work without JS so we control your slider with <code>&#x3C;input/&#x3E;</code> tag, each separate input for each item on the slider.</p>
-      <p>Inputs and labels are related with <code>id</code> and <code>for</code> an attribute, so for each item, we will need one input, one label for navigating (next / prev), and one label for dot (for jump). That is all the logic that you need to know.</p>
+      <p>Inputs and labels are related with <code>id</code> and for an attribute, so <code>for</code> each item, we will need one input, one label for navigating (next / prev), and one label for dot (for jump). That is all the logic that you need to know.</p>
     </div>
     <h3>Good to know</h3>
     <div class="section section-content with-padding background-primary">
-      <p>If you put many slider in one page use also unique ID for each <code>&#x3C;input/&#x3E;</code> tag in your slider code, also group of <code>&#x3C;input/&#x3E;</code> must have unique NAME attribute.</p>
+      <p>If you put many slider in one page use also unique ID for each <code>&#x3C;input/&#x3E;</code> tag in your slider code, also a group of <code>&#x3C;input/&#x3E;</code> must have the unique NAME attribute.</p>
       <p>Try to not include your slider <code>&#x3C;input/&#x3E;</code> within <code>&#x3C;form&#x3E;</code> tag if you don't must, other wide you have to clean input element before sent form if you don't have any undesirable effects.</p>
       <p>Some browsers save state of  <code>&#x3C;input/&#x3E;</code> - if you do not want this future just set <code>AUTOCOMPLETE="off"</code> attribute to each <code>&#x3C;input/&#x3E;</code>.</p>
     </div>
     <div class="section section-content with-padding">
-      <h4>Dimention and proportions control</h4>
-      <p>Slider support 3 kind of dimentions: ratio, free and fixed</p>
-      <p>1) Free - (not set any class) is when ratio of your gallery will set automaticly by dimention of your images, for example, if you use only toll images ratio will be the sam as the most tollest image in set.</p>
-      <p>2) Ratio - set by using one of 5 ratio classes (1, 2-1, 4-3, 16-9, 21-9)</p>
-      <p>3) Fixed - ratio use this class to fixed dimention on that you want, you must also set width and height of your slider or first of his parent.</p>
+      <h4>Dimension and proportions control</h4>
+      <p>Slider support 3 kinds of dimensions: ratio, free and fixed</p>
+      <ol>
+        <li>Free - (not set any class) is when the ratio of your gallery will set automatically by dimension of your images, for example, if you use only toll images ratio will be the sameas the most tollest image in set.
+        </li>
+        <li>Ratio - set by using one of 5 ratio classes (1, 2-1, 4-3, 16-9, 21-9)</li>
+        <li>Fixed - ratio use this class to fixed dimension on that you want, you must also set width and height of your slider or first of his parent.</li>
+      </ol>
+      
+      
+      <table class="borders hoverable-tr">
+        <thead>
+          <th>function class</th>
+          <th>html element to add class</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>none</th>
+            <td>slider</td>
+            <td>ratio of gallery will be automatically set by dimensions of images</td>
+          </tr>
+          <tr>
+            <td>ratio-1</td>
+            <td>slider</td>
+            <td>ratio of gallery will 1 to 1</td>
+          </tr>
+          <tr>
+            <td>ratio-2-1</td>
+            <td>slider</td>
+            <td>ratio of gallery will 2 to 1</td>
+          </tr>
+          <tr>
+            <td>ratio-4-3</td>
+            <td>slider</td>
+            <td>ratio of gallery will 4 to 3</td>
+          </tr>
+          <tr>
+            <td>ratio-16-9</td>
+            <td>slider</td>
+            <td>ratio of gallery will 16 to 9</td>
+          </tr>
+          <tr>
+            <td>ratio-21-9</td>
+            <td>slider</td>
+            <td>ratio of gallery will 21 to 9</td>
+          </tr>
+          <tr>
+            <td>ratio-fixed</td>
+            <td>slider</td>
+            <td>with this class you can set own dimension using padding-bottom on slider-body or height</td>
+          </tr>
+        </tbody>
+      </table>
       <h4>Set size of your images</h4>
-      <p>Ther is two option of size of image: cover size or contain size. Look at object-fit css set.</p>
+      <p>There is two option of the size of the image: cover size or contain size. Look at object-fit css set.</p>
+      <table class="borders hoverable-tr">
+        <thead>
+          <th>function class</th>
+          <th>html element to add class</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>none</th>
+            <td>any tag inside slider above img or picture</td>
+            <td>default object-fit is set to cover</td>
+          </tr>
+          <tr>
+            <th>image-cover</th>
+            <td>any tag inside slider above img or picture</td>
+            <td>object-fit set to cover</td>
+          </tr>
+          <tr>
+            <th>image-contain</th>
+            <td>any tag inside slider above img or picture</td>
+            <td>object-fit set to contain</td>
+          </tr>
+        </tbody>
+      </table>
       <h4>Animation type control</h4>
-      <p>Slider support 3 type of animation, slide on sides, fade or no-animation.</p>
+      <p>Slider support 3 types of animation, slide on sides, fade, or no-animation.</p>
+      <table class="borders hoverable-tr">
+        <thead>
+          <th>function class</th>
+          <th>html element to add class</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>none</th>
+            <td>slider</td>
+            <td>default animation set to slide - move: right & left</td>
+          </tr>
+          <tr>
+            <th>slider-fade</th>
+            <td>slider</td>
+            <td>images will fade (opacity function) form prev to next one.</td>
+          </tr>
+          <tr>
+            <th>no-animation</th>
+            <td>slider</td>
+            <td>will turn off animation</td>
+          </tr>
+        </tbody>
+      </table>
       <h4>Fullsceen control</h4>
-      <p>Slider has a function to switch to fullscreen mode, in that case, you can switch to this mode by clicking the button.</h3>
+      <p>The slider has a function to switch to full screen mode, in that case, you can switch to this mode by clicking the button.</p>
+      <p>Look at an example (sandbox below) of how to use fullscreen switches and triggers.</p>
       <h4>Dark mode control</h4>
-      <p>Slider has a function to manualy switch to dark mode, you can switch to this mode by clicking the button. Dark mode will automoticly turn on when browser is using dark mode.</h3>
+      <p>The slider has a function to manually switch to dark mode, you can switch to this mode by clicking the button. Dark mode will automatically turn on when the browser is using dark mode.</p>
+      <table class="borders hoverable-tr">
+        <thead>
+          <th>function class</th>
+          <th>html element to add class</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>none</th>
+            <td>slider</td>
+            <td>default slider is set to auto mode, dark will be use dark variables, light will be use light variables.</td>
+          </tr>
+          <tr>
+            <th>slider-dark</th>
+            <td>slider</td>
+            <td>slider will be set to dark mode</td>
+          </tr>
+        </tbody>
+      </table>
       <h4>HTML sandbox</h4>
       <p>Use this mockup:</p>
       <pre>
