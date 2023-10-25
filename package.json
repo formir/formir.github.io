@@ -1,6 +1,6 @@
 {
   "name": "formir-home",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": "Homepage of formir framework - formir.io",
   "main": "index.html",
   "directories": {
@@ -10,7 +10,7 @@
   "dependencies": {
     "formir": "^0.3.0",
     "gh-pages": "^2.2.0",
-    "less": "^3.11.1"
+    "less": ">=3.7.0 <=3.13.1"
   },
   "devDependencies": {},
   "scripts": {
