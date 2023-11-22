@@ -8,8 +8,10 @@ active: container
   <h2>Main container class</h2>
   <div class="section section-content with-padding">
     <p>The structure of the main tag element depends on you, but is there a few rules that you need to know.</p>
-    <p>Sidebar (side) component, will push (left/right or top/bottom) all tag with class <code>body-content</code> that are next siblings <code>side ~ .body-content</code>.</p>
-    <p>Header component will push down only first tag directly after (next siblings) css selector: <code>header + *</code>.</p>
+    <p>Sidebar (side) component, will push (left/right or top/bottom) all tag with class <code>body-content</code> that
+      are next siblings <code>side ~ .body-content</code>.</p>
+    <p>Header component will push down only first tag directly after (next siblings) css selector:
+      <code>header + *</code>.</p>
     <p>Name of <code>body-content</code> class you can modify on <code>less/formir/setup/classes.less</code>.</p>
   </div>
   <h2>Content holder</h2>
@@ -19,66 +21,73 @@ active: container
   </div>
 
   <h2 id="header">Header <a class="anhor link small" href="#header">#</a></h2>
-	<div class="tabs section with-padding">
-		<input type="radio" name="header" id="header-1" checked="true"/>
-		<input type="radio" name="header" id="header-2"/>
-		<div class="section-header tab-navs">
-			<div class="tab-labels vertical-center button-group">
-				<label class="button button-s" for="header-1" onClick="window.location.href='#'+this.attributes.for.value">Example</label>
-				<label class="button button-s" for="header-2" onClick="window.location.href='#'+this.attributes.for.value">Code</label>
-			</div>
-		</div>
-		<div class="tab-pages section-content with-border">
-			<div>
+  <div class="tabs section with-padding">
+    <input type="radio" name="header" id="header-1" checked="true" />
+    <input type="radio" name="header" id="header-2" />
+    <div class="section-header tab-navs">
+      <div class="tab-labels vertical-center button-group">
+        <label class="button button-s" for="header-1"
+          onClick="window.location.href='#'+this.attributes.for.value">Example</label>
+        <label class="button button-s" for="header-2"
+          onClick="window.location.href='#'+this.attributes.for.value">Code</label>
+      </div>
+    </div>
+    <div class="tab-pages section-content with-border">
+      <div>
         <header class="header body-content">
-            <div class="header-content">
-              <a href="/" class="logo logo-s"><img src="/img/logo/formir-64.png"/><span>formir / docs</span></a>
-              <nav>
-                <input id="nav-mobile" type="checkbox" class="mobile-toggle"/>
-                <label for="nav-mobile" class="mobile-toggle-label">
-                  <i class="icon-menu toggle-hide"></i>
-                  <i class="icon-cancel toggle-show"></i>
-                </label>
-                <ul class="items menu-mobile mobile-toggle-show">
-                  <li class="item"><a class="anchor" href="https://github.com/formir/formir" target="_blank"><i class="icon-github-alt"></i></a></li>
-                  <li class="item has-popup">
-                    <input type="checkbox"/>
-                    <a class="anchor">Extentions</a>
-                    <ul class="popup bottom menu">
-                      <li class="item">
-                        <a class="anchor" href="http://formir.io/plugins/room.html">Room - 3D Gallery</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="item active"><a class="anchor" href="/docs/index.html">Documentations</a></li>
-                  <li class="item"><a class="anchor" href="https://github.com/formir/formir/archive/master.zip" target="_blank">Download</a></li>
-                  <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new" target="_blank">Report issue</a></li>
-                  <li class="item">
-                    <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support author</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </header>
-			</div>
-			<div>
-				<pre>
+          <div class="header-content">
+            <a href="/" class="logo logo-s"><img src="/img/logo/formir-64.png" /><span>formir / docs</span></a>
+            <nav>
+              <input id="nav-mobile" type="checkbox" class="mobile-toggle" />
+              <label for="nav-mobile" class="mobile-toggle-label">
+                <i class="icon-menu toggle-hide"></i>
+                <i class="icon-cancel toggle-show"></i>
+              </label>
+              <ul class="items menu-mobile mobile-toggle-show">
+                <li class="item"><a class="anchor" href="https://github.com/formir/formir" target="_blank"><i
+                      class="icon-github-alt"></i></a></li>
+                <li class="item has-popup">
+                  <input type="checkbox" />
+                  <a class="anchor">Extentions</a>
+                  <ul class="popup bottom menu">
+                    <li class="item">
+                      <a class="anchor" href="http://formir.io/plugins/room.html">Room - 3D Gallery</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="item active"><a class="anchor" href="/docs/index.html">Documentations</a></li>
+                <li class="item"><a class="anchor"
+                    href="https://github.com/formir/formir/archive/refs/tags/v1.0.1.tar.gz" target="_blank">Download</a>
+                </li>
+                <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new"
+                    target="_blank">Report issue</a></li>
+                <li class="item">
+                  <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support
+                    author</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div>
+        <pre>
 					<code class="html" encode="true">
             {% include docs/container/header.html %}
 					</code>
 				</pre>
-			</div>
-		</div>
+      </div>
+    </div>
   </div>
 
   <h2 id="side">Side <a class="anhor link small" href="#side">#</a></h2>
-	<div class="section section-content with-border with-padding">
+  <div class="section section-content with-border with-padding">
     <a href="/docs/side.html" class="button primary">Go to side</a>
   </div>
 
 
   <h2 id="setup">Setup <a class="anhor link small" href="#setup">#</a></h2>
-  <h3 id="core">core  <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
+  <h3 id="core">core <small>less/formir/setup/core.less</small> <a class="anhor link small" href="#core">#</a></h3>
   <div class="section section-content with-padding">
     <pre>
       <code class="less" encode="true">
@@ -86,7 +95,8 @@ active: container
       </code>
     </pre>
   </div>
-  <h3 id="classes">classes  <small>less/formir/setup/classes.less</small> <a class="anhor link small" href="#classes">#</a></h3>
+  <h3 id="classes">classes <small>less/formir/setup/classes.less</small> <a class="anhor link small"
+      href="#classes">#</a></h3>
   <div class="section section-content with-padding">
     <pre>
       <code class="less" encode="true">
@@ -94,4 +104,4 @@ active: container
       </code>
     </pre>
   </div>
-</div>    
+</div>

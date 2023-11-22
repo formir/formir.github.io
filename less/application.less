@@ -1,103 +1,100 @@
-
 /*!
- *  Formir 0.3.0 by @formir - https://github.com/formir/formir - http://formir.io - support@formir.io
+ *  Formir home by @formir - https://github.com/formir/formir.io - http://formir.io - support@formir.io
  *  MIT License
  */
 
 // SETUP
-@import "../formir/less/formir/setup/classes";
-@import "../formir/less/formir/setup/core";
-@import "../formir/less/formir/setup/variables";
+@import "formir/src/less/setup/classes";
+@import "formir/src/less/setup/core";
+@import "formir/src/less/setup/variables";
 
-  //// THEME SETUP
-  @import "../formir/less/formir/themes/default/setup/classes";
-  @import "../formir/less/formir/themes/default/setup/core";
-  @import "../formir/less/formir/themes/default/setup/variables";
+//// THEME SETUP
+@import "formir/src/less/themes/default/setup/classes";
+@import "formir/src/less/themes/default/setup/core";
+@import "formir/src/less/themes/default/setup/variables";
 
 // CORE
-  //// MIXINS
-  @import "../formir/less/formir/core/mixins/display";
-  @import "../formir/less/formir/core/mixins/flex";
-  @import "../formir/less/formir/core/mixins/functions";
+//// MIXINS
+@import "formir/src/less/core/mixins/display";
+@import "formir/src/less/core/mixins/flex";
+@import "formir/src/less/core/mixins/functions";
 
 
-  //// COMPONENTS
-  @import "../formir/less/formir/core/components/form";
-  @import "../formir/less/formir/core/components/select";
-  @import "../formir/less/formir/core/components/modal";
-  @import "../formir/less/formir/core/components/tab";
-  @import "../formir/less/formir/core/components/accordion";
-  @import "../formir/less/formir/core/components/tooltip";
-  @import "../formir/less/formir/core/components/popup";
-  @import "../formir/less/formir/core/components/button";
-  @import "../formir/less/formir/core/components/chart";
-  @import "../formir/less/formir/core/components/description-list";
-  @import "../formir/less/formir/core/components/menu";
-  @import "../formir/less/formir/core/components/icons";
-  //@import "../formir/less/formir/core/components/table";
-  @import "../formir/less/formir/core/components/section";
-  @import "../formir/less/formir/core/components/alert";
+//// COMPONENTS
+@import "formir/src/less/core/components/form";
+@import "formir/src/less/core/components/select";
+@import "formir/src/less/core/components/modal";
+@import "formir/src/less/core/components/tab";
+@import "formir/src/less/core/components/accordion";
+@import "formir/src/less/core/components/tooltip";
+@import "formir/src/less/core/components/popup";
+@import "formir/src/less/core/components/button";
+@import "formir/src/less/core/components/chart";
+@import "formir/src/less/core/components/description-list";
+@import "formir/src/less/core/components/menu";
+@import "formir/src/less/core/components/icons";
+@import "formir/src/less/core/components/table";
+@import "formir/src/less/core/components/section";
+@import "formir/src/less/core/components/alert";
 
-  //// HELPER
-  @import "../formir/less/formir/core/helpers/align";
-  @import "../formir/less/formir/core/helpers/display";
-  @import "../formir/less/formir/core/helpers/items";
-  @import "../formir/less/formir/core/helpers/toggle";
+//// HELPER
+@import "formir/src/less/core/helpers/align";
+@import "formir/src/less/core/helpers/display";
+@import "formir/src/less/core/helpers/items";
+@import "formir/src/less/core/helpers/toggle";
 
-  //// Typography
-  @import "../formir/less/formir/core/typography/fonts";
-  @import "../formir/less/formir/core/typography/heading";
-  @import "../formir/less/formir/core/typography/list";
-  @import "../formir/less/formir/core/typography/article";
-  @import "../formir/less/formir/core/typography/color";
-  @import "../formir/less/formir/core/typography/link";
+//// Typography
+@import "formir/src/less/core/typography/fonts";
+@import "formir/src/less/core/typography/heading";
+@import "formir/src/less/core/typography/list";
+@import "formir/src/less/core/typography/article";
+@import "formir/src/less/core/typography/color";
+@import "formir/src/less/core/typography/link";
 
-  //// LAYOUTS
-  @import "../formir/less/formir/core/layouts/clear";
-  @import "../formir/less/formir/core/layouts/grid";
-  @import "../formir/less/formir/core/layouts/content";
-  @import "../formir/less/formir/core/layouts/dimensions"; // width, height, margin, padding etc.
-  @import "../formir/less/formir/core/layouts/side";
-  @import "../formir/less/formir/core/layouts/header";
-  @import "../formir/less/formir/core/layouts/window";
+//// LAYOUTS
+@import "formir/src/less/core/layouts/clear";
+@import "formir/src/less/core/layouts/grid";
+@import "formir/src/less/core/layouts/content";
+@import "formir/src/less/core/layouts/dimensions"; // width, height, margin, padding etc.
+@import "formir/src/less/core/layouts/side";
+@import "formir/src/less/core/layouts/header";
+@import "formir/src/less/core/layouts/window";
 
 
 // THEMES
-  //// DEFAULT
-    ////// LAYOUTS
-    @import "../formir/less/formir/themes/default/layouts/side";
+//// DEFAULT
+////// LAYOUTS
+@import "formir/src/less/themes/default/layouts/side";
 
-    ////// COMPONETS
-    @import "../formir/less/formir/themes/default/components/modal";
-    @import "../formir/less/formir/themes/default/components/tab";
-    @import "../formir/less/formir/themes/default/components/tooltip";
-    @import "../formir/less/formir/themes/default/components/chart";
-    @import "../formir/less/formir/themes/default/components/accordion";
-    @import "../formir/less/formir/themes/default/components/popup";
-    @import "../formir/less/formir/themes/default/components/menu";
-    @import "../formir/less/formir/themes/default/components/select";
-    @import "../formir/less/formir/themes/default/components/button";
-    @import "../formir/less/formir/themes/default/components/form";
-    // @import "../formir/less/formir/themes/default/components/table";
-    @import "../formir/less/formir/themes/default/components/alert";
+////// COMPONENTS
+@import "formir/src/less/themes/default/components/modal";
+@import "formir/src/less/themes/default/components/tab";
+@import "formir/src/less/themes/default/components/tooltip";
+@import "formir/src/less/themes/default/components/chart";
+@import "formir/src/less/themes/default/components/accordion";
+@import "formir/src/less/themes/default/components/popup";
+@import "formir/src/less/themes/default/components/menu";
+@import "formir/src/less/themes/default/components/select";
+@import "formir/src/less/themes/default/components/button";
+@import "formir/src/less/themes/default/components/form";
+@import "formir/src/less/themes/default/components/table";
+@import "formir/src/less/themes/default/components/alert";
 
-    ////// TYPOGRAPHY
-    @import "../formir/less/formir/themes/default/typography/heading";
-    @import "../formir/less/formir/themes/default/typography/article";
+////// TYPOGRAPHY
+@import "formir/src/less/themes/default/typography/heading";
+@import "formir/src/less/themes/default/typography/article";
 
+////// TYPOGRAPHY
 
+@import "./formir/themes/home/setup/core";
+@import "./formir/themes/home/setup/variables";
 
+@import "./formir/themes/home/layouts/grid";
+@import "./formir/themes/home/layouts/side";
+@import "./formir/themes/home/components/tooltip";
+@import "./formir/themes/home/components/popup";
+@import "./formir/themes/home/components/section";
 
-@import "formir/themes/home/setup/core";
-@import "formir/themes/home/setup/variables";
-
-@import "formir/themes/home/layouts/grid";
-@import "formir/themes/home/layouts/side";
-@import "formir/themes/home/components/tooltip";
-@import "formir/themes/home/components/popup";
-@import "formir/themes/home/components/section";
-
-@import "application/formir/home/components/logo";
-@import "application/formir/home/components/menu";
-@import "application/formir/home/components/device";
-
+@import "./application/formir/home/components/logo";
+@import "./application/formir/home/components/menu";
+@import "./application/formir/home/components/device";
