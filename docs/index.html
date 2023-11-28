@@ -35,29 +35,35 @@ url: index
 
   <h2>Use Formir</h2>
   <article class="section section-content with-padding">
-    <p>javascript module:</p>
+    <p>javascript module for SASS/SCSS:</p>
     <p><code>import "formir";</code></p>
     <p>&nbsp;</p>
-    <p>less compiler with npm:</p>
+    <p>for LESS:</p>
+    <p><code>import "formir/less";</code></p>
+    <p>&nbsp;</p>
+    <p>less/sass compiler with npm:</p>
     <p><code>@import "formir";</code></p>
   </article>
 
   <h2>Setup Formir</h2>
   <article class="section section-content with-padding">
-    <p>Formir is written on LESS. Files are split by core elements, template elements that are an extension to the core,
+    <p>Formir is written on LESS or SCSS. Files are split by core elements, template elements that are an extension to
+      the core,
       and application files that will be not part of a component of formir but it will be your own styles.</p>
     <p>Start with install or copy framework files to own direction. All files are included in file:
-      <code>less/formir.less</code> you could also use the example of application in file <code>application.less</code>
+      <code>src/scss/formir.scss</code> or <code>src/less/formir.less</code> you could also use the example of
+      application in file <code>application.less</code>
       - this is a compilation for this page. All start with this file - you could remove or change the direction, copy
       from vendor to your direction and modify.
     </p>
     <p>All classes used on this framework is customizable to prevent name collision -
-      <code>less/setup/classes.less</code>
+      <code>src/less/setup/classes.less</code>
     </p>
-    <p>All core variables - the most important for all components are store in - <code>less/setup/core.less</code> for
+    <p>All core variables - the most important for all components are store in - <code>src/less/setup/core.less</code>
+      for
       example number of columns for the grid, or unit for each dimension variables, RWD breaking points.</p>
-    <p>All other variables for each components are store in - <code>less/setup/variables.less</code>.</p>
-    <p>Mixins are store in direction - <code>less/core/mixins/</code> there is a lot of prefix function.</p>
+    <p>All other variables for each components are store in - <code>src/less/setup/variables.less</code>.</p>
+    <p>Mixins are store in direction - <code>src/less/core/mixins/</code> there is a lot of prefix function.</p>
     <p>In the core there is a logic of CSS, we don't recommend changing these files, use variables or templates file
       mixins (each component's template has owned class mixin to do the job) - but feel free if such a need arises.
       Remember to copy all files that will be changed from node_modules and change the include direction..</p>
