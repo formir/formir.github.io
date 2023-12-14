@@ -1,10 +1,11 @@
 <header class="header fixed tab-navs">
   <div class="header-content">
     <span>
-      <a href="/" class="logo logo-s display-inline"><img src="https://formir.io/img/logo/formir-64.png"/><span>formir / slider</span></a>
+      <a href="/" class="logo logo-s display-inline"><img src="https://formir.io/img/logo/formir-64.png" /><span>formir
+          / slider</span></a>
     </span>
     <nav>
-      <input id="nav-mobile" type="checkbox" class="mobile-toggle"/>
+      <input id="nav-mobile" type="checkbox" class="mobile-toggle" />
       <label for="nav-mobile" class="mobile-toggle-label">
         <span class="toggle-hide">&#9776;</span>
         <span class="toggle-show">&times;</span>
@@ -12,9 +13,9 @@
       <ul class="items menu-mobile mobile-toggle-show">
         <li class="item"><a class="anchor" href="/">&larr; back to Formir</a></li>
         <li class="item has-popup">
-          <input type="checkbox"/>
+          <input type="checkbox" aria-haspopup="true" aria-controls="plugins-menu" />
           <a class="anchor">Plugins</a>
-          <ul class="popup bottom menu">
+          <ul id="plugins-menu" aria-hidden="true" class="popup bottom menu">
             <li class="item">
               <a class="anchor" href="/plugins/slider/index.html">Slider</a>
             </li>
@@ -38,10 +39,14 @@
         <li class="item">
           <a class="anchor" href="/plugins/slider/docs.html">Documentation</a>
         </li>
-        <li class="item"><a class="anchor" target="_blank" href="https://codecanyon.net/item/image-slider-pure-css-carousel-with-dark-mode-fullscreen-less-sass/29498159">Buy Slider</a></li>
-        <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new" target="_blank">Report issue</a></li>
+        <li class="item"><a class="anchor" target="_blank"
+            href="https://codecanyon.net/item/image-slider-pure-css-carousel-with-dark-mode-fullscreen-less-sass/29498159">Buy
+            Slider</a></li>
+        <li class="item"><a class="anchor" href="https://github.com/formir/formir/issues/new" target="_blank">Report
+            issue</a></li>
         <li class="item">
-          <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support author</a>
+          <a class="anchor button inverse transparent" href="https://paypal.me/formir" target="_blank">Support
+            author</a>
         </li>
       </ul>
     </nav>

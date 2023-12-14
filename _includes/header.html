@@ -9,9 +9,9 @@
       </label>
       <ul class="items menu-mobile mobile-toggle-show">
         <li class="item has-popup">
-          <input type="checkbox" />
+          <input type="checkbox" aria-haspopup="true" aria-controls="plugins-menu" />
           <a class="anchor">Plugins</a>
-          <ul class="popup bottom menu">
+          <ul id="plugins-menu" aria-hidden="true" class="popup bottom menu">
             <li class="item">
               <a class="anchor" href="/plugins/slider/index.html">Slider</a>
             </li>

@@ -1,12 +1,15 @@
 @media (max-width: @mobile-menu-max-width) {
   .@{menu-mobile} {
-    .kofi-button, .btn-container {
+
+    .kofi-button,
+    .btn-container {
       border-radius: @mobile-menu-item-button-radius;
       width: auto;
       display: block !important;
     }
   }
 }
+
 @media (min-width: @mobile-menu-max-width) {
   .items.menu-mobile {
     .item.divider {
@@ -18,4 +21,14 @@
 
 .mobile-toggle-label {
   font-size: 1.6rem;
+}
+
+.has-popup {
+  >input {
+    cursor: pointer;
+  }
+}
+
+.mobile-toggle {
+  cursor: pointer;
 }
