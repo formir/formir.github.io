@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "image": "formir-room-thumb.png",
+      "title": "The Room Gallery - React & jQuery plugin",
+      "descriptionHtml": "<p><a target='_blank' href='https://codecanyon.net/item/js-jquery-react-3d-image-carousel-resposive-slider-room-gallery/50336453'>Buy full version</a></p>",
+      "height": "280px",
+      "width": "280px"
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/239/150/100",
+        "prompt": "https://picsum.photos/id/239/600/400",
+        "original": "https://picsum.photos/id/239/1200/800",
+        "zoom": "https://picsum.photos/id/239/2400/1600"
+      },
+      "description": "This React component is a versatile slider, perfect for showcasing a series of images or content."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/240/150/100",
+        "prompt": "https://picsum.photos/id/240/600/400",
+        "original": "https://picsum.photos/id/240/1200/800",
+        "zoom": "https://picsum.photos/id/240/2400/1600"
+      },
+      "description": "The carousel feature allows for a smooth transition between slides, creating a seamless user experience."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/237/150/100",
+        "prompt": "https://picsum.photos/id/237/600/400",
+        "original": "https://picsum.photos/id/237/1200/800",
+        "zoom": "https://picsum.photos/id/237/2400/1600"
+      },
+      "description": "It can be used as a dynamic gallery, displaying a collection of images or content in an engaging manner."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/241/150/100",
+        "prompt": "https://picsum.photos/id/241/600/400",
+        "original": "https://picsum.photos/id/241/1200/800",
+        "zoom": "https://picsum.photos/id/241/2400/1600"
+      },
+      "description": "The exhibit feature of this component allows for a unique presentation of images or content, similar to a museum exhibition."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/242/150/100",
+        "prompt": "https://picsum.photos/id/242/600/400",
+        "original": "https://picsum.photos/id/242/1200/800",
+        "zoom": "https://picsum.photos/id/242/2400/1600"
+      },
+      "description": "Each image in the slider is displayed in high resolution, ensuring a visually appealing experience for the viewer."
+    },
+    {
+      "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "description": "The video feature allows for the inclusion of videos in the slider, making it a versatile component for showcasing multimedia content."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/244/150/100",
+        "prompt": "https://picsum.photos/id/244/600/400",
+        "original": "https://picsum.photos/id/244/1200/800",
+        "zoom": "https://picsum.photos/id/244/2400/1600"
+      },
+      "description": "The picture quality remains consistent across all slides, regardless of the number of images in the carousel."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/250/150/100",
+        "prompt": "https://picsum.photos/id/250/600/400",
+        "original": "https://picsum.photos/id/250/1200/800",
+        "zoom": "https://picsum.photos/id/250/2400/1600"
+      },
+      "description": "Despite being a React component, it offers similar functionality to a jQuery slider, making it a great alternative."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/251/150/100",
+        "prompt": "https://picsum.photos/id/251/600/400",
+        "original": "https://picsum.photos/id/251/1200/800",
+        "zoom": "https://picsum.photos/id/251/2400/1600"
+      },
+      "description": "Built with React, this component offers superior performance and a component-based structure."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/247/150/100",
+        "prompt": "https://picsum.photos/id/247/600/400",
+        "original": "https://picsum.photos/id/247/1200/800",
+        "zoom": "https://picsum.photos/id/247/2400/1600"
+      },
+      "description": "The 3D feature adds depth to the slider, making the images appear more lifelike and engaging."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/248/150/100",
+        "prompt": "https://picsum.photos/id/248/600/400",
+        "original": "https://picsum.photos/id/248/1200/800",
+        "zoom": "https://picsum.photos/id/248/2400/1600"
+      },
+      "description": "This JavaScript-based component is easy to integrate into any web project and offers extensive customization options."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/238/150/100",
+        "prompt": "https://picsum.photos/id/238/600/400",
+        "original": "https://picsum.photos/id/238/1200/800",
+        "zoom": "https://picsum.photos/id/238/2400/1600"
+      },
+      "description": "The room feature allows for a unique presentation of images, similar to a room in a museum."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/239/150/100",
+        "prompt": "https://picsum.photos/id/239/600/400",
+        "original": "https://picsum.photos/id/239/1200/800",
+        "zoom": "https://picsum.photos/id/239/2400/1600"
+      },
+      "description": "The museum feature presents the images in a manner reminiscent of a museum exhibition, adding a touch of sophistication to your website."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/240/150/100",
+        "prompt": "https://picsum.photos/id/240/600/400",
+        "original": "https://picsum.photos/id/240/1200/800",
+        "zoom": "https://picsum.photos/id/240/2400/1600"
+      },
+      "description": "The exhibition mode allows for a unique showcase of images, making it perfect for art galleries and museums."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/241/150/100",
+        "prompt": "https://picsum.photos/id/241/600/400",
+        "original": "https://picsum.photos/id/241/1200/800",
+        "zoom": "https://picsum.photos/id/241/2400/1600"
+      },
+      "description": "The showcase feature presents your images in a stunning layout, ensuring they capture the viewer's attention."
+    },
+    {
+      "image": {
+        "thumb": "https://picsum.photos/id/242/150/100",
+        "prompt": "https://picsum.photos/id/242/600/400",
+        "original": "https://picsum.photos/id/242/1200/800",
+        "zoom": "https://picsum.photos/id/242/2400/1600"
+      },
+      "description": "The viewer can easily navigate through the slides using the intuitive controls, and can also zoom in for a closer look."
+    }
+  ]
+}
