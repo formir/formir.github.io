@@ -1,0 +1,15 @@
+{
+  "short_name": "Room Gallery",
+  "name": "React Room Gallery",
+  "icons": [
+    {
+      "src": "logo-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
