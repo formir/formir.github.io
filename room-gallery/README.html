@@ -1,0 +1,1190 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>docs</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="roomgallery---react--javascript--jquery---3d-images-slider">RoomGallery - React / JavaScript / jQuery - 3D images slider</h1>
+<p>RoomGallery is a powerful and versatile 3D image gallery slider for your web application. It provides an immersive experience for displaying images or custom HTML content on virtual gallery walls. With RoomGallery, you can create stunning 3D presentations and galleries with a wide range of customization options.</p>
+<h2 id="thank-you-for-purchasing-this-product"><a target='_blank'
+	href='https://codecanyon.net/item/js-jquery-react-3d-image-carousel-resposive-slider-room-gallery/50336453'>Buy full version</a></h2>
+<p>If you encounter any issues, please contact <a href="mailto:support@formir.io">support@formir.io</a></p>
+<p>This product is part of the Formir HTML/CSS framework ecosystem - we encourage you to try it out. <a href="https://formir.io">https://formir.io</a> / <a href="https://github.com/formir/formir">https://github.com/formir/formir</a> (npm formir)</p>
+<p>Demo: <a href="https://formir.io/room-gallery/">https://formir.io/room-gallery/</a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>
+<p>3D Virtual Gallery: Create a virtual 3D gallery space with walls to display your images or HTML content.</p>
+</li>
+<li>
+<p>Customizable: Customize the gallery’s appearance and behavior using various configuration options.</p>
+</li>
+<li>
+<p>Navigation: Navigate through the gallery using arrow buttons, keyboard shortcuts, or swipe gestures.</p>
+</li>
+<li>
+<p>Dark Mode: Toggle dark mode for a different viewing experience.</p>
+</li>
+<li>
+<p>Zoom Mode: Zoom in and out on images or content.</p>
+</li>
+<li>
+<p>Pagination: Add pagination for easy item selection.</p>
+</li>
+<li>
+<p>Events: Implement event callbacks to respond to gallery actions.</p>
+</li>
+</ul>
+<h2 id="installation-with-npm-package">Installation with NPM package</h2>
+<p>You have purchased a license for this product, so you can use one instance of the product for commercial purposes by using the NPM package source named <code>room-gallery</code>.</p>
+<p>The latest version of this product is always available in the NPM resources, provided under a developer license.</p>
+<p>To use RoomGallery in your project, you can install it via npm:</p>
+<pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">npm</span>  <span class="token function">install</span>  room-gallery
+
+</code></pre>
+<h2 id="installing-the-package-using-npm--yarn-from-your-own-directory-in-this-zip-package.">Installing the package using NPM / YARN from your own directory in this zip package.</h2>
+<p>To use RoomGallery in your project, you can install it via npm:</p>
+<p>You can use custom direction for package out of <code>node_modules</code>. Move all unziped files in category <code>room-gallery</code> to <code>libs/room-gallery</code> or <code>../room-gallery</code> direction and run npm in root direction:</p>
+<p>File <code>package.json</code> should be in <code>libs/room-gallery/package.json</code> or <code>../room-gallery/package.json</code>.</p>
+<pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">npm</span>  <span class="token function">install</span>  room-gallery@libs/room-gallery
+
+</code></pre>
+<p>or</p>
+<pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">npm</span>  <span class="token function">install</span>  room-gallery@<span class="token punctuation">..</span>/room-gallery
+
+</code></pre>
+<h3 id="for-yarn">For yarn:</h3>
+<pre class=" language-bash"><code class="prism  language-bash">
+yarn  add  room-gallery@libs/room-gallery
+
+</code></pre>
+<p>or</p>
+<pre class=" language-bash"><code class="prism  language-bash">
+yarn  add  room-gallery@<span class="token punctuation">..</span>/room-gallery
+
+</code></pre>
+<p>After that package will be copy to your <code>node_modules/room-gallery</code> direction.</p>
+<h2 id="usage-in-react">Usage in React</h2>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token keyword">import</span>  React  <span class="token keyword">from</span>  <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRoot <span class="token punctuation">}</span> <span class="token keyword">from</span>  <span class="token string">"react-dom/client"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span>  RoomGallery  <span class="token keyword">from</span>  <span class="token string">"room-gallery"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span>  <span class="token string">"room-gallery/scss/room-gallery.scss"</span><span class="token punctuation">;</span>
+  
+<span class="token keyword">const</span>  dataFetch <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span>  data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token punctuation">(</span><span class="token keyword">await</span>  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"./data.json"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span>  data<span class="token punctuation">.</span>items<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">const</span>  container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span>  root <span class="token operator">=</span> <span class="token function">createRoot</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>RoomGallery  fetch<span class="token operator">=</span><span class="token punctuation">{</span>dataFetch<span class="token punctuation">}</span>  styles<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span> settings<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h2 id="import-room-gallerysrcindex-in-case-of-typescript-project">Import room-gallery/src/index in case of TypeScript project</h2>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token keyword">import</span>  RoomGallery  <span class="token keyword">from</span>  <span class="token string">"room-gallery/src/index"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span>  <span class="token string">"room-gallery/scss/room-gallery.scss"</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h2 id="itemtype">ItemType</h2>
+<p>The <code>ItemType</code> is a TypeScript type that defines the structure of the primary data element in your <code>data.json</code> file, which is processed by your gallery. It provides a way to specify the properties and their types for individual items in your gallery.</p>
+<h3 id="properties">Properties</h3>
+<ul>
+<li>
+<p><code>title</code> (optional): A string representing the title of the item.</p>
+</li>
+<li>
+<p><code>description</code> (optional): A string for a description of the item.</p>
+</li>
+<li>
+<p><code>descriptionHtml</code> (optional): A string containing HTML for the item’s description.</p>
+</li>
+<li>
+<p><code>image</code> (optional): A string or an object representing the image associated with the item. It can include properties like <code>prompt</code>, <code>original</code>, and <code>zoom</code>.</p>
+</li>
+<li>
+<p><code>html</code> (optional): A string containing HTML content for the item.</p>
+</li>
+<li>
+<p><code>video</code> (optional): A string representing the URL of a video.</p>
+</li>
+<li>
+<p><code>vimeo</code> (optional): A string representing the URL of a Vimeo video.</p>
+</li>
+<li>
+<p><code>youtube</code> (optional): A string representing the URL of a YouTube video.</p>
+</li>
+<li>
+<p><code>width</code> (optional): A string with the item’s width in the format of a number followed by a unit (e.g., “200px”).</p>
+</li>
+<li>
+<p><code>height</code> (optional): A string with the item’s height in the format of a number followed by a unit (e.g., “150px”).</p>
+</li>
+</ul>
+<p>This type provides the structure for defining various properties for each item within your gallery’s data. You can customize the properties based on the specific data you want to associate with each item.</p>
+<h2 id="sample-of-json-data">Sample of json data</h2>
+<pre class=" language-json"><code class="prism  language-json">
+<span class="token punctuation">{</span>
+	<span class="token string">"items"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+		<span class="token punctuation">{</span>
+			<span class="token string">"image"</span><span class="token punctuation">:</span> <span class="token string">"formir-room-thumb.png"</span><span class="token punctuation">,</span>
+			<span class="token string">"title"</span><span class="token punctuation">:</span> <span class="token string">"The Room Gallery - React &amp; jQuery plugin"</span><span class="token punctuation">,</span>
+			<span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Provided to you in Open Beta during testing and development process."</span><span class="token punctuation">,</span>
+			<span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token string">"280px"</span><span class="token punctuation">,</span>
+			<span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token string">"280px"</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">{</span>
+			<span class="token string">"image"</span><span class="token punctuation">:</span> <span class="token string">"formir-500.png"</span><span class="token punctuation">,</span>
+			<span class="token string">"descriptionHtml"</span><span class="token punctuation">:</span> <span class="token string">"&lt;p style='margin: 0 0 10px'&gt;Use for free: &lt;a href='https://github.com/formir/room-gallery/'&gt;Documentation&lt;/a&gt;&lt;/p&gt;&lt;p style='margin: 0'&gt;&lt;/p&gt;&lt;p style='font-size: 0.9rem; margin: 30px 0 10px'&gt;Help with testing and improve:&lt;br/&gt;&lt;a href='https://github.com/formir/room-gallery/issues'&gt;Report issue&lt;/a&gt;&lt;/p&gt;"</span><span class="token punctuation">,</span>
+			<span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token string">"200px"</span><span class="token punctuation">,</span>
+			<span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token string">"200px"</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">{</span>
+			<span class="token string">"image"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+				<span class="token string">"prompt"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/239/600/400"</span><span class="token punctuation">,</span>
+				<span class="token string">"original"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/239/1200/800"</span><span class="token punctuation">,</span>
+				<span class="token string">"zoom"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/239/2400/1600"</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Nullam placerat odio eget purus rhoncus, eget eleifend augue congue."</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">{</span>
+			<span class="token string">"image"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+				<span class="token string">"prompt"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/240/600/400"</span><span class="token punctuation">,</span>
+				<span class="token string">"original"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/240/1200/800"</span><span class="token punctuation">,</span>
+				<span class="token string">"zoom"</span><span class="token punctuation">:</span> <span class="token string">"https://picsum.photos/id/240/2400/1600"</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+			<span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Nam vitae sem a arcu sodales rhoncus quis vel mi."</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h2 id="interface-roomgalleryprops">Interface: RoomGalleryProps</h2>
+<h3 id="fetch---promisearrayitemtype--any--string"><code>fetch?: () =&gt; Promise&lt;Array&lt;ItemType&gt;&gt; | any | string</code></h3>
+<p>This optional property defines a function for fetching data, which is expected to return a promise that resolves to an array of <code>ItemType</code>, or it can return any other data type, such as a string. Use this function to load items dynamically. It can be used to populate the gallery with data. If not provided, the gallery may rely on the <code>items</code> property for static content.</p>
+<h3 id="items-itemtype--htmlelement"><code>items?: (ItemType[] | HTMLElement[])</code></h3>
+<p>An array of <code>ItemType</code> objects or HTMLElements representing the items in the room gallery. These items can be static content or can be preloaded for display within the gallery. If the <code>fetch</code> function is provided, it may override this static data.</p>
+<h3 id="styles-object"><code>styles?: object</code></h3>
+<p>An optional object that allows you to define custom styles for the room gallery. You can provide CSS styles using this property to customize the appearance of the gallery.</p>
+<h3 id="children-jsx.element--jsx.element"><code>children?: JSX.Element[] | JSX.Element</code></h3>
+<p>This property allows you to pass JSX elements as children to the room gallery. It can be used to add additional content or components within the gallery.</p>
+<h3 id="settings-roomgallerysettingstype"><code>settings?: RoomGallerySettingsType</code></h3>
+<p>An object that holds various settings for configuring the behavior and appearance of the room gallery. This can include options such as enabling/disabling features, adjusting layout, and more.</p>
+<h3 id="ref-refhtmldivelement"><code>ref?: Ref&lt;HTMLDivElement&gt;</code></h3>
+<p>An optional reference to the HTML <code>&lt;div&gt;</code> element that represents the room gallery. This can be used to access and manipulate the gallery’s DOM element directly. This reference can be passed to other parts of your application as needed.</p>
+<h3 id="you-can-also-use-children-as-node">you can also use children as node:</h3>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token operator">&lt;</span>RoomGallery  styles<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span> settings<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div  className<span class="token operator">=</span><span class="token string">"item-image"</span><span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>img  src<span class="token operator">=</span><span class="token string">"url"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+		<span class="token operator">&lt;</span>div  className<span class="token operator">=</span><span class="token string">"item-desc"</span><span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>Description<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div  className<span class="token operator">=</span><span class="token string">"item-image"</span><span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>img  src<span class="token operator">=</span><span class="token string">"url"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div  className<span class="token operator">=</span><span class="token string">"item-desc"</span><span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>Description<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>RoomGallery<span class="token operator">&gt;</span>
+
+</code></pre>
+<h2 id="usage-vanilla-javascript">Usage Vanilla JavaScript</h2>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token keyword">import</span>  RoomGallery  <span class="token keyword">from</span>  <span class="token string">'room-gallery/build/RoomGallery'</span>
+<span class="token keyword">import</span>  <span class="token string">'room-gallery/build/RoomGallery.css'</span>
+
+<span class="token keyword">const</span>  options <span class="token operator">=</span> <span class="token punctuation">{</span>
+	element<span class="token punctuation">:</span>  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// element in DOM to render gallery</span>
+	items<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>image<span class="token punctuation">:</span>  <span class="token string">'url'</span><span class="token punctuation">,</span> title<span class="token punctuation">:</span>  <span class="token string">'title'</span><span class="token punctuation">,</span> description<span class="token punctuation">:</span>  <span class="token string">'description'</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// optional items</span>
+	fetch<span class="token punctuation">:</span>  <span class="token string">'//fetch-url'</span>  <span class="token comment">// optional fetch url or promise method</span>
+	styles<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	setting<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span>  room <span class="token operator">=</span> <span class="token keyword">new</span>  <span class="token class-name">RoomGallery</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token comment">// gallery will init by default</span>
+
+room<span class="token punctuation">.</span><span class="token function">gotoNextItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// use method to go to next</span>
+
+
+</code></pre>
+<h2 id="methods-on-object">Methods on object</h2>
+<h3 id="gotonextitem-void"><code>gotoNextItem(): void</code></h3>
+<p>This method allows you to navigate to the next item in the room gallery.</p>
+<h3 id="gotoprevitem-void"><code>gotoPrevItem(): void</code></h3>
+<p>Use this method to navigate to the previous item in the room gallery.</p>
+<h3 id="toggledarkmode-void"><code>toggleDarkMode(): void</code></h3>
+<p>This method toggles the dark mode in the room gallery.</p>
+<h3 id="setdarkmodemode-boolean-void"><code>setDarkMode(mode: boolean): void</code></h3>
+<p>You can use this method to set the dark mode in the room gallery by providing a boolean <code>mode</code> as a parameter.</p>
+<h3 id="togglezoom-void"><code>toggleZoom(): void</code></h3>
+<p>This method toggles the zoom feature in the room gallery.</p>
+<h3 id="setzoomzoom-boolean-void"><code>setZoom(zoom: boolean): void</code></h3>
+<p>To set the zoom feature in the room gallery, use this method with a boolean <code>zoom</code> as a parameter.</p>
+<h3 id="getcurrentitem---void"><code>getCurrentItem(): {} | void</code></h3>
+<p>This method returns the current item in the room gallery.</p>
+<h3 id="refresh---void"><code>refresh(): {} | void</code></h3>
+<p>This method rebuild stage and fetch new items if url was set.</p>
+<h3 id="clear---void"><code>clear(): {} | void</code></h3>
+<p>This method will clear the stage data and remove all walls.</p>
+<h2 id="usage-with-jquery">Usage with jQuery</h2>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
+	<span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-3.7.1.min.js<span class="token punctuation">"</span></span>
+	<span class="token attr-name">integrity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=<span class="token punctuation">"</span></span>
+	<span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>anonymous<span class="token punctuation">"</span></span>
+	<span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>  <span class="token attr-name">defer</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>defer<span class="token punctuation">"</span></span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jQueryRoomGallery.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>  <span class="token attr-name">defer</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>defer<span class="token punctuation">"</span></span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>RoomGallery.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>RoomGallery.css<span class="token punctuation">"</span></span>  <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span>  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some title<span class="token punctuation">"</span></span>  <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some description<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span>  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some title<span class="token punctuation">"</span></span>  <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some description<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span>  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some title<span class="token punctuation">"</span></span>  <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Some description<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>room-gallery<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<h3 id="find-images-on-page-and-give-element">Find images on page and give element</h3>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">RoomGallery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>element<span class="token punctuation">:</span>  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#room-gallery'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> styles<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span> settings<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre>
+<h3 id="find-element-and-give-images">Find element and give images</h3>
+<pre class=" language-javascript"><code class="prism  language-javascript">
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#room-gallery'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">RoomGallery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>items<span class="token punctuation">:</span>  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> styles<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span> settings<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#room-gallery'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">'RommGallery'</span><span class="token punctuation">)</span> <span class="token comment">// will give you access for control method and state</span>
+
+</code></pre>
+<h2 id="roomgallery-settings">RoomGallery Settings</h2>
+<p>The <code>settings</code> type allows you to configure various aspects of your RoomGallery. It includes the following configuration options:</p>
+<ul>
+<li>
+<p><code>emptyMessage</code>: Specifies the message on the first wall if there are no items to display.</p>
+</li>
+<li>
+<p><code>arrowNav</code>: Defines how arrow navigation is displayed. Options are:</p>
+</li>
+<li>
+<p><code>'number'</code>: Display the item number (e.g., 1 of 10).</p>
+</li>
+<li>
+<p><code>'icon'</code>: Use arrow icons for navigation.</p>
+</li>
+<li>
+<p><code>'blank'</code>: Display nothing.</p>
+</li>
+<li>
+<p><code>'disabled'</code>: Disable arrow navigation.</p>
+</li>
+<li>
+<p><code>darkNav</code>: Specifies how dark mode navigation is displayed. Options are:</p>
+</li>
+<li>
+<p><code>'button'</code>: Use a button for toggling dark mode.</p>
+</li>
+<li>
+<p><code>'icon'</code>: Use an icon for toggling dark mode.</p>
+</li>
+<li>
+<p><code>zoomNav</code>: Specifies how zoom mode navigation is displayed. Options are:</p>
+</li>
+<li>
+<p><code>'button'</code>: Use a button for toggling zoom mode.</p>
+</li>
+<li>
+<p><code>'icon'</code>: Use an icon for toggling zoom mode.</p>
+</li>
+<li>
+<p><code>darkMode</code>: Defines the initial dark mode behavior. Options are:</p>
+</li>
+<li>
+<p><code>'dark'</code>: Start with dark mode enabled.</p>
+</li>
+<li>
+<p><code>'light'</code>: Start with dark mode disabled.</p>
+</li>
+<li>
+<p><code>'manual'</code>: Enable or disable dark mode manually.</p>
+</li>
+<li>
+<p><code>'auto'</code>: Automatically switch between dark and light modes based on user preferences.</p>
+</li>
+<li>
+<p><code>zoomMode</code>: Specifies the initial zoom mode behavior. Options are:</p>
+</li>
+<li>
+<p><code>'in'</code>: Start with zoom mode enabled.</p>
+</li>
+<li>
+<p><code>'out'</code>: Start with zoom mode disabled.</p>
+</li>
+<li>
+<p><code>'manual'</code>: Enable or disable zoom mode manually.</p>
+</li>
+<li>
+<p><code>'disabled'</code>: Disable zoom mode.</p>
+</li>
+<li>
+<p><code>paginationsNav</code>: Defines how pagination navigation is displayed. Options are:</p>
+</li>
+<li>
+<p><code>'button'</code>: Use button-style pagination.</p>
+</li>
+<li>
+<p><code>'text'</code>: Use text-based pagination.</p>
+</li>
+<li>
+<p><code>paginations</code>: Specifies how paginations are displayed. Options are:</p>
+</li>
+<li>
+<p><code>'number'</code>: Display item numbers.</p>
+</li>
+<li>
+<p><code>'title'</code>: Display title from <code>item.title</code></p>
+</li>
+<li>
+<p><code>'thumb'</code>: Display thumb from <code>item.image.thumb</code></p>
+</li>
+<li>
+<p><code>'blank'</code>: Display nothing.</p>
+</li>
+<li>
+<p><code>'disabled'</code>: Disable pagination.</p>
+</li>
+<li>
+<p><code>paginationsOnZoom</code>: Controls whether paginations are hidden when zoomed. Options are:</p>
+</li>
+<li>
+<p><code>'show'</code>: Paginations remain visible when zoomed.</p>
+</li>
+<li>
+<p><code>'hide'</code>: Hide paginations when zoomed.</p>
+</li>
+<li>
+<p><code>arrowNavOnZoom</code>: Specifies whether arrow navigation is hidden when zoomed. Options are:</p>
+</li>
+<li>
+<p><code>'show'</code>: Arrow navigation is visible when zoomed.</p>
+</li>
+<li>
+<p><code>'hide'</code>: Hide arrow navigation when zoomed.</p>
+</li>
+<li>
+<p><code>defaultPosition</code>: Sets the default position for the gallery.</p>
+</li>
+<li>
+<p><code>allOnOneWall</code>: If set to <code>true</code>, images will be placed only on the front wall. By default, this is set to <code>false</code>, and images will propagate across all four walls.</p>
+</li>
+<li>
+<p><code>icons</code>: Allows you to customize the icons used for navigation.</p>
+</li>
+<li>
+<p><code>swipeToNav</code>: Enables or disables swipe gestures for item navigation.</p>
+</li>
+<li>
+<p><code>swipeToZoom</code>: Enables or disables swipe gestures for zooming.</p>
+</li>
+<li>
+<p><code>keypressToNav</code>: Allows arrow key presses for item navigation.</p>
+</li>
+<li>
+<p><code>keypressToZoom</code>: Allows arrow key presses for zooming.</p>
+</li>
+<li>
+<p><code>animationSpeed</code>: Specifies the animation speed (in seconds)</p>
+</li>
+<li>
+<p><code>'min'</code>: Represents the time it takes to animate between switched walls. Default 2s.</p>
+</li>
+<li>
+<p><code>'ratio'</code>: Is the distance multiplier between the walls being switched. Default 1.</p>
+</li>
+<li>
+<p><code>allOnOneWall</code>: By setting this <code>true</code>, all items will apply only front wall (all 3 other wall will not be used). Default disabled.</p>
+</li>
+<li>
+<p><code>sanitizeHtml</code>: Enable or disable sanitization of all data that will be present in HTML mode, for example descriptions, or Item as HTML. Default enabled.</p>
+</li>
+<li>
+<p><code>sanitizeHtmlOptions</code>:</p>
+</li>
+<li>
+<p><code>allowedTags</code>: Array of string with tags that we will allow to display in case HTML.</p>
+</li>
+<li>
+<p><code>allowedAttributes</code>: Array of string with attribute that we will allow to display in case HTML.</p>
+</li>
+<li>
+<p><code>event</code>: Configures event callbacks for various gallery actions, such as initialization, rendering, showing next/previous items, toggling dark mode, zooming, and more.</p>
+</li>
+</ul>
+<h3 id="event-callbacks">Event Callbacks</h3>
+<p>The <code>event</code> property within the <code>settings</code> type allows you to define various event callbacks that get triggered during different actions in your RoomGallery. These event callbacks can be used to add custom behavior or handle specific actions. Here are the available event callbacks:</p>
+<ul>
+<li>
+<p><code>onInit(value?: object)</code>: This callback is invoked when the RoomGallery is initialized. You can perform any initialization tasks or setup actions here.</p>
+</li>
+<li>
+<p><code>onRender(value?: object)</code>: Triggered when the RoomGallery is rendered. You can use this callback to perform actions after the gallery is rendered.</p>
+</li>
+<li>
+<p><code>onShowNext(value?: object)</code>: Called when the user navigates to the next item. You can use this callback to add custom behavior when showing the next item.</p>
+</li>
+<li>
+<p><code>onShowPrev(value?: object)</code>: Invoked when the user navigates to the previous item. Use this callback to add custom behavior when showing the previous item.</p>
+</li>
+<li>
+<p><code>onZoomIn(value?: object)</code>: Triggered when the user zooms in. You can use this callback to perform actions when the gallery zooms in.</p>
+</li>
+<li>
+<p><code>onZoomOut(value?: object)</code>: Called when the user zooms out. You can use this callback to perform actions when the gallery zooms out.</p>
+</li>
+<li>
+<p><code>onDarkModeOn(value?: object)</code>: This callback is invoked when dark mode is turned on. You can use this callback to handle actions specific to enabling dark mode.</p>
+</li>
+<li>
+<p><code>onDarkModeOff(value?: object)</code>: Called when dark mode is turned off. You can use this callback to handle actions specific to disabling dark mode.</p>
+</li>
+</ul>
+<h3 id="stylesvariables-enum">StylesVariables Enum</h3>
+<p>The <code>styles</code> provides a set of predefined CSS variables used to style your RoomGallery. These variables can be customized to control the visual appearance of your gallery. Here are the available variables:</p>
+<h4 id="core-room-styles">Core Room Styles:</h4>
+<ul>
+<li>
+<p><code>rotateSpeed</code>: Rotation speed in degrees per second.</p>
+</li>
+<li>
+<p><code>rotateTiming</code>: Timing function for rotation animation.</p>
+</li>
+<li>
+<p><code>fontFamily</code>: Font family for text content.</p>
+</li>
+<li>
+<p><code>perspective</code>: Perspective value for 3D transformation.</p>
+</li>
+<li>
+<p><code>mobileSizeWidth</code>: Width of the mobile viewport.</p>
+</li>
+<li>
+<p><code>mobileSizeHeight</code>: Height of the mobile viewport.</p>
+</li>
+<li>
+<p><code>mobilePerspective</code>: Perspective value for mobile view.</p>
+</li>
+<li>
+<p><code>scale</code>: Scaling factor for elements.</p>
+</li>
+<li>
+<p><code>scaleZoom</code>: Scaling factor for zoomed elements.</p>
+</li>
+<li>
+<p><code>offsetY</code>: Vertical offset for elements in percentage.</p>
+</li>
+<li>
+<p><code>itemHeight</code>: Height of items in the room.</p>
+</li>
+<li>
+<p><code>itemWidth</code>: Width of items in the room.</p>
+</li>
+<li>
+<p><code>zIndex</code>: Z-index for elements in the room.</p>
+</li>
+<li>
+<p><code>textFontSize</code>: Font size for text content.</p>
+</li>
+<li>
+<p><code>textFontSizeMobile</code>: Font size for text content on mobile devices.</p>
+</li>
+<li>
+<p><code>fontLineHeight</code>: Line height for text content.</p>
+</li>
+<li>
+<p><code>textMarginTop</code>: Margin top for text content.</p>
+</li>
+<li>
+<p><code>textMaxHeight</code>: Maximum height for text content.</p>
+</li>
+<li>
+<p><code>textMinHeight</code>: Minimum height for text content.</p>
+</li>
+<li>
+<p><code>textMaxWidth</code>: Maximum width for text content.</p>
+</li>
+<li>
+<p><code>textPadding</code>: Padding for text content.</p>
+</li>
+<li>
+<p><code>navigationsMargin</code>: Margin for navigational elements.</p>
+</li>
+<li>
+<p><code>buttonSize</code>: Size of buttons.</p>
+</li>
+<li>
+<p><code>paginationButtonSize</code>: Size of pagination buttons.</p>
+</li>
+<li>
+<p><code>paginationButtonsSpace</code>: Space between pagination buttons.</p>
+</li>
+<li>
+<p><code>paginationButtonsBorderRadius</code> Specifies the border radius of pagination buttons.</p>
+</li>
+<li>
+<p><code>paginationThumbsMaxHeight</code>: Specify max height of thumbs images in paginations.</p>
+</li>
+<li>
+<p><code>paginationThumbMaxWidth</code>: Max width of thumb in pagination.</p>
+</li>
+<li>
+<p><code>navButtonSize</code>: Size of navigation buttons.</p>
+</li>
+<li>
+<p><code>buttonsPosition</code>: Position of buttons.</p>
+</li>
+<li>
+<p><code>buttonZoomPosition</code>: Position of zoom button.</p>
+</li>
+<li>
+<p><code>buttonDarkPosition</code>: Position of dark button.</p>
+</li>
+<li>
+<p><code>buttonZoomWidth</code>: Width of zoom button.</p>
+</li>
+<li>
+<p><code>buttonExitWidth</code>: Width of exit button.</p>
+</li>
+<li>
+<p><code>buttonDarkWidth</code>: Width of dark button.</p>
+</li>
+<li>
+<p><code>paginationPosition</code>: Position of pagination elements.</p>
+</li>
+<li>
+<p><code>buttonTransition</code>: Transition effect for buttons.</p>
+</li>
+<li>
+<p><code>buttonOpacity</code>: Opacity value for buttons.</p>
+</li>
+</ul>
+<h4 id="light-room-styles">Light Room Styles:</h4>
+<ul>
+<li>
+<p><code>lightBackgroundBlendMode</code></p>
+</li>
+<li>
+<p><code>lightBodyBackground</code></p>
+</li>
+<li>
+<p><code>lightTextColor</code></p>
+</li>
+<li>
+<p><code>lightLinkColor</code></p>
+</li>
+<li>
+<p><code>lightFloorBackground</code></p>
+</li>
+<li>
+<p><code>lightFloorShadow</code></p>
+</li>
+<li>
+<p><code>lightWallBackground</code></p>
+</li>
+<li>
+<p><code>lightWallShadow</code></p>
+</li>
+<li>
+<p><code>lightCeilBackground</code></p>
+</li>
+<li>
+<p><code>lightCeilShadow</code></p>
+</li>
+<li>
+<p><code>lightButtonBackground</code></p>
+</li>
+<li>
+<p><code>lightButtonColor</code></p>
+</li>
+<li>
+<p><code>lightButtonBorder</code></p>
+</li>
+<li>
+<p><code>lightButtonShadow</code></p>
+</li>
+<li>
+<p><code>lightButtonCurrentBackground</code></p>
+</li>
+<li>
+<p><code>lightButtonCurrentBorder</code></p>
+</li>
+<li>
+<p><code>lightButtonCurrentColor</code></p>
+</li>
+<li>
+<p><code>lightButtonCurrentShadow</code></p>
+</li>
+<li>
+<p><code>lightCanvasBorder</code></p>
+</li>
+<li>
+<p><code>lightCanvasShadow</code></p>
+</li>
+</ul>
+<h4 id="dark-room-styles">Dark Room Styles:</h4>
+<ul>
+<li>
+<p><code>darkBackgroundBlendMode</code></p>
+</li>
+<li>
+<p><code>darkBodyBackground</code></p>
+</li>
+<li>
+<p><code>darkTextColor</code></p>
+</li>
+<li>
+<p><code>darkLinkColor</code></p>
+</li>
+<li>
+<p><code>darkFloorBackground</code></p>
+</li>
+<li>
+<p><code>darkFloorShadow</code></p>
+</li>
+<li>
+<p><code>darkWallBackground</code></p>
+</li>
+<li>
+<p><code>darkWallShadow</code></p>
+</li>
+<li>
+<p><code>darkCeilBackground</code></p>
+</li>
+<li>
+<p><code>darkCeilShadow</code></p>
+</li>
+<li>
+<p><code>darkButtonBackground</code></p>
+</li>
+<li>
+<p><code>darkButtonColor</code></p>
+</li>
+<li>
+<p><code>darkButtonBorder</code></p>
+</li>
+<li>
+<p><code>darkButtonShadow</code></p>
+</li>
+<li>
+<p><code>darkButtonCurrentBackground</code></p>
+</li>
+<li>
+<p><code>darkButtonCurrentBorder</code></p>
+</li>
+<li>
+<p><code>darkButtonCurrentColor</code></p>
+</li>
+<li>
+<p><code>darkButtonCurrentShadow</code></p>
+</li>
+<li>
+<p><code>darkCanvasBorder</code></p>
+</li>
+<li>
+<p><code>darkCanvasShadow</code></p>
+</li>
+</ul>
+<p>These CSS variables allow you to control the styling of various components and elements within your RoomGallery. You can override these variables to create a custom look and feel for your gallery.</p>
+<h3 id="core-setup-in-sass-srcsassroom-gallery.scss">Core Setup in Sass (src/sass/room-gallery.scss)</h3>
+<ul>
+<li>
+<p><code>$room-size-width</code>: Default width of room gallery - 100vmax</p>
+</li>
+<li>
+<p><code>$room-size-height</code>: Default height of gallery - 100vmin</p>
+</li>
+<li>
+<p><code>$room-mobile-media-width</code>: Mobile breakpoint - 945px (Do not use % unit or calc(). You can use px, rem, cm, vh, vw, etc.)</p>
+</li>
+<li>
+<p><code>$room-mobile-size-width</code>: Mobile width of gallery after mobile breakpoint - 100vw (Do not use % unit or calc(). Recommended 100vw)</p>
+</li>
+<li>
+<p><code>$room-mobile-size-height</code>: Mobile height of gallery after mobile breakpoint - 100vh (Recommended 100vh)</p>
+</li>
+</ul>
+<h3 id="sass-variables-for-classes-names-setup">Sass variables for classes names setup:</h3>
+<ul>
+<li>
+<p><code>$room</code>: main wrapper</p>
+</li>
+<li>
+<p><code>$room-dark</code>: dark room wrapper</p>
+</li>
+<li>
+<p><code>$room-dark-auto</code>: automatic dark room wrapper</p>
+</li>
+<li>
+<p><code>$room-body</code>: body of the room</p>
+</li>
+<li>
+<p><code>$room-arena</code>: wrapper for the arena</p>
+</li>
+<li>
+<p><code>$room-walls</code>: walls in 3D</p>
+</li>
+<li>
+<p><code>$room-wall</code>: individual wall</p>
+</li>
+<li>
+<p><code>$room-wall-active</code>: active wall</p>
+</li>
+<li>
+<p><code>$room-ceil</code>: ceiling</p>
+</li>
+<li>
+<p><code>$room-floor</code>: floor</p>
+</li>
+<li>
+<p><code>$room-item</code>: item to display on the wall</p>
+</li>
+<li>
+<p><code>$room-item-active</code>: active item</p>
+</li>
+<li>
+<p><code>$room-item-image</code>: image container</p>
+</li>
+<li>
+<p><code>$room-item-desc</code>: image description</p>
+</li>
+<li>
+<p><code>$room-zoom</code>: zoom control input</p>
+</li>
+<li>
+<p><code>$room-paginations</code>: pagination wrapper</p>
+</li>
+<li>
+<p><code>$room-paginations-thumbs</code>: pagination wrapper for thumbs</p>
+</li>
+<li>
+<p><code>$room-navigations</code>: navigation wrapper</p>
+</li>
+<li>
+<p><code>$room-prev-button</code>: previous button</p>
+</li>
+<li>
+<p><code>$room-next-button</code>: next button</p>
+</li>
+<li>
+<p><code>$room-icon</code>: icon</p>
+</li>
+<li>
+<p><code>$room-zoom-button</code>: zoom in button- <code>$room-dark-button</code>: dark mode button</p>
+</li>
+<li>
+<p><code>$room-exit-button</code>: exit zoom button</p>
+</li>
+<li>
+<p><code>$room-canvas</code>: border/canvas style</p>
+</li>
+</ul>
+<h2 id="sass-variables-editable-in-js">Sass variables editable in JS:</h2>
+<ul>
+<li>
+<p><code>$room-rotate-speed</code>: Specifies the rotation speed of the room. The default value is <code>2s</code>.</p>
+</li>
+<li>
+<p><code>$room-rotate-timing</code>: Specifies the timing function for the room rotation animation. The default value is <code>ease-in-out</code>.</p>
+</li>
+<li>
+<p><code>$room-font-family</code>: Specifies the font family for the room. The default value is <code>Arial</code>.</p>
+</li>
+<li>
+<p><code>$room-perspective</code>: Specifies the perspective value for the room. It is a Sass variable that is set to the value of <code>$room-size-width</code>.</p>
+</li>
+<li>
+<p><code>$room-mobile-perspective</code>: Specifies the perspective value for the room on mobile devices. It is a Sass variable that is set to the value of <code>$room-mobile-size-width</code>.</p>
+</li>
+<li>
+<p><code>$room-scale</code>: Specifies the scale factor for the room. The default value is <code>1.1</code>.</p>
+</li>
+<li>
+<p><code>$room-scale-zoom</code>: Specifies the zoom scale factor for the room. The default value is <code>1.5</code>.</p>
+</li>
+<li>
+<p><code>$room-offset-y</code>: Specifies the vertical offset of the room. The default value is <code>0</code> and it is expressed as a percentage.</p>
+</li>
+<li>
+<p><code>$room-item-height</code>: Specifies the height of the room items. The default value is <code>90%</code>.</p>
+</li>
+<li>
+<p><code>$room-item-width</code>: Specifies the width of the room items. The default value is <code>90%</code>.</p>
+</li>
+<li>
+<p><code>$room-zindex</code>: Specifies the z-index value for the room. The default value is <code>1000</code>.</p>
+</li>
+<li>
+<p><code>$room-icon-blend-mode</code>: Specifies the mix blend mode for navs icons. The default value is <code>difference</code>.</p>
+</li>
+<li>
+<p><code>$room-text-font-size</code>: Specifies the font size for the room text. The default value is <code>14px</code>.</p>
+</li>
+<li>
+<p><code>$room-text-font-size-mobile</code>: Specifies the font size for the room text on mobile devices. The default value is <code>2vmin</code>.</p>
+</li>
+<li>
+<p><code>$room-font-line-height</code>: Specifies the line height for the room text. The default value is <code>1.3em</code>.</p>
+</li>
+<li>
+<p><code>$room-text-margin-top</code>: Specifies the top margin for the room text. The default value is <code>1.5rem</code>.</p>
+</li>
+<li>
+<p><code>$room-text-max-height</code>: Specifies the maximum height for the room text. The default value is <code>20%</code>.</p>
+</li>
+<li>
+<p><code>$room-text-min-height</code>: Specifies the minimum height for the room text. The default value is <code>15%</code>.</p>
+</li>
+<li>
+<p><code>$room-text-max-width</code>: Specifies the maximum width for the room text. The default value is <code>70%</code>.</p>
+</li>
+<li>
+<p><code>$room-text-padding</code>: Specifies the padding for the room text. The default value is <code>20px 0</code>.</p>
+</li>
+<li>
+<p><code>$room-navigations-margin</code>: Specifies the margin for the room navigations. The default value is <code>20px</code>.</p>
+</li>
+<li>
+<p><code>$room-button-size</code>: Specifies the size of the room buttons. The default value is <code>35px</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-button-size</code>: Specifies the size of the room pagination buttons. The default value is <code>25px</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-buttons-space</code>: Specifies the space between room pagination buttons. The default value is <code>7px</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-buttons-border-radius</code>: Specifies the border radius of pagination buttons (also thumbs). The default value is <code>$room-button-size</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-thumbs-max-height</code>: Specify max height of thumbs images in paginations. The default value is <code>15%</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-thumb-max-width</code>: Max width of thumb in pagination. The default value is <code>100px</code>.</p>
+</li>
+<li>
+<p><code>$room-nav-button-size</code>: Specifies the size of the room navigation buttons. The default value is <code>35px</code>.</p>
+</li>
+<li>
+<p><code>$room-buttons-position</code>: Specifies the position of the room buttons. The default value is <code>5%</code>.</p>
+</li>
+<li>
+<p><code>$room-button-zoom-position</code>: Specifies the position of the zoom button in the room. The default value is <code>10%</code>.</p>
+</li>
+<li>
+<p><code>$room-button-dark-position</code>: Specifies the position of the dark mode button in the room. The default value is <code>10%</code>.</p>
+</li>
+<li>
+<p><code>$room-button-zoom-width</code>: Specifies the width of the zoom button in the room. The default value is <code>35px</code>.</p>
+</li>
+<li>
+<p><code>$room-button-exit-width</code>: Specifies the width of the exit button in the room. The default value is <code>35px</code>.</p>
+</li>
+<li>
+<p><code>$room-button-dark-width</code>: Specifies the width of the dark mode button in the room. The default value is <code>35px</code>.</p>
+</li>
+<li>
+<p><code>$room-pagination-position</code>: Specifies the position of the room pagination. The default value is <code>5%</code>.</p>
+</li>
+<li>
+<p><code>$room-button-transition</code>: Specifies the transition property for the room buttons. The default value is <code>opacity 0.5s linear</code>.</p>
+</li>
+<li>
+<p><code>$room-button-opacity</code>: Specifies the opacity value for the room buttons. The default value is <code>1</code>.</p>
+</li>
+<li>
+<p><code>$room-background-blend-mode</code>: Specifies the blend mode for the room background.</p>
+</li>
+<li>
+<p><code>$room-body-background</code>: Specifies the background color for the room body.</p>
+</li>
+<li>
+<p><code>$room-text-color</code>: Specifies the color for the room text.</p>
+</li>
+<li>
+<p><code>$room-link-color</code>: Specifies the color for the room links.</p>
+</li>
+<li>
+<p><code>$room-floor-background</code>: Specifies the background image and repeat pattern for the room floor.</p>
+</li>
+<li>
+<p><code>$room-floor-shadow</code>: Specifies the shadow effect for the room floor.</p>
+</li>
+<li>
+<p><code>$room-wall-background</code>: Specifies the background image and repeat pattern for the room walls.</p>
+</li>
+<li>
+<p><code>$room-wall-shadow</code>: Specifies the shadow effect for the room walls.</p>
+</li>
+<li>
+<p><code>$room-ceil-background</code>: Specifies the background image and repeat pattern for the room ceiling.</p>
+</li>
+<li>
+<p><code>$room-ceil-shadow</code>: Specifies the shadow effect for the room ceiling.</p>
+</li>
+<li>
+<p><code>$room-button-background</code>: Specifies the background color for the room buttons.</p>
+</li>
+<li>
+<p><code>$room-button-color</code>: Specifies the color for the room buttons.</p>
+</li>
+<li>
+<p><code>$room-button-border</code>: Specifies the border style for the room buttons.</p>
+</li>
+<li>
+<p><code>$room-button-shadow</code>: Specifies the shadow effect for the room buttons.</p>
+</li>
+<li>
+<p><code>$room-button-current-background</code>: Specifies the background color for the current room button.</p>
+</li>
+<li>
+<p><code>$room-button-current-border</code>: Specifies the border style for the current room button.</p>
+</li>
+<li>
+<p><code>$room-button-current-color</code>: Specifies the color for the current room button.</p>
+</li>
+<li>
+<p><code>$room-button-current-shadow</code>: Specifies the shadow effect for the current room button.</p>
+</li>
+<li>
+<p><code>$room-button-current-shadow</code>: Specifies the shadow effect for the current room button.</p>
+</li>
+<li>
+<p><code>$room-icon-color</code>: Specifies the nav icon color.</p>
+</li>
+<li>
+<p><code>$room-canvas-border</code>: Specifies the border style for the room canvas.</p>
+</li>
+<li>
+<p><code>$room-canvas-shadow</code>: Specifies the shadow effect for the room canvas.</p>
+</li>
+</ul>
+<h3 id="light-sass-variables">Light sass variables:</h3>
+<ul>
+<li>
+<p><code>$room-light-background-blend-mode</code>: Specifies the blend mode for the light theme background. The default value is <code>multiply</code>.</p>
+</li>
+<li>
+<p><code>$room-light-body-background</code>: Specifies the background color for the light theme body. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-light-text-color</code>: Specifies the color for the light theme text. The default value is <code>#2d2d2d</code>.</p>
+</li>
+<li>
+<p><code>$room-light-link-color</code>: Specifies the color for the light theme links. The default value is <code>#2d2d2d</code>.</p>
+</li>
+<li>
+<p><code>$room-light-floor-background</code>: Specifies the background image and repeat pattern for the light theme floor.</p>
+</li>
+<li>
+<p><code>$room-light-floor-shadow</code>: Specifies the shadow effect for the light theme floor.</p>
+</li>
+<li>
+<p><code>$room-light-wall-background</code>: Specifies the background image and repeat pattern for the light theme walls.</p>
+</li>
+<li>
+<p><code>$room-light-wall-shadow</code>: Specifies the shadow effect for the light theme walls.</p>
+</li>
+<li>
+<p><code>$room-light-ceil-background</code>: Specifies the background image and repeat pattern for the light theme ceiling.</p>
+</li>
+<li>
+<p><code>$room-light-ceil-shadow</code>: Specifies the shadow effect for the light theme ceiling.</p>
+</li>
+<li>
+<p><code>$room-light-button-background</code>: Specifies the background color for the light theme buttons. The default value is <code>#3c3642</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-color</code>: Specifies the color for the light theme buttons. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-border</code>: Specifies the border style for the light theme buttons. The default value is <code>0 none</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-shadow</code>: Specifies the shadow effect for the light theme buttons. The default value is <code>0 0 2px rgba(0, 0, 0, 0.5)</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-current-background</code>: Specifies the background color for the current light theme button. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-current-border</code>: Specifies the border style for the current light theme button. The default value is <code>0 none</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-current-color</code>: Specifies the color for the current light theme button. The default value is <code>#3c3642</code>.</p>
+</li>
+<li>
+<p><code>$room-light-button-current-shadow</code>: Specifies the shadow effect for the current light theme button. The default value is <code>none</code>.</p>
+</li>
+<li>
+<p><code>$room-light-canvas-border</code>: Specifies the border style for the light theme canvas. The default value is <code>10px solid #3c3642</code>.</p>
+</li>
+<li>
+<p><code>$room-light-canvas-shadow</code>: Specifies the shadow effect for the light theme canvas. The default value is <code>1px 1px 3px rgba(0, 0, 0, 0.5)</code>.</p>
+</li>
+</ul>
+<h3 id="dark-sass-variables">Dark sass variables:</h3>
+<ul>
+<li>
+<p><code>$room-dark-background-blend-mode</code>: Specifies the blend mode for the dark theme background. The default value is <code>screen</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-body-background</code>: Specifies the background color for the dark theme body. The default value is <code>#1c1e24</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-text-color</code>: Specifies the color for the dark theme text. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-link-color</code>: Specifies the color for the dark theme links. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-floor-background</code>: Specifies the background image and repeat pattern for the dark theme floor.</p>
+</li>
+<li>
+<p><code>$room-dark-floor-shadow</code>: Specifies the shadow effect for the dark theme floor.</p>
+</li>
+<li>
+<p><code>$room-dark-wall-background</code>: Specifies the background image and repeat pattern for the dark theme walls.</p>
+</li>
+<li>
+<p><code>$room-dark-wall-shadow</code>: Specifies the shadow effect for the dark theme walls.</p>
+</li>
+<li>
+<p><code>$room-dark-ceil-background</code>: Specifies the background image and repeat pattern for the dark theme ceiling.</p>
+</li>
+<li>
+<p><code>$room-dark-ceil-shadow</code>: Specifies the shadow effect for the dark theme ceiling.</p>
+</li>
+<li>
+<p><code>$room-dark-button-background</code>: Specifies the background color for the dark theme buttons. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-color</code>: Specifies the color for the dark theme buttons. The default value is <code>#000</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-border</code>: Specifies the border style for the dark theme buttons. The default value is <code>0 none</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-shadow</code>: Specifies the shadow effect for the dark theme buttons. The default value is <code>0 0 2px rgba(0, 0, 0, 0.5)</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-current-background</code>: Specifies the background color for the current dark theme button. The default value is <code>#000</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-current-border</code>: Specifies the border style for the current dark theme button. The default value is <code>0 none</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-current-color</code>: Specifies the color for the current dark theme button. The default value is <code>#fff</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-button-current-shadow</code>: Specifies the shadow effect for the current dark theme button. The default value is <code>0 0 5px 5px rgba(255, 255, 255, 0.3)</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-canvas-border</code>: Specifies the border style for the dark theme canvas. The default value is <code>10px solid $room-button-background</code>.</p>
+</li>
+<li>
+<p><code>$room-dark-canvas-shadow</code>: Specifies the shadow effect for the dark theme canvas. The default value is <code>0 0 10px rgba(255, 255, 255, 0.1)</code>.</p>
+</li>
+</ul>
+<h3 id="after-all-the-application-will-utilize-css-variables-based-on-the-dark-or-light-mode-dependency-for-the-final-result.">After all, the application will utilize CSS variables based on the dark or light mode dependency for the final result.</h3>
+<ul>
+<li>
+<p><code>--room-body-background-blend-mode</code>: $room-&lt;light/dark&gt;-background-blend-mode</p>
+</li>
+<li>
+<p><code>--room-body-background</code>: $room-&lt;light/dark&gt;-body-background</p>
+</li>
+<li>
+<p><code>--room-text-color</code>: $room-&lt;light/dark&gt;-text-color</p>
+</li>
+<li>
+<p><code>--room-link-color</code>: $room-&lt;light/dark&gt;-link-color</p>
+</li>
+<li>
+<p><code>--room-floor-background</code>: $room-&lt;light/dark&gt;-floor-background</p>
+</li>
+<li>
+<p><code>--room-floor-shadow</code>: $room-&lt;light/dark&gt;-floor-shadow</p>
+</li>
+<li>
+<p><code>--room-wall-background</code>: $room-&lt;light/dark&gt;-wall-background</p>
+</li>
+<li>
+<p><code>--room-wall-shadow</code>: $room-&lt;light/dark&gt;-wall-shadow</p>
+</li>
+<li>
+<p><code>--room-ceil-background</code>: $room-&lt;light/dark&gt;-ceil-background</p>
+</li>
+<li>
+<p><code>--room-ceil-shadow</code>: $room-&lt;light/dark&gt;-ceil-shadow</p>
+</li>
+<li>
+<p><code>--room-button-background</code>: $room-&lt;light/dark&gt;-button-background</p>
+</li>
+<li>
+<p><code>--room-button-color</code>: $room-&lt;light/dark&gt;-button-color</p>
+</li>
+<li>
+<p><code>--room-icon-color</code>: $room-&lt;light/dark&gt;-icon-color</p>
+</li>
+<li>
+<p><code>--room-button-border</code>: $room-&lt;light/dark&gt;-button-border</p>
+</li>
+<li>
+<p><code>--room-button-shadow</code>: $room-&lt;light/dark&gt;-button-shadow</p>
+</li>
+<li>
+<p><code>--room-button-current-background</code>: $room-&lt;light/dark&gt;-button-current-background</p>
+</li>
+<li>
+<p><code>--room-button-current-border</code>: $room-&lt;light/dark&gt;-button-current-border</p>
+</li>
+<li>
+<p><code>--room-button-current-color</code>: $room-&lt;light/dark&gt;-button-current-color</p>
+</li>
+<li>
+<p><code>--room-button-current-shadow</code>: $room-&lt;light/dark&gt;-button-current-shadow</p>
+</li>
+<li>
+<p><code>--room-canvas-border</code>: $room-&lt;light/dark&gt;-canvas-border</p>
+</li>
+<li>
+<p><code>--room-canvas-shadow</code>: $room-&lt;light/dark&gt;-canvas-shadow</p>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
